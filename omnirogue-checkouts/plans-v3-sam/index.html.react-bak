@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plans - AIPU</title>
+<meta name="description" content="Choose your AIPU plan">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/checkouts/plans-v3-sam/logo-aipu.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/checkouts/plans-v3-sam/plans-pick-your-plan/css/bundle.scoped.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #08060F; color: #fff; }
+  [data-checkout-prototype="plans-pick-your-plan"] { min-height: 100vh; }
+  [data-checkout-prototype="plans-pick-your-plan"] .pyp-top { display: none !important; }
+</style>
+</head>
+<body>
+<div data-checkout-prototype="plans-pick-your-plan"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" crossorigin></script>
+<script>
+window.__KK_OFFER_LINKS = {
+  creatormonthly: '/signup?offer=creatormonthly',
+  premiummonthly: '/signup?offer=premiummonthly',
+  agencymonthly: '/signup?offer=agencymonthly',
+  promonthly: '/signup?offer=promonthly',
+  creatoryearly: '/signup?offer=creatoryearly',
+  premiumyearly: '/signup?offer=premiumyearly',
+  agencyyearly: '/signup?offer=agencyyearly',
+  proyearly: '/signup?offer=proyearly'
+};
+</script>
+<script src="/checkouts/plans-v3-sam/plans-pick-your-plan/js/bundle.js"></script>
+<script>
+(function () {
+  var MONTHLY = ['creatormonthly', 'premiummonthly', 'agencymonthly', 'promonthly'];
+  var YEARLY  = ['creatoryearly', 'premiumyearly', 'agencyyearly', 'proyearly'];
+
+  function tokens() {
+    var root = document.querySelector('[data-checkout-prototype="plans-pick-your-plan"]');
+    var annual = root && root.querySelector('.pyp-switch.on');
+    return annual ? YEARLY : MONTHLY;
+  }
+
+  function wire() {
+    var root = document.querySelector('[data-checkout-prototype="plans-pick-your-plan"]');
+    var links = window.__KK_OFFER_LINKS || {};
+    if (!root || !links) return;
+    var cols = root.querySelectorAll('.pyp-grid .pcol');
+    var toks = tokens();
+    cols.forEach(function (col, i) {
+      var btn = col.querySelector('.pcol-cta');
+      var tok = toks[i];
+      if (!btn || !tok || !links[tok]) return;
+      btn.onclick = function () { window.location.href = links[tok]; };
+    });
+  }
+
+  function boot() {
+    var root = document.querySelector('[data-checkout-prototype="plans-pick-your-plan"]');
+    if (!root) return;
+    if (typeof window.__aipuMountPickYourPlanV1 === 'function') {
+      window.__aipuMountPickYourPlanV1(root);
+    } else {
+      console.error('Checkout bundle failed to load');
+      return;
+    }
+    setTimeout(wire, 50);
+    setTimeout(wire, 400);
+    var obs = new MutationObserver(function () { wire(); });
+    obs.observe(root, { subtree: true, attributes: true, childList: true });
+    root.addEventListener('click', function (e) {
+      if (e.target.closest('.pyp-switch')) setTimeout(wire, 80);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>

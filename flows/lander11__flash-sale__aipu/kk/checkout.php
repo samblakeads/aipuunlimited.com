@@ -1,0 +1,1682 @@
+<?php
+$dat_path  = $_SERVER['DOCUMENT_ROOT'].'/../data/loc.dat';
+$base_path = $_SERVER['DOCUMENT_ROOT']."/".(
+    file_exists($dat_path) ? json_decode(file_get_contents($dat_path), true)["location"] : 'kowboykit'
+);
+require_once $base_path.'/includes/money.php';
+?>
+<?php require_once(__DIR__.'/_kk-config.php'); ?>
+<?php require_once(__DIR__.'/_checkout-offers.php'); ?>
+<!DOCTYPE html>
+
+<html data-browser-safari="false" data-theme-mode="dark" lang="en" style="--banner-height: 0px;">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Flash Sale - AIPU</title>
+<meta content="AIPU Flash Sale: Lifetime access for $399 (reg. $1,900), or start monthly from $14.99. 140+ AI models, 99 prebuilt agents, voice &amp; video studios — one workspace, paid once, kept forever." name="description"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/lander11__flash-sale__aipu/logo-aipu.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/></noscript>
+<script defer="defer" src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          border: 'rgba(255,255,255,0.08)',
+          foreground: '#e8eaf0',
+          background: '#05060f',
+        },
+        keyframes: {
+          fsShine: { '0%': { backgroundPosition: '0%' }, '100%': { backgroundPosition: '200%' } },
+          fsPulse: { '0%,100%': { transform: 'scale(1)', opacity: '1' }, '50%': { transform: 'scale(1.18)', opacity: '0.55' } },
+          fsFloat: { '0%,100%': { transform: 'translate3d(0,0,0)' }, '50%': { transform: 'translate3d(18px,12px,0)' } },
+          fsMarquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+          fsToastIn: { '0%': { transform: 'translate(-12px,12px)', opacity: '0' }, '20%': { transform: 'translate(0,0)', opacity: '1' }, '80%': { transform: 'translate(0,0)', opacity: '1' }, '100%': { transform: 'translate(-12px,12px)', opacity: '0' } },
+        },
+        animation: {
+          fsShine: 'fsShine 6s linear infinite',
+          fsPulse: 'fsPulse 1.8s ease-in-out infinite',
+          fsFloat: 'fsFloat 14s ease-in-out infinite',
+          fsMarquee: 'fsMarquee 40s linear infinite',
+          fsToastIn: 'fsToastIn 7s ease-in-out infinite',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --fs-bg: #05060f;
+    --fs-pink: #F472B6;
+    --fs-pink-glow: #FF4FD8;
+    --fs-magenta: #C026D3;
+    --fs-violet: #8B5CFF;
+    --fs-indigo: #6366F1;
+    --fs-cyan: #35D7FF;
+    --fs-gold: #E6C97A;
+    --fs-gold-lite: #FFF8E7;
+    --fs-gold-bright: #FFD86B;
+    --fs-green: #34D399;
+    --fs-emerald: #10B981;
+    --fs-warm-dark: #0D0A06;
+  }
+  html, body { margin: 0; padding: 0; background: var(--fs-bg); color: #e8eaf0; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; }
+  .tabular-nums { font-variant-numeric: tabular-nums; }
+
+  /* ---------- AMBIENT PAGE BACKGROUND  (lives behind everything) ---------- */
+  .fs-ambient {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(1200px 600px at 20% 0%, rgba(139, 92, 255, 0.18), transparent 60%),
+      radial-gradient(900px 500px at 80% 30%, rgba(53, 215, 255, 0.12), transparent 60%),
+      radial-gradient(700px 500px at 50% 80%, rgba(255, 79, 216, 0.10), transparent 60%);
+  }
+  .fs-ambient-dots {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    opacity: 0.18;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-mask-image: radial-gradient(80% 70% at 50% 30%, black 30%, transparent 80%);
+            mask-image: radial-gradient(80% 70% at 50% 30%, black 30%, transparent 80%);
+  }
+  .fs-orb {
+    position: absolute; border-radius: 50%; pointer-events: none;
+    will-change: transform;
+  }
+  .fs-orb-1 { left: 5%;  top: 8%;   width: 700px; height: 700px; background: radial-gradient(closest-side, rgba(139, 92, 255, 0.55), transparent); filter: blur(110px); }
+  .fs-orb-2 { right: 5%; top: 18%;  width: 600px; height: 600px; background: radial-gradient(closest-side, rgba(53, 215, 255, 0.45), transparent); filter: blur(120px); }
+  .fs-orb-3 { left: 30%; top: 58%;  width: 700px; height: 700px; background: radial-gradient(closest-side, rgba(255, 79, 216, 0.38), transparent); filter: blur(140px); }
+  .fs-orb-4 { right: 8%; top: 85%;  width: 600px; height: 600px; background: radial-gradient(closest-side, rgba(230, 201, 122, 0.22), transparent); filter: blur(130px); }
+  .fs-orb-wrap { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  /* push real content above the ambient layers */
+  body > section, body > div.fs-promo, body > .fs-sticky-bar, body > .fs-toast,
+  body > script + section { position: relative; z-index: 1; }
+
+  /* ---------- gradients & typography ---------- */
+  .fs-grad-flash {
+    background: linear-gradient(135deg, #FFF8E7 0%, #FFD86B 20%, #FF8FB1 50%, #C026D3 80%, #8B5CFF 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 0 30px rgba(255, 79, 216, 0.75), 0 0 60px rgba(139, 92, 255, 0.45);
+  }
+  /* the text-shadow trick: paint shadow on transparent text */
+  .fs-grad-flash {
+    -webkit-text-fill-color: transparent;
+  }
+  .fs-grad-gold {
+    background: linear-gradient(120deg,#FFF8E7 0%,#F5E1A4 32%,#E6C97A 60%,#D4A647 88%,#FFF8E7 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .fs-grad-violet {
+    background: linear-gradient(120deg,#A78BFA 0%,#C084FC 50%,#F472B6 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .fs-grad-empire {
+    background: linear-gradient(110deg,#35D7FF 0%,#8B5CFF 35%,#C026D3 65%,#F472B6 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* ---------- CTAs ---------- */
+  .fs-cta-gold {
+    background: linear-gradient(110deg,#FFF8E7 0%,#F5E1A4 32%,#E6C97A 60%,#D4A647 88%,#FFF8E7 100%);
+    box-shadow: 0 0 28px -6px rgba(230,201,122,0.55), 0 26px 54px -18px rgba(0,0,0,0.85);
+    color: #1A1208;
+    background-size: 200% 100%;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .fs-cta-gold:hover { transform: translateY(-2px); box-shadow: 0 0 40px -4px rgba(230,201,122,0.7), 0 30px 60px -18px rgba(0,0,0,0.85); }
+  /* Studio plan — emerald (matches Most Popular green theme) */
+  .fs-cta-emerald, .fs-cta-violet {
+    background: linear-gradient(110deg, #10B981 0%, #34D399 50%, #6EE7B7 100%);
+    box-shadow: 0 20px 40px -12px rgba(52, 211, 153, 0.55);
+    color: #052e1f;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .fs-cta-emerald:hover, .fs-cta-violet:hover { transform: translateY(-2px); box-shadow: 0 26px 48px -12px rgba(52, 211, 153, 0.7); }
+  /* Scale plan — soft amber outlined */
+  .fs-cta-amber {
+    background: rgba(230, 201, 122, 0.10);
+    border: 1px solid rgba(230, 201, 122, 0.55);
+    box-shadow: 0 18px 36px -16px rgba(230, 201, 122, 0.35);
+    color: #F5E1A4;
+    transition: transform .25s ease, background .25s ease, color .25s ease;
+  }
+  .fs-cta-amber:hover { transform: translateY(-2px); background: rgba(230, 201, 122, 0.18); color: #FFF8E7; }
+  /* generic pink CTA still available for video/training buttons */
+  .fs-cta-pink {
+    background: linear-gradient(110deg,#F472B6 0%,#EC4899 50%,#C026D3 100%);
+    box-shadow: 0 20px 40px -12px rgba(236,72,153,0.55);
+    color: #fff;
+    transition: transform .25s ease;
+  }
+  .fs-cta-pink:hover { transform: translateY(-2px); }
+  .fs-cta-ghost {
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    transition: all .25s ease;
+  }
+  .fs-cta-ghost:hover { border-color: rgba(255,255,255,0.32); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  /* ---------- pills, badges ---------- */
+  .fs-pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+    border: 1px solid rgba(230,201,122,0.45); background: rgba(230,201,122,0.10);
+    color: #F5E1A4; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  }
+  .fs-pill-violet {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+    border: 1px solid rgba(139,92,255,0.5); background: rgba(139,92,255,0.10);
+    color: #C4B5FD; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  }
+  .fs-pill-green {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+    border: 1px solid rgba(52,211,153,0.45); background: rgba(52,211,153,0.10);
+    color: #6EE7B7; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  }
+  .fs-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
+  .fs-badge-best {
+    background: linear-gradient(110deg,#FFF8E7,#E6C97A); color: #1A1208;
+    font-size: 10px; font-weight: 900; letter-spacing: 0.16em; padding: 5px 10px; border-radius: 999px;
+    text-transform: uppercase;
+  }
+  .fs-badge-pop {
+    background: linear-gradient(110deg, #10B981 0%, #34D399 50%, #6EE7B7 100%); color: #052e1f;
+    font-size: 10px; font-weight: 900; letter-spacing: 0.16em; padding: 5px 10px; border-radius: 999px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 18px -6px rgba(52,211,153,0.55);
+  }
+  .fs-plan-tag {
+    display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 999px;
+    font-size: 10px; font-weight: 800; letter-spacing: 0.10em; text-transform: uppercase;
+  }
+  .fs-tag-lifetime { background: rgba(230,201,122,0.16); color: #F5E1A4; border: 1px solid rgba(230,201,122,0.35); }
+  .fs-tag-studio   { background: rgba(52,211,153,0.14); color: #6EE7B7; border: 1px solid rgba(52,211,153,0.45); }
+  .fs-tag-scale    { background: rgba(255,216,107,0.14); color: #FCD879; border: 1px solid rgba(255,216,107,0.35); }
+  .fs-tag-creator  { background: rgba(255,255,255,0.06); color: #E5E7EB; border: 1px solid rgba(255,255,255,0.18); }
+
+  /* ---------- cards ---------- */
+  .fs-card {
+    border: 1px solid rgba(255,255,255,0.08); border-radius: 22px;
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+  /* lifetime ($399) card — warm brown + gold halo, like the reference */
+  .fs-card-gold {
+    border: 1px solid rgba(255,255,255,0.08);
+    background:
+      radial-gradient(circle at 100% 0%, rgba(230, 201, 122, 0.12), transparent 50%),
+      linear-gradient(165deg, #0D0A06 0%, #0F0B07 100%);
+    box-shadow:
+      0 0 60px -20px rgba(230, 201, 122, 0.3),
+      0 48px 96px -34px rgba(0, 0, 0, 0.92);
+  }
+  /* Studio "Most Popular" — emerald themed */
+  .fs-card-emerald {
+    border: 1px solid rgba(52, 211, 153, 0.35);
+    background:
+      radial-gradient(at center top, rgba(52, 211, 153, 0.14), transparent 55%),
+      radial-gradient(at right bottom, rgba(16, 185, 129, 0.10), transparent 50%),
+      #0a0c1f;
+    box-shadow: 0 30px 60px -30px rgba(52, 211, 153, 0.50);
+  }
+  /* legacy alias so existing markup using fs-card-violet upgrades */
+  .fs-card-violet {
+    border: 1px solid rgba(52, 211, 153, 0.35);
+    background:
+      radial-gradient(at center top, rgba(52, 211, 153, 0.14), transparent 55%),
+      radial-gradient(at right bottom, rgba(16, 185, 129, 0.10), transparent 50%),
+      #0a0c1f;
+    box-shadow: 0 30px 60px -30px rgba(52, 211, 153, 0.50);
+  }
+  /* Scale plan — subtle gold accent */
+  .fs-card-amber {
+    border: 1px solid rgba(255, 216, 107, 0.20);
+    background: rgba(255,255,255,0.02);
+    box-shadow:
+      0 30px 60px -30px rgba(0, 0, 0, 0.6),
+      0 0 40px -20px rgba(255, 216, 107, 0.15);
+  }
+  .fs-card-empire {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(160deg,rgba(20,18,42,0.85) 0%,rgba(8,8,18,0.95) 100%) padding-box,
+      linear-gradient(135deg,#35D7FF 0%,#8B5CFF 40%,#C026D3 70%,#F472B6 100%) border-box;
+    border-radius: 26px;
+  }
+  .fs-grid-card {
+    border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px;
+    background: linear-gradient(160deg,rgba(20,18,42,0.55) 0%,rgba(8,8,18,0.75) 100%);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .fs-grid-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.18); box-shadow: 0 14px 40px -20px rgba(139,92,255,0.45); }
+
+  /* ---------- feature row ---------- */
+  .fs-row {
+    display: flex; gap: 10px; align-items: flex-start; padding: 12px 0;
+    border-top: 1px solid rgba(255,255,255,0.06); font-size: 13.5px; line-height: 1.5;
+  }
+  .fs-row:first-child { border-top: none; }
+  .fs-row > svg { flex: 0 0 auto; margin-top: 3px; color: #34D399; }
+
+  /* ---------- helpers ---------- */
+  .fs-strike { color: rgba(255,255,255,0.4); text-decoration: line-through; font-weight: 700; }
+  .fs-save {
+    display: inline-flex; align-items: center; padding: 4px 9px; border-radius: 999px;
+    background: rgba(52,211,153,0.14); color: #6EE7B7; font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em;
+  }
+  .fs-bg-glow { position: absolute; pointer-events: none; filter: blur(80px); opacity: 0.55; border-radius: 50%; }
+  details.faq-q summary { list-style: none; cursor: pointer; }
+  details.faq-q summary::-webkit-details-marker { display: none; }
+  details.faq-q[open] .faq-chev { transform: rotate(180deg); }
+  .faq-chev { transition: transform .2s ease; }
+
+  /* ---------- promo bar (urgent purple → wine red → purple, like the reference) ---------- */
+  .fs-promo {
+    background: linear-gradient(90deg, #4B1D52 0%, #6B2D38 25%, #8B1538 50%, #6B2D38 75%, #4B1D52 100%);
+    border-bottom: 1px solid rgba(230,201,122,0.30);
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.04);
+  }
+  .fs-promo-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #F5E1A4; box-shadow: 0 0 0 3px rgba(230,201,122,0.18), 0 0 12px #E6C97A;
+    animation: fsPulse 1.8s ease-in-out infinite;
+  }
+
+  /* ---------- countdown ---------- */
+  .fs-cd-card {
+    border: 1px solid rgba(255,255,255,0.10); border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    padding: 14px 18px; min-width: 78px; text-align: center;
+  }
+
+  /* ---------- marquee (press logos) ---------- */
+  .fs-marquee { overflow: hidden; mask-image: linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%); -webkit-mask-image: linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%); }
+  .fs-marquee-track { display: flex; gap: 64px; width: max-content; animation: fsMarquee 40s linear infinite; }
+  .fs-press {
+    color: rgba(255,255,255,0.55); font-weight: 800; font-size: 18px; letter-spacing: 0.04em; white-space: nowrap;
+    transition: color .2s ease;
+  }
+  .fs-press:hover { color: rgba(255,255,255,0.85); }
+  .fs-press-serif { font-family: 'Times New Roman', Georgia, serif; font-style: italic; font-weight: 700; letter-spacing: 0; }
+  .fs-press-spaced { letter-spacing: 0.32em; font-size: 15px; }
+
+  /* ---------- value stack rows ---------- */
+  .fs-value-row {
+    display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center;
+    padding: 16px 18px; border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .fs-value-row:first-child { border-top: none; }
+  .fs-value-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(139,92,255,0.10); color: #C4B5FD; flex: 0 0 auto;
+  }
+  .fs-value-amt { font-weight: 900; color: #F5E1A4; font-size: 13.5px; letter-spacing: 0.02em; text-align: right; line-height: 1.2; }
+  .fs-value-amt-lbl { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.14em; text-transform: uppercase; display: block; }
+
+  /* ---------- testimonial avatar ---------- */
+  .fs-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 800; font-size: 13px; letter-spacing: 0.02em; flex: 0 0 auto;
+  }
+  .fs-avatar-1 { background: linear-gradient(135deg,#A855F7,#EC4899); }
+  .fs-avatar-2 { background: linear-gradient(135deg,#06B6D4,#3B82F6); }
+  .fs-avatar-3 { background: linear-gradient(135deg,#F97316,#EF4444); }
+  .fs-avatar-4 { background: linear-gradient(135deg,#6366F1,#8B5CFF); }
+  .fs-avatar-5 { background: linear-gradient(135deg,#10B981,#34D399); }
+  .fs-avatar-6 { background: linear-gradient(135deg,#F472B6,#FB7185); }
+  .fs-star { color: #E6C97A; }
+
+  /* ---------- slider ---------- */
+  .fs-slider {
+    -webkit-appearance: none; appearance: none; width: 100%; height: 8px;
+    background: linear-gradient(90deg,#34D399 0%,#34D399 var(--p,15%),rgba(255,255,255,0.10) var(--p,15%),rgba(255,255,255,0.10) 100%);
+    border-radius: 999px; outline: none;
+  }
+  .fs-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%;
+    background: #34D399; border: 3px solid #05060f; cursor: pointer;
+    box-shadow: 0 6px 20px -4px rgba(52,211,153,0.55);
+  }
+  .fs-slider::-moz-range-thumb {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #34D399; border: 3px solid #05060f; cursor: pointer;
+    box-shadow: 0 6px 20px -4px rgba(52,211,153,0.55);
+  }
+
+  /* ---------- sticky bottom bar ---------- */
+  .fs-sticky-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+    background: linear-gradient(180deg,rgba(8,8,18,0.85) 0%,rgba(10,8,18,0.97) 100%);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(230,201,122,0.20);
+    transform: translateY(120%); transition: transform .35s ease;
+    padding: 10px 14px env(safe-area-inset-bottom);
+  }
+  .fs-sticky-bar.visible { transform: translateY(0); }
+  .fs-sticky-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .fs-sticky-crown { width: 34px; height: 34px; border-radius: 10px; flex: 0 0 auto; background: linear-gradient(135deg,#FFF8E7,#E6C97A); color: #1A1208; display: inline-flex; align-items: center; justify-content: center; }
+  .fs-sticky-text { flex: 1; min-width: 0; font-size: 12.5px; color: rgba(255,255,255,0.78); line-height: 1.35; }
+  .fs-sticky-text b { color: #fff; }
+  .fs-sticky-dismiss { background: none; border: 0; color: rgba(255,255,255,0.4); cursor: pointer; padding: 6px; border-radius: 8px; }
+  .fs-sticky-dismiss:hover { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); }
+
+  /* ---------- live activity toast ---------- */
+  .fs-toast {
+    position: fixed; bottom: 90px; left: 16px; z-index: 80;
+    background: linear-gradient(140deg,rgba(20,18,42,0.95) 0%,rgba(8,8,18,0.95) 100%);
+    border: 1px solid rgba(255,255,255,0.10); border-radius: 14px;
+    padding: 10px 14px 10px 12px; max-width: 280px;
+    display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 16px 40px -16px rgba(0,0,0,0.85);
+    pointer-events: none;
+    opacity: 0;
+  }
+  .fs-toast.show { animation: fsToastIn 8s ease-in-out 1; }
+  .fs-toast-dot { width: 8px; height: 8px; border-radius: 50%; background: #34D399; box-shadow: 0 0 10px #34D399; flex: 0 0 auto; }
+
+  /* ---------- guarantee badge ring ---------- */
+  .fs-guarantee-ring {
+    width: 120px; height: 120px; border-radius: 50%;
+    border: 4px solid rgba(230,201,122,0.45);
+    background: radial-gradient(circle at 50% 35%, rgba(230,201,122,0.22) 0%, rgba(230,201,122,0.05) 50%, transparent 80%), rgba(230,201,122,0.05);
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 6px rgba(230,201,122,0.10), 0 0 50px -10px rgba(230,201,122,0.55);
+  }
+
+  /* ---------- video play card ---------- */
+  .fs-video-card {
+    position: relative; border-radius: 22px; overflow: hidden;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(139,92,255,0.35) 0%, transparent 55%),
+      radial-gradient(circle at 70% 70%, rgba(244,114,182,0.30) 0%, transparent 55%),
+      linear-gradient(135deg,#160a2b,#0c0a1e);
+    aspect-ratio: 16/9;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .fs-video-play {
+    width: 78px; height: 78px; border-radius: 50%;
+    background: rgba(255,255,255,0.92); color: #1A1208;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 60px -10px rgba(0,0,0,0.6);
+    transition: transform .25s ease;
+  }
+  .fs-video-card:hover .fs-video-play { transform: scale(1.08); }
+
+  /* ---------- divider with text ---------- */
+  .fs-divider-text {
+    display: inline-flex; align-items: center; gap: 14px;
+    color: rgba(255,255,255,0.42); font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  }
+  .fs-divider-text::before, .fs-divider-text::after {
+    content: ''; width: 60px; height: 1px; background: rgba(255,255,255,0.10);
+  }
+
+  /* mini-countdown in promo bar */
+  .fs-mini-cd {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 4px 8px; border-radius: 8px;
+    background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.06);
+    font-weight: 800; font-size: 12px; color: #fff; line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  .fs-mini-cd-sub { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.55); margin-left: 1px; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="/lander11__flash-sale__aipu/assets/main1.css" rel="stylesheet"/>
+<link href="/lander11__flash-sale__aipu/assets/main2.css" rel="stylesheet"/>
+<style id="omni-static-fixes">
+html{--header-height:64px;--nav-height:64px;--nav-bg:rgba(7,8,18,0.85);color-scheme:dark}
+.fixed.top-0.left-0.right-0.z-50 .backdrop-blur-xl,.fixed.top-0.left-0.right-0.z-50 [class*="backdrop-blur"]{backdrop-filter:blur(24px)!important;-webkit-backdrop-filter:blur(24px)!important;}
+
+[data-checkout-prototype="plans-pick-your-plan"] .pyp-wrap{padding-top:calc(var(--nav-height) + env(safe-area-inset-top) + 12px);}
+</style>
+<style id="omni-nav-isolation">
+/* Site nav must render identically on lander, checkout, and studio pages. */
+.fixed.top-0.left-0.right-0.z-50 {
+  z-index: 50 !important;
+  isolation: isolate;
+}
+.fixed.top-0.left-0.right-0.z-50,
+.fixed.top-0.left-0.right-0.z-50 *,
+.fixed.top-0.left-0.right-0.z-50 *::before,
+.fixed.top-0.left-0.right-0.z-50 *::after {
+  box-sizing: border-box;
+}
+.omni-lander-wrap .promo-bar {
+  position: sticky;
+  top: calc(var(--nav-height, 64px) + env(safe-area-inset-top, 0px));
+  z-index: 40;
+}
+/* Announcement / promo bar pinned cleanly directly under the fixed site nav.
+   Keyed on the stable kk-announce-bar hook (added at build time) so it works
+   regardless of the lander's original bar class name. */
+.omni-lander-wrap .kk-announce-bar {
+  position: sticky;
+  top: calc(var(--nav-height, 64px) + env(safe-area-inset-top, 0px));
+  z-index: 40;
+}
+.omni-lander-wrap .kk-announce-bar .container {
+  flex-wrap: nowrap;
+  gap: 10px;
+  min-height: 0;
+}
+@media (max-width: 700px) {
+  /* On phones, don't let the announcement bar dominate the header: keep it on
+     a single compact row and let it scroll away instead of stacking under the
+     nav, so the mobile header is just the slim site nav. */
+  .omni-lander-wrap .kk-announce-bar {
+    position: static;
+  }
+  .omni-lander-wrap .kk-announce-bar .container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+</style>
+<script data-flow-config>
+window.__LANDER_BASE=<?= json_encode($__web, JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_CHECKOUT_URL=<?= json_encode($__checkout, JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_OFFER_LINKS=<?= json_encode((object)($__kk_offer_links ?? []), JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_REGISTER_CHECKOUT=<?= json_encode($__registercheckout, JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_REGISTER_CREATE=<?= json_encode($__registercreate, JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_REGISTER_BILLING=<?= json_encode($__registercheckout, JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_REGISTER_TOKEN="registercheckout";
+window.__KK_STEP1LINK=<?= json_encode($__step1link, JSON_UNESCAPED_SLASHES); ?>;
+window.__KK_IS_CHECKOUT=<?= json_encode($__is_checkout ?? false); ?>;
+window.__OMNI_HOME_DEAD=1;
+</script>
+
+</head>
+<body class="bg-[#05060f] text-white">
+<!-- ambient background: lives behind everything, matches the reference design's color depth -->
+<div aria-hidden="true" class="fs-ambient"></div>
+<div aria-hidden="true" class="fs-orb-wrap">
+<div class="fs-orb fs-orb-1 animate-fsFloat"></div>
+<div class="fs-orb fs-orb-2 animate-fsFloat" style="animation-delay:-5s"></div>
+<div class="fs-orb fs-orb-3 animate-fsFloat" style="animation-delay:-9s"></div>
+<div class="fs-orb fs-orb-4 animate-fsFloat" style="animation-delay:-3s"></div>
+</div>
+<div aria-hidden="true" class="fs-ambient-dots"></div>
+<!-- ==================================================================== -->
+<!-- TOP PROMO BAR                                                        -->
+<!-- ==================================================================== -->
+<section class="fs-promo">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-center sm:justify-between gap-3">
+<div class="flex items-center gap-2.5 text-[12px] sm:text-[13px] font-semibold">
+<span class="fs-promo-dot"></span>
+<span class="fs-eyebrow text-amber-200/90">Flash Sale Active</span>
+<span class="text-white/45 hidden sm:inline">·</span>
+<span class="text-white"><b>Lifetime $399</b> <span class="fs-strike ml-1">$1,900</span></span>
+</div>
+<div class="flex items-center gap-2" data-fs-mini-cd="">
+<span class="fs-mini-cd"><span data-cd-d-mini="">02</span><span class="fs-mini-cd-sub">d</span></span>
+<span class="fs-mini-cd"><span data-cd-h-mini="">23</span><span class="fs-mini-cd-sub">h</span></span>
+<span class="fs-mini-cd"><span data-cd-m-mini="">59</span><span class="fs-mini-cd-sub">m</span></span>
+<a class="fs-cta-gold ml-1 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.16em]" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['lifetime'] ?? '#'); ?>">
+        Claim Now
+        <svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- HERO                                                                 -->
+<!-- ==================================================================== -->
+<section class="relative overflow-hidden pt-16 sm:pt-24 pb-12">
+<div class="fs-bg-glow animate-fsFloat" style="top:-80px;left:-120px;width:520px;height:520px;background:rgba(139,92,255,0.45);"></div>
+<div class="fs-bg-glow animate-fsFloat" style="top:120px;right:-140px;width:560px;height:560px;background:rgba(192,38,211,0.40);animation-delay:-7s"></div>
+<div class="fs-bg-glow" style="bottom:-160px;left:25%;width:600px;height:600px;background:rgba(244,114,182,0.22);"></div>
+<div class="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+<span class="fs-pill">
+<svg aria-hidden="true" fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M5 16 L3 8 l5 4 l4-7 l4 7 l5-4 l-2 8z"></path></svg>
+      Limited Time Offer
+      <svg aria-hidden="true" fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M5 16 L3 8 l5 4 l4-7 l4 7 l5-4 l-2 8z"></path></svg>
+</span>
+<h1 class="mt-6 text-[68px] sm:text-[110px] lg:text-[140px] font-black tracking-tighter leading-[0.88]">
+<span class="fs-grad-flash animate-fsShine">FLASH SALE</span>
+</h1>
+<p class="mt-6 text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">
+      Unlock Your Membership Now — <b class="text-white">140+ AI tools, agents &amp; trainings.</b> Pay once. Build forever.
+    </p>
+<!-- Countdown -->
+<div class="mt-10 inline-flex items-center justify-center gap-2.5 sm:gap-3" data-fs-countdown="">
+<div class="fs-cd-card"><div class="text-3xl sm:text-4xl font-extrabold tabular-nums text-white" data-cd-d="">02</div><div class="text-[10px] uppercase tracking-[0.18em] text-white/45 mt-1 font-bold">Days</div></div>
+<div class="fs-cd-card"><div class="text-3xl sm:text-4xl font-extrabold tabular-nums text-white" data-cd-h="">23</div><div class="text-[10px] uppercase tracking-[0.18em] text-white/45 mt-1 font-bold">Hours</div></div>
+<div class="fs-cd-card"><div class="text-3xl sm:text-4xl font-extrabold tabular-nums text-white" data-cd-m="">59</div><div class="text-[10px] uppercase tracking-[0.18em] text-white/45 mt-1 font-bold">Min</div></div>
+<div class="fs-cd-card"><div class="text-3xl sm:text-4xl font-extrabold tabular-nums text-white" data-cd-s="">50</div><div class="text-[10px] uppercase tracking-[0.18em] text-white/45 mt-1 font-bold">Sec</div></div>
+</div>
+<div class="mt-6 flex items-center justify-center gap-2.5 text-sm text-white/70">
+<span class="fs-star inline-flex">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</span>
+<span><b class="text-white">4.9 / 5</b> · 1,287 verified reviews</span>
+</div>
+<!-- Trust stat strip -->
+<div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
+<div class="fs-grid-card flex items-center gap-3 !p-4">
+<span class="w-10 h-10 rounded-full bg-amber-500/15 inline-flex items-center justify-center flex-none">
+<svg fill="none" height="18" stroke="#F5E1A4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</span>
+<div class="text-left"><div class="text-xl font-extrabold text-white">4.9★</div><div class="text-[10px] uppercase tracking-wider text-white/50 font-bold mt-0.5">Avg rating</div></div>
+</div>
+<div class="fs-grid-card flex items-center gap-3 !p-4">
+<span class="w-10 h-10 rounded-full bg-emerald-500/15 inline-flex items-center justify-center flex-none">
+<svg fill="none" height="18" stroke="#6EE7B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</span>
+<div class="text-left"><div class="text-xl font-extrabold text-white">1,500+</div><div class="text-[10px] uppercase tracking-wider text-white/50 font-bold mt-0.5">Active creators</div></div>
+</div>
+<div class="fs-grid-card flex items-center gap-3 !p-4">
+<span class="w-10 h-10 rounded-full bg-violet-500/15 inline-flex items-center justify-center flex-none">
+<svg fill="none" height="18" stroke="#C4B5FD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+</span>
+<div class="text-left"><div class="text-xl font-extrabold text-white">140+</div><div class="text-[10px] uppercase tracking-wider text-white/50 font-bold mt-0.5">AI models</div></div>
+</div>
+<div class="fs-grid-card flex items-center gap-3 !p-4">
+<span class="w-10 h-10 rounded-full bg-cyan-500/15 inline-flex items-center justify-center flex-none">
+<svg fill="none" height="18" stroke="#67E8F9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+</span>
+<div class="text-left"><div class="text-xl font-extrabold text-white">24/7</div><div class="text-[10px] uppercase tracking-wider text-white/50 font-bold mt-0.5">Secure access</div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- PRESS LOGO MARQUEE                                                   -->
+<!-- ==================================================================== -->
+<section class="relative pb-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-6"><span class="fs-divider-text">As featured in</span></div>
+<div class="fs-marquee">
+<div class="fs-marquee-track">
+<span class="fs-press fs-press-serif">Forbes</span>
+<span class="fs-press fs-press-serif">The New York Times</span>
+<span class="fs-press fs-press-spaced">TECHCRUNCH</span>
+<span class="fs-press" style="font-weight:900;letter-spacing:0.06em">WIRED</span>
+<span class="fs-press">Product Hunt</span>
+<span class="fs-press fs-press-spaced">FAST COMPANY</span>
+<span class="fs-press">VentureBeat</span>
+<span class="fs-press fs-press-serif">Inc.</span>
+<span class="fs-press fs-press-serif">Forbes</span>
+<span class="fs-press fs-press-serif">The New York Times</span>
+<span class="fs-press fs-press-spaced">TECHCRUNCH</span>
+<span class="fs-press" style="font-weight:900;letter-spacing:0.06em">WIRED</span>
+<span class="fs-press">Product Hunt</span>
+<span class="fs-press fs-press-spaced">FAST COMPANY</span>
+<span class="fs-press">VentureBeat</span>
+<span class="fs-press fs-press-serif">Inc.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- LIFETIME HERO CARD                                                   -->
+<!-- ==================================================================== -->
+<section class="relative pb-20" id="lifetime">
+<div class="max-w-3xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-8">
+<div class="fs-eyebrow text-amber-300/85">Founder-style deal</div>
+<h2 class="mt-3 text-3xl sm:text-5xl font-black tracking-tight leading-[1.05]">One payment. <span class="fs-grad-gold">Lifetime access.</span></h2>
+<p class="mt-5 text-white/65 leading-relaxed max-w-xl mx-auto">For people who already know they'll keep creating. Pay once, skip the monthly mental math, and keep building forever.</p>
+</div>
+<!-- Live activity + founding spots row -->
+<div class="grid sm:grid-cols-2 gap-3 mb-5">
+<div class="fs-grid-card !p-4 flex items-center gap-3">
+<span class="w-9 h-9 rounded-full bg-emerald-500/15 inline-flex items-center justify-center flex-none">
+<svg fill="none" height="16" stroke="#6EE7B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+</span>
+<div class="text-sm leading-tight">
+<div class="font-bold text-white"><span data-fs-live-claims="">1,401</span> claimed in the last hour</div>
+<div class="text-white/55 text-[11px] uppercase tracking-wider font-bold mt-0.5">Live activity</div>
+</div>
+</div>
+<div class="fs-grid-card !p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] uppercase tracking-wider font-bold text-amber-300/85">Founding-price spots</span>
+<span class="text-sm font-extrabold text-white">43<span class="text-white/45 font-bold">/200</span></span>
+</div>
+<div class="h-1.5 rounded-full bg-white/[0.06] overflow-hidden"><div class="h-full bg-gradient-to-r from-amber-300 to-amber-500" style="width:21.5%"></div></div>
+<div class="text-white/55 text-[11px] mt-1.5">After 200 sold, Lifetime rises to <b class="text-white">$699</b></div>
+</div>
+</div>
+<!-- Card -->
+<div class="fs-card fs-card-gold p-7 sm:p-9 relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="fs-badge-best">★ Best Deal</span></div>
+<div class="flex items-start justify-between gap-4 mb-2">
+<div>
+<h3 class="text-2xl font-extrabold tracking-tight">Lifetime Access</h3>
+<p class="text-white/55 text-xs mt-0.5 font-semibold uppercase tracking-wider">One-time payment · No subscription, ever</p>
+</div>
+<span class="fs-save">80% OFF</span>
+</div>
+<div class="flex items-end gap-3 mt-4">
+<span class="fs-strike text-lg sm:text-xl">$1,900</span>
+<span class="text-5xl sm:text-6xl font-black fs-grad-gold leading-none">$399</span>
+<span class="text-white/50 text-sm pb-1">one-time</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Effectively $1.09/day for your first year — every year after is free.</p>
+<div class="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-1">
+<div class="fs-row">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg>
+<div><b class="text-white">Everything in Scale included</b><div class="text-white/55 text-xs mt-0.5">All 140+ models · agents · memory · knowledge bases</div></div>
+</div>
+<div class="fs-row">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg>
+<div><b class="text-white">Pay once. No renewal.</b><div class="text-white/55 text-xs mt-0.5">One secure payment, never billed again.</div></div>
+</div>
+<div class="fs-row">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg>
+<div><b class="text-white">99 prebuilt AI agents</b><div class="text-white/55 text-xs mt-0.5">Ads, emails, scripts, research — ready to run.</div></div>
+</div>
+<div class="fs-row">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg>
+<div><b class="text-white">VIP AIPU University</b><div class="text-white/55 text-xs mt-0.5">Step-by-step training on every workflow.</div></div>
+</div>
+<div class="fs-row">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg>
+<div><b class="text-white">VIP AIPU Community</b><div class="text-white/55 text-xs mt-0.5">Creators, founders, marketers sharing playbooks.</div></div>
+</div>
+<div class="fs-row">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg>
+<div><b class="text-white">Premium Prompt Vault</b><div class="text-white/55 text-xs mt-0.5">Battle-tested prompts for ads, emails, videos.</div></div>
+</div>
+</div>
+<!-- BONUS callout -->
+<div class="mt-6 p-5 rounded-2xl border border-amber-300/25 bg-amber-500/[0.05]">
+<div class="flex items-center gap-2 mb-2 flex-wrap">
+<span class="fs-pill" style="padding:5px 10px;font-size:10px">★ Bonus · Lifetime exclusive · $497 value</span>
+</div>
+<div class="font-extrabold text-white">Free 1:1 AI Growth Strategy Call</div>
+<p class="text-white/65 text-[13px] mt-1.5 leading-relaxed">Discover how to use AI to automate your business, create new offers, and explore launching your own AI-powered business — mapped out 1-on-1 with our growth team.</p>
+</div>
+<!-- 30 day guarantee inline -->
+<div class="mt-5 flex items-center justify-center">
+<span class="fs-pill-green">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          30-Day Money-Back Guarantee
+        </span>
+</div>
+<a class="fs-cta-gold mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-sm font-extrabold uppercase tracking-[0.16em]" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['lifetime'] ?? '#'); ?>">
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M5 16 L3 8 l5 4 l4-7 l4 7 l5-4 l-2 8z"></path></svg>
+        Secure Lifetime Access
+        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+<p class="mt-3 text-center text-[11px] text-white/55">One-time payment · Lifetime access · 30-day refund · Stripe checkout</p>
+<!-- Payment icons -->
+<div class="mt-4 flex items-center justify-center gap-2.5 opacity-90">
+<span class="inline-flex items-center justify-center w-12 h-7 rounded bg-white/95"><svg height="12" viewbox="0 0 32 12" width="32" xmlns="http://www.w3.org/2000/svg"><text fill="#1A1F71" font-family="Arial Black, sans-serif" font-size="10" font-weight="900" letter-spacing="0.5" text-anchor="middle" x="16" y="10">VISA</text></svg></span>
+<span class="inline-flex items-center justify-center w-12 h-7 rounded bg-white/95"><svg height="12" viewbox="0 0 24 14" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="7" fill="#EB001B" r="5.5"></circle><circle cx="15" cy="7" fill="#F79E1B" fill-opacity="0.9" r="5.5"></circle></svg></span>
+<span class="inline-flex items-center justify-center w-12 h-7 rounded bg-white/95"><svg height="12" viewbox="0 0 32 12" width="32" xmlns="http://www.w3.org/2000/svg"><text fill="#003087" font-family="Arial, sans-serif" font-size="8" font-weight="800" letter-spacing="-0.2" text-anchor="middle" x="16" y="9">Pay<tspan fill="#009CDE">Pal</tspan></text></svg></span>
+<span class="inline-flex items-center justify-center w-12 h-7 rounded bg-white/95"><svg height="12" viewbox="0 0 40 12" width="38" xmlns="http://www.w3.org/2000/svg"><text fill="#635BFF" font-family="Arial, sans-serif" font-size="8" font-weight="800" letter-spacing="0.2" text-anchor="middle" x="20" y="9">stripe</text></svg></span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- $7,378 VALUE STACK                                                   -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]">
+<div class="max-w-5xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-12">
+<div class="fs-eyebrow text-amber-300/85">What you're actually getting</div>
+<h2 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight">
+<span class="fs-grad-gold">$7,378</span> in value. Today: <span class="fs-grad-gold">$399</span>.
+      </h2>
+<p class="mt-4 text-white/65 max-w-2xl mx-auto leading-relaxed">Most platforms charge for each model. With your Lifetime Pass, every line below is included — no upsells, no “upgrade for that” pop-ups, no surprise overage bills.</p>
+</div>
+<div class="fs-card">
+<div class="fs-value-row">
+<span class="fs-value-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m22 8-6 4 6 4V8Z"></path><rect height="12" rx="2" ry="2" width="14" x="2" y="6"></rect></svg></span>
+<div><div class="font-bold text-white">UNLIMITED Video Generation</div><div class="text-white/55 text-xs mt-0.5">Seedance · Kling · Sora 2 · Veo 3.1 · Runway</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$1,188/yr</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(244,114,182,0.10);color:#FBCFE8"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></span>
+<div><div class="font-bold text-white">UNLIMITED Image Generation</div><div class="text-white/55 text-xs mt-0.5">Nano Banana · GPT-Image · Imagen 4 · Flux · Seedream</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$720/yr</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(99,102,241,0.10);color:#A5B4FC"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
+<div><div class="font-bold text-white">UNLIMITED Text &amp; Reasoning</div><div class="text-white/55 text-xs mt-0.5">GPT-5 · Claude 4 · Gemini Pro 3 · Grok · DeepSeek</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$960/yr</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(245,158,11,0.10);color:#FCD34D"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><path d="M12 19v3"></path></svg></span>
+<div><div class="font-bold text-white">Voice Agent &amp; Audio</div><div class="text-white/55 text-xs mt-0.5">ElevenLabs · Fish Audio · Custom voices · Suno · Udio</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$348/yr</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(52,211,153,0.10);color:#6EE7B7"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M12 17v.01"></path><path d="M9 7a3 3 0 0 1 6 0v4H9z"></path></svg></span>
+<div><div class="font-bold text-white">99 Prebuilt AI Agents</div><div class="text-white/55 text-xs mt-0.5">Ads, emails, scripts, research, planning, support, ops</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$1,200</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(139,92,255,0.10);color:#C4B5FD"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"></path></svg></span>
+<div><div class="font-bold text-white">VIP AIPU University</div><div class="text-white/55 text-xs mt-0.5">Step-by-step training: prompting, automation, agent building</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$497</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(236,72,153,0.10);color:#F9A8D4"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+<div><div class="font-bold text-white">VIP AIPU Community</div><div class="text-white/55 text-xs mt-0.5">1,500+ creators, marketers, founders sharing real workflows</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$297/yr</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(99,102,241,0.10);color:#A5B4FC"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21.5 4.5 19 7l-5-5"></path><path d="M2 22l5-5 5 5"></path><path d="M14 2l-2 2"></path><path d="m4 18 16-16"></path></svg></span>
+<div><div class="font-bold text-white flex items-center gap-2">VIP Telegram Inner Circle <span class="fs-plan-tag fs-tag-lifetime">Lifetime only</span></div><div class="text-white/55 text-xs mt-0.5">Private mastermind · 7-figure AI entrepreneurs · networking &amp; custom trainings</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$997/yr</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(244,114,182,0.10);color:#FBCFE8"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+<div><div class="font-bold text-white flex items-center gap-2">Free 1:1 AI Growth Strategy Call <span class="fs-plan-tag fs-tag-lifetime">Lifetime only</span></div><div class="text-white/55 text-xs mt-0.5">Use AI to automate your business, create new offers — mapped 1-on-1.</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$497</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(52,211,153,0.10);color:#6EE7B7"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"></path></svg></span>
+<div><div class="font-bold text-white">Premium Prompt Vault</div><div class="text-white/55 text-xs mt-0.5">1,000+ vetted prompts for ads, content, ops, growth</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$197</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(230,201,122,0.12);color:#F5E1A4"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 15c2.7 0 5-2.3 5-5V6a3 3 0 0 0-6 0v4c0 2.7 2.3 5 5 5z" transform="translate(-2 0)"></path><path d="M5 22h14M9 22v-4M15 22v-4"></path></svg></span>
+<div><div class="font-bold text-white">Founder VIP Badge &amp; Lifetime Priority Support</div><div class="text-white/55 text-xs mt-0.5">VIP queue · same-day reply · founder recognition</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>$197</div>
+</div>
+<div class="fs-value-row">
+<span class="fs-value-icon" style="background:rgba(35,215,255,0.10);color:#67E8F9"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span>
+<div><div class="font-bold text-white">All Future Models &amp; Features</div><div class="text-white/55 text-xs mt-0.5">Every model we ship from now on lands free in your account</div></div>
+<div class="fs-value-amt"><span class="fs-value-amt-lbl">Value</span>∞</div>
+</div>
+<div class="fs-value-row" style="background:rgba(255,255,255,0.03);grid-template-columns: 1fr auto;">
+<div class="font-extrabold text-white text-lg">Total real value</div>
+<div class="font-black text-2xl fs-grad-gold">$7,378</div>
+</div>
+<div class="fs-value-row" style="grid-template-columns: 1fr auto;">
+<div class="font-extrabold text-white text-lg">Your one-time price today</div>
+<div class="font-black text-3xl text-amber-300">$399</div>
+</div>
+</div>
+<div class="text-center mt-8 text-white/70 text-sm">That's a <b class="text-emerald-300">94% discount</b>, no subscription, no renewals, no surprise upsells — ever.</div>
+<div class="text-center mt-6">
+<a class="fs-cta-gold inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-4 text-sm font-extrabold uppercase tracking-[0.16em]" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['lifetime'] ?? '#'); ?>">
+        Claim the $7,378 stack for $399
+        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- PRICING — 3 PLANS                                                    -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]" data-or-anchor="plans" id="pricing">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="flex items-center justify-center mb-10">
+<div class="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/[0.04] p-1 text-sm font-bold">
+<button aria-selected="true" class="rounded-xl px-5 py-2.5 transition-all bg-white text-slate-950" data-billing="monthly" style="box-shadow:0 8px 30px -12px rgba(255,255,255,0.65)">Monthly</button>
+<button aria-selected="false" class="rounded-xl px-5 py-2.5 transition-all text-white/70 hover:text-white inline-flex items-center gap-2" data-billing="yearly">Yearly <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-extrabold tracking-wider">SAVE UP TO 50%</span></button>
+</div>
+</div>
+<div class="grid lg:grid-cols-3 gap-6">
+<!-- Creator -->
+<div class="fs-card p-7" data-plan="creator">
+<div class="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] font-bold text-white/55">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg>
+          Solo
+        </div>
+<h3 class="mt-2 text-2xl font-extrabold tracking-tight">Creator</h3>
+<p class="mt-2 text-white/60 text-sm leading-relaxed">One workspace. Every premium AI model. Zero usage limits. Built for solo creators who want to ship faster.</p>
+<div class="mt-5 flex items-center gap-3">
+<span class="fs-strike" data-strike="">$29/mo</span>
+<span class="fs-save" data-save="">SAVE 48%</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-5xl font-black text-white" data-price="">$14.99</span>
+<span class="text-white/55 text-sm" data-period="">/mo</span>
+</div>
+<p class="mt-2 text-xs text-white/45" data-billing-note="">Flexible monthly billing. Cancel anytime.</p>
+<div class="mt-6 space-y-3 text-sm">
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white">AI Image &amp; Video Generation</b><div class="text-white/55 text-xs mt-0.5">SeeDance 2.0 · Veo 3.1 · Kling · Nano Banana · GPT Image 2 · Imagen 4 · Flux</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white">Unlimited Text AI Usage</b><div class="text-white/55 text-xs mt-0.5">GPT-5 · Claude 4 · Gemini Pro 3 · Grok · DeepSeek · Llama · Mistral · Qwen</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white">140+ AI Models &amp; Tools</b><div class="text-white/55 text-xs mt-0.5">One dashboard for text, image, video, voice, music, agents, automation.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white">Voice &amp; Music Generation</b><div class="text-white/55 text-xs mt-0.5">ElevenLabs · Fish Audio · Suno · Udio</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white">Memory &amp; Knowledge Bases</b><div class="text-white/55 text-xs mt-0.5">Persistent context + upload up to 50k PDFs per workspace.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">99 Prebuilt AI Agents <span class="fs-plan-tag fs-tag-creator">New</span></b><div class="text-white/55 text-xs mt-0.5">Ready-made agents for ads, emails, scripts, research, content.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">VIP AIPU University <span class="fs-plan-tag fs-tag-creator">New</span></b><div class="text-white/55 text-xs mt-0.5">Step-by-step training on prompting, automation, AI workflows.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">VIP AIPU Community <span class="fs-plan-tag fs-tag-creator">New</span></b><div class="text-white/55 text-xs mt-0.5">Join 1,500+ creators sharing AI workflows and real client wins.</div></div></div>
+</div>
+<div class="mt-6 pt-5 border-t border-white/[0.06]">
+<div class="text-[10px] uppercase tracking-[0.18em] font-bold text-white/45 mb-1.5">Best for</div>
+<p class="text-white/60 text-sm leading-relaxed">Solo builders, creators, and founders who want one AI workspace that remembers.</p>
+</div>
+<a class="fs-cta-ghost mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['creatormonthly'] ?? '#'); ?>">
+<span data-cta-label="">Start Creating — $14.99/mo</span>
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+<div class="mt-3 flex items-center justify-center gap-4 text-[11px] text-white/50">
+<span class="inline-flex items-center gap-1"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Secure checkout</span>
+<span class="inline-flex items-center gap-1"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Cancel anytime</span>
+</div>
+</div>
+<!-- Studio (Most Popular) -->
+<div class="fs-card fs-card-violet p-7 relative" data-plan="studio">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="fs-badge-pop">★ Most Popular</span></div>
+<div class="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] font-bold text-violet-300/85">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Team · Up to 5 users
+        </div>
+<h3 class="mt-2 text-2xl font-extrabold tracking-tight">Studio</h3>
+<p class="mt-2 text-white/60 text-sm leading-relaxed">Replace 5 separate logins with one team workspace. Shared agents, shared memory, 2× faster output.</p>
+<div class="mt-5 flex items-center gap-3">
+<span class="fs-strike" data-strike="">$59/mo</span>
+<span class="fs-save" data-save="">SAVE 49%</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-5xl font-black text-white" data-price="">$29.99</span>
+<span class="text-white/55 text-sm" data-period="">/mo</span>
+</div>
+<p class="mt-2 text-xs text-white/45" data-billing-note="">Flexible monthly billing. Cancel anytime. No per-seat contracts.</p>
+<div class="mt-5 flex items-center gap-2 p-3 rounded-xl border border-violet-400/25 bg-violet-500/[0.06]">
+<svg fill="none" height="14" stroke="#A78BFA" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M20 6 9 17l-5-5"></path></svg>
+<span class="text-[12px] font-extrabold uppercase tracking-wider text-violet-200">Everything from Creator plan included</span>
+</div>
+<div class="mt-4 space-y-3 text-sm">
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">99 Prebuilt AI Bots <span class="fs-plan-tag fs-tag-studio">Team</span></b><div class="text-white/55 text-xs mt-0.5">Deploy ad bots, email bots, scriptwriters, researchers, content engines — share across your team.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">2× Faster Generation <span class="fs-plan-tag fs-tag-studio">Faster</span></b><div class="text-white/55 text-xs mt-0.5">Priority generation queue — images, videos, scripts ship in half the time.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">Up to 5 team seats <span class="fs-plan-tag fs-tag-studio">Team</span></b><div class="text-white/55 text-xs mt-0.5">Shared workspace, agents, memory &amp; knowledge bases across your team.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">Admin controls &amp; roles <span class="fs-plan-tag fs-tag-studio">Team</span></b><div class="text-white/55 text-xs mt-0.5">Invite, manage, remove teammates in one click.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">Priority email support <span class="fs-plan-tag fs-tag-studio">Team</span></b><div class="text-white/55 text-xs mt-0.5">Real humans, real answers — under 4 business hours.</div></div></div>
+</div>
+<!-- Studio testimonial -->
+<div class="mt-5 p-4 rounded-2xl border border-white/[0.08] bg-white/[0.025]">
+<div class="flex items-start gap-3">
+<span class="fs-avatar fs-avatar-1">SK</span>
+<div>
+<p class="text-white/85 text-sm italic leading-relaxed">"5 of us share one Studio plan. We replaced ChatGPT Teams + Midjourney + ElevenLabs."</p>
+<div class="text-white/55 text-[12px] mt-1.5">— Sarah K., Head of Marketing · 4-person team</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-5 border-t border-white/[0.06]">
+<div class="text-[10px] uppercase tracking-[0.18em] font-bold text-white/45 mb-1.5">Best for</div>
+<p class="text-white/60 text-sm leading-relaxed">Small teams running daily workflows and sharing agents + knowledge bases.</p>
+</div>
+<a class="fs-cta-violet mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-extrabold" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['studiomonthly'] ?? '#'); ?>">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M5 16 L3 8 l5 4 l4-7 l4 7 l5-4 l-2 8z"></path></svg>
+<span data-cta-label="">Equip My Team — $29.99/mo</span>
+</a>
+<div class="mt-3 flex items-center justify-center gap-4 text-[11px] text-white/50">
+<span class="inline-flex items-center gap-1"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Secure checkout</span>
+<span class="inline-flex items-center gap-1"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Cancel anytime</span>
+</div>
+</div>
+<!-- Scale -->
+<div class="fs-card p-7" data-plan="scale">
+<div class="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] font-bold text-pink-300/85">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Agency · Up to 10 users
+        </div>
+<h3 class="mt-2 text-2xl font-extrabold tracking-tight">Scale</h3>
+<p class="mt-2 text-white/60 text-sm leading-relaxed">Bill clients for AI work without per-seat overhead. 10 seats, multi-brand workspaces, priority everything — plus the Launch Masterclass bonus.</p>
+<div class="mt-5 flex items-center gap-3">
+<span class="fs-strike" data-strike="">$199/mo</span>
+<span class="fs-save" data-save="">SAVE 50%</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-5xl font-black text-white" data-price="">$99.99</span>
+<span class="text-white/55 text-sm" data-period="">/mo</span>
+</div>
+<p class="mt-2 text-xs text-white/45" data-billing-note="">Replaces ~$2,000/mo in standalone tool subscriptions.</p>
+<div class="mt-5 flex items-center gap-2 p-3 rounded-xl border border-amber-300/25 bg-amber-500/[0.05]">
+<svg fill="none" height="14" stroke="#F5E1A4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M20 6 9 17l-5-5"></path></svg>
+<span class="text-[12px] font-extrabold uppercase tracking-wider text-amber-200">Everything from Studio plan included</span>
+</div>
+<div class="mt-4 space-y-3 text-sm">
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">Up to 10 team users <span class="fs-plan-tag fs-tag-scale">Agency</span></b><div class="text-white/55 text-xs mt-0.5">2× the seats of Studio — built for agencies running multiple clients.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">Multi-brand workspaces <span class="fs-plan-tag fs-tag-scale">Agency</span></b><div class="text-white/55 text-xs mt-0.5">Separate clients, brands, projects with isolated memory.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">Priority chat &amp; email support <span class="fs-plan-tag fs-tag-scale">Agency</span></b><div class="text-white/55 text-xs mt-0.5">Average reply &lt; 1 business hour.</div></div></div>
+<div class="flex items-start gap-2.5"><svg class="mt-0.5 flex-none" fill="none" height="16" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><path d="M20 6 9 17l-5-5"></path></svg><div><b class="text-white flex items-center gap-2">1-on-1 onboarding session <span class="fs-plan-tag fs-tag-scale">Agency</span></b><div class="text-white/55 text-xs mt-0.5">Setup call to launch your team in &lt; 24 hours.</div></div></div>
+</div>
+<!-- Scale Masterclass callout -->
+<div class="mt-5 p-4 rounded-2xl border border-pink-400/25 bg-pink-500/[0.05]">
+<div class="flex items-center gap-2 mb-1.5"><span class="fs-plan-tag fs-tag-scale">Scale Exclusive</span></div>
+<div class="font-extrabold text-white">Private AI Platform Launch Masterclass</div>
+<p class="text-white/65 text-[13px] mt-1 leading-relaxed">Exclusive training on building an AI-powered business, creating an offer, and launching your own branded platform.</p>
+</div>
+<!-- Scale testimonial -->
+<div class="mt-5 p-4 rounded-2xl border border-white/[0.08] bg-white/[0.025]">
+<div class="flex items-start gap-3">
+<span class="fs-avatar fs-avatar-3">JD</span>
+<div>
+<p class="text-white/85 text-sm italic leading-relaxed">"Manage 8 client brands inside Scale. Cancelled $1,840/mo in legacy tools."</p>
+<div class="text-white/55 text-[12px] mt-1.5">— Jordan D., Agency CEO · 9-person team</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-5 border-t border-white/[0.06]">
+<div class="text-[10px] uppercase tracking-[0.18em] font-bold text-white/45 mb-1.5">Best for</div>
+<p class="text-white/60 text-sm leading-relaxed">Agencies and operators managing multiple workflows, clients, or departments.</p>
+</div>
+<a class="fs-cta-amber mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-extrabold" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['scalemonthly'] ?? '#'); ?>">
+<span data-cta-label="">Power My Agency — $99.99/mo</span>
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+<div class="mt-3 flex items-center justify-center gap-4 text-[11px] text-white/50">
+<span class="inline-flex items-center gap-1"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Secure checkout</span>
+<span class="inline-flex items-center gap-1"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Cancel anytime</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- GUARANTEE                                                            -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]">
+<div class="max-w-5xl mx-auto px-4 sm:px-6">
+<div class="fs-card fs-card-gold p-8 sm:p-12 grid sm:grid-cols-[180px_1fr_auto] gap-8 items-center">
+<div class="text-center">
+<div class="fs-guarantee-ring">
+<div class="text-center">
+<div class="text-[9px] uppercase tracking-[0.18em] text-amber-300/85 font-bold">30-Day</div>
+<div class="text-2xl font-black fs-grad-gold leading-none my-0.5">100%</div>
+<div class="text-[9px] uppercase tracking-[0.18em] text-amber-300/85 font-bold leading-tight">Money-Back<br/>Guarantee</div>
+</div>
+</div>
+</div>
+<div>
+<div class="fs-eyebrow text-amber-300/85">Try Lifetime risk-free</div>
+<h2 class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">If you don't love it in 30 days, we'll refund 100%.</h2>
+<p class="mt-3 text-white/70 leading-relaxed">No questions. No forms. No “let me transfer you to a manager.” Just email us inside 30 days and we'll send every penny back. <b class="text-white">Available exclusively on Lifetime VIP.</b></p>
+<div class="mt-5 grid sm:grid-cols-3 gap-3 text-xs">
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3"><b class="block text-white">No questions asked</b><span class="text-white/55">One-line email is enough.</span></div>
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3"><b class="block text-white">Refunded in 48 hours</b><span class="text-white/55">Direct to your original payment.</span></div>
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3"><b class="block text-white">Keep your work</b><span class="text-white/55">Export everything you made.</span></div>
+</div>
+</div>
+<div class="text-center sm:text-right">
+<a class="fs-cta-gold inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-sm font-extrabold uppercase tracking-[0.16em] whitespace-nowrap" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['lifetime'] ?? '#'); ?>">
+          Claim VIP Lifetime
+          <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- SAVINGS CALCULATOR (slider)                                          -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="fs-card p-7 sm:p-10">
+<div class="grid lg:grid-cols-2 gap-10 items-start">
+<div>
+<div class="fs-eyebrow text-emerald-300/85">Better than free</div>
+<h2 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight leading-tight">Replaces <span class="fs-grad-violet">$120+/mo</span> of subscriptions.</h2>
+<p class="mt-4 text-white/70 leading-relaxed">Drag the slider to estimate your real-world savings. Most creators we surveyed replace ChatGPT Plus, Midjourney, Veo, ElevenLabs, Suno, Canva Pro, and a hosting tool — with one $14.99/mo Creator plan.</p>
+<div class="mt-7">
+<div class="flex items-center justify-between text-sm mb-2">
+<span class="text-white/55 text-[11px] uppercase tracking-wider font-bold">Your current tool spend</span>
+<span class="font-extrabold text-white"><span data-fs-slider-val="">$120</span><span class="text-white/45 font-bold">/mo</span></span>
+</div>
+<input aria-label="Monthly subscription spend" class="fs-slider w-full" data-fs-slider="" max="2000" min="40" step="10" type="range" value="120"/>
+<div class="mt-2 flex justify-between text-[11px] text-white/45 font-semibold tabular-nums">
+<span>$40</span><span>$500</span><span>$1,000</span><span>$2,000</span>
+</div>
+</div>
+<div class="mt-7 flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><path d="M20 6 9 17l-5-5"></path></svg> ChatGPT Plus · saved</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><path d="M20 6 9 17l-5-5"></path></svg> Midjourney · saved</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><path d="M20 6 9 17l-5-5"></path></svg> Veo / Kling · saved</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><path d="M20 6 9 17l-5-5"></path></svg> ElevenLabs · saved</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><path d="M20 6 9 17l-5-5"></path></svg> Suno / Udio · saved</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><path d="M20 6 9 17l-5-5"></path></svg> Canva Pro · saved</span>
+</div>
+</div>
+<div class="rounded-2xl border border-emerald-500/25 bg-emerald-500/[0.04] p-6 sm:p-8">
+<div class="grid sm:grid-cols-2 gap-5">
+<div>
+<div class="fs-eyebrow text-white/55">AIPU Creator</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-3xl font-black text-white">$14.99</span><span class="text-white/55 text-sm">/mo</span>
+</div>
+</div>
+<div>
+<div class="fs-eyebrow text-emerald-300/85">You save</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-3xl font-black text-emerald-300" data-fs-save-amt="">$105.01</span><span class="text-white/55 text-sm">/mo</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-emerald-500/20">
+<div class="fs-eyebrow text-emerald-300/85">Annual savings with Creator</div>
+<div class="mt-2 text-5xl sm:text-6xl font-black text-emerald-300 tabular-nums" data-fs-annual="">$1,260</div>
+</div>
+<p class="mt-5 text-sm text-white/65 leading-relaxed">Buy <b class="text-white">Lifetime ($399)</b> and your <b class="text-emerald-300">break-even is &lt; 4 months</b>. Every month after is pure profit.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- "EVERYTHING. UNLOCKED." FEATURES                                     -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-12">
+<div class="fs-eyebrow text-violet-300/85">One workspace · 140+ models</div>
+<h2 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight"><span class="fs-grad-violet">Everything.</span> Unlocked.</h2>
+<p class="mt-4 text-white/65 max-w-2xl mx-auto leading-relaxed">Stop juggling 8 subscriptions. Open one tab, ask one question, get answers from the model best suited for the job — including the ones not even released yet.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-violet-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#C4B5FD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m22 8-6 4 6 4V8Z"></path><rect height="12" rx="2" ry="2" width="14" x="2" y="6"></rect></svg></div>
+<b class="block text-white">All major video models</b>
+<span class="text-white/55 text-sm mt-1 block">Veo 3.1, Kling, Sora 2, Seedance, Runway — all in one workflow.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-pink-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#FBCFE8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></div>
+<b class="block text-white">Image models for everything</b>
+<span class="text-white/55 text-sm mt-1 block">Nano Banana, GPT-Image, Imagen 4, Flux, Seedream — native.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-indigo-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#A5B4FC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+<b class="block text-white">Text models without limits</b>
+<span class="text-white/55 text-sm mt-1 block">GPT-5, Claude 4, Gemini Pro 3, Grok, DeepSeek — unlimited.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-amber-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#FCD34D" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><path d="M12 19v3"></path></svg></div>
+<b class="block text-white">Voice &amp; music studios</b>
+<span class="text-white/55 text-sm mt-1 block">ElevenLabs, Fish Audio, Suno, Udio — ship voiceovers in minutes.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#6EE7B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 14.14 14.14"></path></svg></div>
+<b class="block text-white">99 prebuilt AI agents</b>
+<span class="text-white/55 text-sm mt-1 block">Ads, emails, research, content, ops — ready out of the box.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-cyan-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#67E8F9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"></path></svg></div>
+<b class="block text-white">VIP AIPU University</b>
+<span class="text-white/55 text-sm mt-1 block">Step-by-step training. Get production-ready in a weekend.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-rose-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#FDA4AF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+<b class="block text-white">VIP community</b>
+<span class="text-white/55 text-sm mt-1 block">1,500+ creators trading workflows, leads, and live use-cases.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-fuchsia-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#F0ABFC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"></path></svg></div>
+<b class="block text-white">Premium prompt vault</b>
+<span class="text-white/55 text-sm mt-1 block">1,000+ tested prompts for ads, emails, content &amp; growth.</span>
+</div>
+<div class="fs-grid-card">
+<div class="w-10 h-10 rounded-lg bg-amber-500/15 inline-flex items-center justify-center mb-3"><svg fill="none" height="18" stroke="#FCD34D" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg></div>
+<b class="block text-white">Future-proof access</b>
+<span class="text-white/55 text-sm mt-1 block">Every model we add lands free in your account, forever.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- HONEST REASONS                                                       -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]">
+<div class="max-w-5xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-12">
+<div class="fs-eyebrow text-white/55">Honest reasons</div>
+<h2 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight">Why creators switch — and stay.</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-5">
+<div class="fs-card p-7">
+<div class="w-10 h-10 rounded-lg bg-violet-500/15 inline-flex items-center justify-center mb-4 text-violet-300 font-black">1</div>
+<h3 class="text-xl font-extrabold text-white">One tab, every model.</h3>
+<p class="mt-2 text-white/65 leading-relaxed text-sm">Stop alt-tabbing between ChatGPT, Midjourney, Veo, ElevenLabs, Suno, and your hosting tool. Open AIPU, pick the model that fits, ship.</p>
+</div>
+<div class="fs-card p-7">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/15 inline-flex items-center justify-center mb-4 text-emerald-300 font-black">2</div>
+<h3 class="text-xl font-extrabold text-white">A fraction of the cost.</h3>
+<p class="mt-2 text-white/65 leading-relaxed text-sm">Most members replace $120–$2,000/mo in standalone subscriptions. Your Lifetime pass pays itself off before the year is out.</p>
+</div>
+<div class="fs-card p-7">
+<div class="w-10 h-10 rounded-lg bg-pink-500/15 inline-flex items-center justify-center mb-4 text-pink-300 font-black">3</div>
+<h3 class="text-xl font-extrabold text-white">Same output. Higher quality.</h3>
+<p class="mt-2 text-white/65 leading-relaxed text-sm">Frontier models out of the box. Multi-agent orchestration. Brand voice that doesn't drift. Your work looks like it cost $10k to make.</p>
+</div>
+<div class="fs-card p-7">
+<div class="w-10 h-10 rounded-lg bg-amber-500/15 inline-flex items-center justify-center mb-4 text-amber-300 font-black">4</div>
+<h3 class="text-xl font-extrabold text-white">Future-proof.</h3>
+<p class="mt-2 text-white/65 leading-relaxed text-sm">When a new flagship model drops (and they're dropping every quarter), it lands in your account — no upsell, no upcharge, no "upgrade for that" pop-up.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- VERIFIED BUYER REVIEWS                                               -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-10">
+<div class="fs-divider-text"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M20 6 9 17l-5-5"></path></svg> Verified buyer reviews</div>
+<h2 class="mt-4 text-3xl sm:text-4xl font-black tracking-tight">What creators are saying.</h2>
+<div class="mt-3 inline-flex items-center gap-2 text-sm text-white/70">
+<span class="fs-star inline-flex">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</span>
+<span><b class="text-white">4.9 / 5</b> from <b class="text-white">1,287</b> verified reviews</span>
+</div>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="fs-card p-5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="fs-avatar fs-avatar-1">AM</span>
+<div><div class="font-bold text-white text-sm">Alex Morgan</div><div class="text-white/55 text-xs">Content creator · 47k followers</div></div>
+</div>
+<span class="fs-plan-tag fs-tag-lifetime">Lifetime</span>
+</div>
+<div class="fs-star inline-flex mt-3">
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</div>
+<p class="text-white/80 text-[13.5px] leading-relaxed mt-3">"I bought Lifetime in February. Already saved more than $2,400 in tool subscriptions. The 99 agents library alone is worth the price."</p>
+<div class="mt-3 inline-flex items-center gap-1.5 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M20 6 9 17l-5-5"></path></svg> Verified · 4 months on Lifetime</div>
+</div>
+<div class="fs-card p-5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="fs-avatar fs-avatar-2">TN</span>
+<div><div class="font-bold text-white text-sm">Tara N.</div><div class="text-white/55 text-xs">Founder · 2-person team</div></div>
+</div>
+<span class="fs-plan-tag fs-tag-studio">Studio</span>
+</div>
+<div class="fs-star inline-flex mt-3">
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</div>
+<p class="text-white/80 text-[13.5px] leading-relaxed mt-3">"My co-founder and I share Studio. The community alone has been worth every dollar — we found two clients in there in the first month."</p>
+<div class="mt-3 inline-flex items-center gap-1.5 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M20 6 9 17l-5-5"></path></svg> Verified · 3 months on Studio</div>
+</div>
+<div class="fs-card p-5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="fs-avatar fs-avatar-3">RP</span>
+<div><div class="font-bold text-white text-sm">Ryan P.</div><div class="text-white/55 text-xs">Agency owner · 7 clients</div></div>
+</div>
+<span class="fs-plan-tag fs-tag-scale">Scale</span>
+</div>
+<div class="fs-star inline-flex mt-3">
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</div>
+<p class="text-white/80 text-[13.5px] leading-relaxed mt-3">"Scale gave us 10 seats + multi-brand workspaces. We bill clients for the agents we set up — Scale paid for itself the first week."</p>
+<div class="mt-3 inline-flex items-center gap-1.5 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M20 6 9 17l-5-5"></path></svg> Verified · 5 months on Scale</div>
+</div>
+<div class="fs-card p-5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="fs-avatar fs-avatar-4">LC</span>
+<div><div class="font-bold text-white text-sm">Lena C.</div><div class="text-white/55 text-xs">Solo marketer</div></div>
+</div>
+<span class="fs-plan-tag fs-tag-lifetime">Lifetime</span>
+</div>
+<div class="fs-star inline-flex mt-3">
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</div>
+<p class="text-white/80 text-[13.5px] leading-relaxed mt-3">"The VIP AI University course was the unlock. Finished it in two weekends and landed a $4k automation contract — Lifetime paid itself off in week 3."</p>
+<div class="mt-3 inline-flex items-center gap-1.5 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M20 6 9 17l-5-5"></path></svg> Verified · 7 weeks on Lifetime</div>
+</div>
+<div class="fs-card p-5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="fs-avatar fs-avatar-5">DK</span>
+<div><div class="font-bold text-white text-sm">Diego K.</div><div class="text-white/55 text-xs">Indie filmmaker</div></div>
+</div>
+<span class="fs-plan-tag fs-tag-creator">Creator</span>
+</div>
+<div class="fs-star inline-flex mt-3">
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</div>
+<p class="text-white/80 text-[13.5px] leading-relaxed mt-3">"Veo, Kling, ElevenLabs, Suno — they're all here in one tab. Cut my pre-production time in half."</p>
+<div class="mt-3 inline-flex items-center gap-1.5 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M20 6 9 17l-5-5"></path></svg> Verified · 2 months on Creator</div>
+</div>
+<div class="fs-card p-5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="fs-avatar fs-avatar-6">PH</span>
+<div><div class="font-bold text-white text-sm">Priya H.</div><div class="text-white/55 text-xs">Course creator</div></div>
+</div>
+<span class="fs-plan-tag fs-tag-lifetime">Lifetime</span>
+</div>
+<div class="fs-star inline-flex mt-3">
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+<svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><path d="M3 12 7 8 5 2 12 5 19 2 17 8 21 12 15 14 12 22 9 14z"></path></svg>
+</div>
+<p class="text-white/80 text-[13.5px] leading-relaxed mt-3">"Was nervous about $399 upfront — the 30-day refund made it a no-brainer. Stayed because of the community."</p>
+<div class="mt-3 inline-flex items-center gap-1.5 text-emerald-300 text-[11px] font-semibold"><svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M20 6 9 17l-5-5"></path></svg> Verified · 5 months on Lifetime</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- ENTERPRISE INFRASTRUCTURE                                            -->
+<!-- ==================================================================== -->
+<section class="relative py-16 border-t border-white/[0.06]">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="fs-card p-6 sm:p-8 grid lg:grid-cols-[1fr_auto] gap-6 items-center">
+<div>
+<div class="fs-eyebrow text-white/55">Enterprise-grade infrastructure</div>
+<p class="mt-2 text-white/70 leading-relaxed text-sm sm:text-base max-w-2xl">Your payment, data, and content are protected by the same standards used by banks and Fortune 500 SaaS.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3 text-center">
+<div class="w-8 h-8 rounded-full bg-emerald-500/15 inline-flex items-center justify-center mb-1.5"><svg fill="none" height="14" stroke="#6EE7B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+<b class="block text-white text-sm">256-bit SSL</b>
+<span class="text-white/55 text-[11px]">Bank-grade encryption</span>
+</div>
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3 text-center">
+<div class="w-8 h-8 rounded-full bg-indigo-500/15 inline-flex items-center justify-center mb-1.5"><svg fill="none" height="14" stroke="#A5B4FC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="12" rx="2" width="20" x="2" y="6"></rect><path d="M2 10h20"></path></svg></div>
+<b class="block text-white text-sm">Stripe Checkout</b>
+<span class="text-white/55 text-[11px]">PCI DSS Level 1</span>
+</div>
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3 text-center">
+<div class="w-8 h-8 rounded-full bg-violet-500/15 inline-flex items-center justify-center mb-1.5"><svg fill="none" height="14" stroke="#C4B5FD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+<b class="block text-white text-sm">GDPR · CCPA</b>
+<span class="text-white/55 text-[11px]">Privacy compliant</span>
+</div>
+<div class="rounded-xl border border-white/10 bg-white/[0.04] p-3 text-center">
+<div class="w-8 h-8 rounded-full bg-amber-500/15 inline-flex items-center justify-center mb-1.5"><svg fill="none" height="14" stroke="#F5E1A4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg></div>
+<b class="block text-white text-sm">SOC 2 Type II</b>
+<span class="text-white/55 text-[11px]">Audit certified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- FAQ                                                                  -->
+<!-- ==================================================================== -->
+<section class="relative py-20 border-t border-white/[0.06]" id="faq">
+<div class="max-w-3xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-10">
+<div class="fs-eyebrow text-white/55">Frequently asked</div>
+<h2 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight">Quick answers before you buy.</h2>
+</div>
+<div class="space-y-3">
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>What if I don't love it? Can I get a refund?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">Yes. Lifetime VIP is backed by a 30-day unconditional money-back guarantee. Email <a class="text-amber-300 underline" href="mailto:support@aiprofessionalsuniversity.com">support@aiprofessionalsuniversity.com</a> within 30 days and we'll refund 100% — no questions, no forms. Monthly plans (Creator, Studio, Scale) can be canceled in one click and you won't be billed again.</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>Is Lifetime really lifetime? What about new models?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">Yes — one payment, forever. Every future AI model and tool we ship (text, image, video, voice, music, reasoning, agents) lands in your Lifetime account automatically at no extra cost. Your $399 price is locked. You will never be charged again.</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>Why is Lifetime $399 today? Will the price go up?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">We're seeding the platform with founding members. The regular Lifetime price is $1,900. At $399 today (80% off) we're capping the founding batch at 200 spots. Once those are gone, Lifetime resets to $699, then to $1,900. Lock today's price now — it can't go back.</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>What's the difference between Creator, Studio, and Scale?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">All three plans include unlimited access to 140+ AI models, 99 prebuilt agents, VIP AIPU University, VIP community, memory and knowledge bases. The difference is team size: <b class="text-white">Creator ($14.99/mo)</b> is one solo seat; <b class="text-white">Studio ($29.99/mo)</b> adds 5 team seats with shared workspaces, admin controls, and priority email support (~$5.99/user); <b class="text-white">Scale ($99.99/mo)</b> doubles that to 10 seats with multi-brand workspaces, priority chat support, and a 1-on-1 onboarding session (~$9.99/user).</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>Are there really no usage limits or hidden fees?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">Text models (GPT-5, Claude 4, Gemini Pro 3, DeepSeek, Grok and others) are truly unlimited on every plan — no per-message, per-token, or per-minute fees. Image, video, voice, and music generation use generous per-month credits sized for daily workflows. No surprise overage charges.</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>Is my data and payment information safe?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">Yes. We never see or store card data — payments are processed by Stripe (PCI DSS Level 1, the highest standard). All traffic uses 256-bit SSL encryption. We are GDPR and CCPA compliant. You can delete your data at any time from the dashboard or by emailing support.</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>Can I start with monthly and upgrade to Lifetime later?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">Yes — but the Lifetime price is currently $399 (regular $1,900) and will increase to $699 once the founding spots sell out. Locking it in today saves you 27+ monthly subscription payments and protects you from future price increases.</p>
+</details>
+<details class="faq-q fs-card p-5">
+<summary class="flex items-center justify-between gap-4 font-bold">
+<span>What if I don't know how to use AI tools yet?</span>
+<svg class="faq-chev flex-none" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<p class="mt-3 text-sm text-white/70 leading-relaxed">You're covered. Every plan includes <b class="text-white">VIP AIPU University</b> — step-by-step training on AI tools, prompting, content creation, automation, and business workflows. Plus 99 prebuilt agents are ready out of the box, so you can produce real results on day one without writing a single prompt.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- FINAL CTA                                                            -->
+<!-- ==================================================================== -->
+<section class="relative py-24 border-t border-white/[0.06]">
+<div class="fs-bg-glow" style="bottom:0;left:30%;width:600px;height:400px;background:rgba(230,201,122,0.18);"></div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+<div class="fs-eyebrow text-amber-300/85">Last chance — today's price</div>
+<h2 class="mt-3 text-3xl sm:text-5xl font-black tracking-tight leading-[1.05]">
+      Skip 27 months of monthly bills.<br/>
+      Lock in <span class="fs-grad-gold">Lifetime for $399</span>.
+    </h2>
+<p class="mt-5 text-white/70 max-w-xl mx-auto leading-relaxed">$1,900 value · 80% off today · 30-day money-back guarantee · every future model included.</p>
+<div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
+<a class="fs-cta-gold inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-4 text-sm font-extrabold uppercase tracking-[0.16em]" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['lifetime'] ?? '#'); ?>">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M5 16 L3 8 l5 4 l4-7 l4 7 l5-4 l-2 8z"></path></svg>
+        Claim VIP Lifetime — $399 Once
+      </a>
+<a class="fs-cta-ghost inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-4 text-sm font-bold" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['creatormonthly'] ?? '#'); ?>">
+        Not ready? Start monthly from $14.99
+      </a>
+</div>
+<div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-white/55">
+<span class="inline-flex items-center gap-1"><svg fill="none" height="12" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="12"><path d="M20 6 9 17l-5-5"></path></svg>30-Day Money-Back Guarantee</span>
+<span class="inline-flex items-center gap-1"><svg fill="none" height="12" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="12"><path d="M20 6 9 17l-5-5"></path></svg>Secure Stripe Checkout</span>
+<span class="inline-flex items-center gap-1"><svg fill="none" height="12" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="12"><path d="M20 6 9 17l-5-5"></path></svg>1,500+ creators trust AIPU</span>
+<span class="inline-flex items-center gap-1"><svg fill="none" height="12" stroke="#34D399" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="12"><path d="M20 6 9 17l-5-5"></path></svg>SSL encrypted · PCI compliant</span>
+</div>
+</div>
+</section>
+<!-- ==================================================================== -->
+<!-- STICKY BOTTOM BAR                                                    -->
+<!-- ==================================================================== -->
+<div aria-hidden="true" class="fs-sticky-bar" data-fs-sticky="">
+<div class="fs-sticky-inner">
+<span aria-hidden="true" class="fs-sticky-crown">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M5 16 L3 8 l5 4 l4-7 l4 7 l5-4 l-2 8z"></path></svg>
+</span>
+<div class="fs-sticky-text">
+<span class="text-amber-300 font-extrabold tracking-wider text-[10px] uppercase">Flash Sale · Lifetime Offer</span><br class="sm:hidden"/>
+<span class="fs-strike">$1,900</span> <b>$399</b> <span class="text-white/50">· 80% off</span>
+</div>
+<a class="fs-cta-gold inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.16em] flex-none" data-cta="" href="<?= htmlspecialchars($__kk_offer_links['lifetime'] ?? '#'); ?>">
+      Claim Lifetime
+      <svg fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="11"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+<button aria-label="Dismiss" class="fs-sticky-dismiss" data-fs-sticky-close="" type="button">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+</button>
+</div>
+</div>
+<!-- ==================================================================== -->
+<!-- LIVE ACTIVITY TOAST (rotating)                                       -->
+<!-- ==================================================================== -->
+<div aria-live="polite" class="fs-toast" data-fs-toast="" role="status">
+<span class="fs-toast-dot"></span>
+<div class="text-[12px] leading-tight">
+<div class="text-white font-semibold" data-fs-toast-name="">Tyler from São Paulo, BR</div>
+<div class="text-white/55" data-fs-toast-action="">started Creator · 4 min ago</div>
+</div>
+</div>
+<script>
+(function () {
+  /* ============================================================
+     PLAN SWITCHER  (monthly / yearly)
+     ============================================================ */
+  var PLANS = {
+    creator: {
+      monthly: { strike: '$29/mo', price: '$14.99', period: '/mo', save: 'SAVE 48%', note: 'Flexible monthly billing. Cancel anytime.', token: 'creatormonthly', cta: 'Start Creating — $14.99/mo' },
+      yearly:  { strike: '$348/yr', price: '$99',   period: '/yr', save: 'SAVE 49%', note: 'Billed annually. Cancel anytime.',           token: 'creatoryearly',  cta: 'Start Creating — $99/yr' }
+    },
+    studio: {
+      monthly: { strike: '$59/mo',  price: '$29.99', period: '/mo', save: 'SAVE 49%', note: 'Flexible monthly billing. No per-seat contracts.', token: 'studiomonthly', cta: 'Equip My Team — $29.99/mo' },
+      yearly:  { strike: '$708/yr', price: '$359',   period: '/yr', save: 'SAVE 49%', note: 'Billed annually. Cancel anytime.',                token: 'studioyearly',  cta: 'Equip My Team — $359/yr' }
+    },
+    scale: {
+      monthly: { strike: '$199/mo',   price: '$99.99', period: '/mo', save: 'SAVE 50%', note: 'Replaces ~$2,000/mo in standalone tools.', token: 'scalemonthly', cta: 'Power My Agency — $99.99/mo' },
+      yearly:  { strike: '$2,388/yr', price: '$1,199', period: '/yr', save: 'SAVE 50%', note: 'Billed annually. Cancel anytime.',           token: 'scaleyearly',  cta: 'Power My Agency — $1,199/yr' }
+    }
+  };
+
+  var toggleBtns = document.querySelectorAll('[data-billing]');
+  function checkoutUrl(token) { return ((window.__KK_OFFER_LINKS||{})[token]||window.__KK_REGISTER_CHECKOUT||'#'); }
+
+  function applyBilling(mode) {
+    toggleBtns.forEach(function (btn) {
+      var active = btn.getAttribute('data-billing') === mode;
+      btn.setAttribute('aria-selected', active ? 'true' : 'false');
+      if (active) {
+        btn.classList.add('bg-white', 'text-slate-950');
+        btn.classList.remove('text-white/70', 'hover:text-white');
+        btn.style.boxShadow = '0 8px 30px -12px rgba(255,255,255,0.65)';
+      } else {
+        btn.classList.remove('bg-white', 'text-slate-950');
+        btn.classList.add('text-white/70', 'hover:text-white');
+        btn.style.boxShadow = '';
+      }
+    });
+    document.querySelectorAll('[data-plan]').forEach(function (card) {
+      var key = card.getAttribute('data-plan');
+      var plan = PLANS[key] && PLANS[key][mode];
+      if (!plan) return;
+      var strikeEl = card.querySelector('[data-strike]');
+      var priceEl  = card.querySelector('[data-price]');
+      var periodEl = card.querySelector('[data-period]');
+      var saveEl   = card.querySelector('[data-save]');
+      var noteEl   = card.querySelector('[data-billing-note]');
+      var ctaEl    = card.querySelector('[data-cta]');
+      var ctaLabel = card.querySelector('[data-cta-label]');
+      if (strikeEl) strikeEl.textContent = plan.strike;
+      if (priceEl)  priceEl.textContent  = plan.price;
+      if (periodEl) periodEl.textContent = plan.period;
+      if (saveEl)   saveEl.textContent   = plan.save;
+      if (noteEl)   noteEl.textContent   = plan.note;
+      if (ctaLabel) ctaLabel.textContent = plan.cta;
+      if (ctaEl)    { ctaEl.href = checkoutUrl(plan.token); ctaEl.setAttribute('data-offer', plan.token); }
+    });
+  }
+  toggleBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () { applyBilling(btn.getAttribute('data-billing')); });
+  });
+  applyBilling('monthly');
+
+  /* ============================================================
+     COUNTDOWN  (persisted ~3 days via sessionStorage)
+     ============================================================ */
+  var DURATION = (2 * 24 * 3600 + 23 * 3600 + 59 * 60 + 50) * 1000;
+  var KEY = 'aipu_flash_sale_cd';
+  var end = parseInt(sessionStorage.getItem(KEY), 10);
+  if (!end || end < Date.now()) { end = Date.now() + DURATION; sessionStorage.setItem(KEY, end); }
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var diff = Math.max(0, end - Date.now());
+    var d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    var h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+    var m = Math.floor(diff / 60000);    diff -= m * 60000;
+    var s = Math.floor(diff / 1000);
+    var ids = [
+      ['data-cd-d', d], ['data-cd-h', h], ['data-cd-m', m], ['data-cd-s', s],
+      ['data-cd-d-mini', d], ['data-cd-h-mini', h], ['data-cd-m-mini', m]
+    ];
+    ids.forEach(function (kv) {
+      var el = document.querySelector('[' + kv[0] + ']');
+      if (el) el.textContent = pad(kv[1]);
+    });
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ============================================================
+     SAVINGS CALCULATOR SLIDER
+     ============================================================ */
+  var slider = document.querySelector('[data-fs-slider]');
+  var sliderVal = document.querySelector('[data-fs-slider-val]');
+  var saveAmt = document.querySelector('[data-fs-save-amt]');
+  var annualAmt = document.querySelector('[data-fs-annual]');
+  function fmt(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: n % 1 === 0 ? 0 : 2, maximumFractionDigits: 2 }); }
+  function updateSlider() {
+    if (!slider) return;
+    var v = parseInt(slider.value, 10);
+    var pct = ((v - parseInt(slider.min, 10)) / (parseInt(slider.max, 10) - parseInt(slider.min, 10))) * 100;
+    slider.style.setProperty('--p', pct + '%');
+    if (sliderVal) sliderVal.textContent = fmt(v);
+    var save = Math.max(0, v - 14.99);
+    var annual = save * 12;
+    if (saveAmt) saveAmt.textContent = fmt(Math.round(save * 100) / 100);
+    if (annualAmt) annualAmt.textContent = fmt(Math.round(annual));
+  }
+  if (slider) {
+    slider.addEventListener('input', updateSlider);
+    updateSlider();
+  }
+
+  /* ============================================================
+     STICKY BOTTOM BAR  (show after hero, allow dismiss for session)
+     ============================================================ */
+  var sticky = document.querySelector('[data-fs-sticky]');
+  var stickyClosed = sessionStorage.getItem('aipu_fs_sticky_closed') === '1';
+  function syncSticky() {
+    if (!sticky || stickyClosed) return;
+    if (window.scrollY > 700) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  }
+  window.addEventListener('scroll', syncSticky, { passive: true });
+  syncSticky();
+  var stickyClose = document.querySelector('[data-fs-sticky-close]');
+  if (stickyClose) {
+    stickyClose.addEventListener('click', function () {
+      stickyClosed = true;
+      sessionStorage.setItem('aipu_fs_sticky_closed', '1');
+      if (sticky) sticky.classList.remove('visible');
+    });
+  }
+
+  /* ============================================================
+     LIVE ACTIVITY TOAST  (rotates every ~10s)
+     ============================================================ */
+  var toast = document.querySelector('[data-fs-toast]');
+  var toastName = document.querySelector('[data-fs-toast-name]');
+  var toastAction = document.querySelector('[data-fs-toast-action]');
+  var EVENTS = [
+    { name: 'Tyler from São Paulo, BR', action: 'started Creator · 4 min ago' },
+    { name: 'Olivia from Mumbai, IN',   action: 'started Creator · 7 min ago' },
+    { name: 'Maya from Berlin, DE',     action: 'started Scale · 14 min ago' },
+    { name: 'Hailey from New York, NY', action: 'claimed Lifetime $399 · 6 min ago' },
+    { name: 'Diego from Mexico City',   action: 'equipped Studio · 2 min ago' },
+    { name: 'Aisha from Lagos, NG',     action: 'claimed Lifetime $399 · 11 min ago' },
+    { name: 'Ben from Sydney, AU',      action: 'started Creator · 3 min ago' },
+    { name: 'Hailey from Miami, FL',    action: 'claimed Lifetime $399 · 4 min ago' }
+  ];
+  var toastIdx = 0;
+  function rotateToast() {
+    if (!toast || !toastName || !toastAction) return;
+    var e = EVENTS[toastIdx % EVENTS.length];
+    toastName.textContent = e.name;
+    toastAction.textContent = e.action;
+    toast.classList.remove('show');
+    void toast.offsetWidth; /* restart animation */
+    toast.classList.add('show');
+    toastIdx++;
+  }
+  if (toast) {
+    setTimeout(rotateToast, 4000);
+    setInterval(rotateToast, 10000);
+  }
+
+  /* ============================================================
+     LIVE CLAIM COUNTER  (slow drift up)
+     ============================================================ */
+  var claims = document.querySelector('[data-fs-live-claims]');
+  if (claims) {
+    var n = parseInt(claims.textContent.replace(/,/g, ''), 10) || 1401;
+    setInterval(function () {
+      n += Math.floor(Math.random() * 3) + 1;
+      claims.textContent = n.toLocaleString('en-US');
+    }, 9000);
+  }
+
+  /* ============================================================
+     MASTERCLASS PLACEHOLDER  (no real video — soft-scroll to faq)
+     ============================================================ */
+  document.querySelectorAll('[data-fs-video-cta]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var faq = document.getElementById('faq');
+      if (faq) faq.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+</script>
+<footer class="relative border-t border-border bg-background"><div class="absolute inset-0 bg-linear-to-t from-background via-background-secondary/30 to-transparent pointer-events-none"></div><div class="container container--xl max-w-7xl mx-auto px-4 sm:px-6 relative py-10 sm:py-16"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-10 sm:mb-16"><div class="sm:col-span-2"><a class="flex items-center mb-4" href="#"><div class="flex-layout flex-row gap-0 items-center h-[42px]"><picture><source srcset="/lander11__flash-sale__aipu/assets/logo-aipu.webp" type="image/webp"/><img alt="AIPU" class="object-contain" data-nimg="1" decoding="async" height="42" loading="lazy" src="/lander11__flash-sale__aipu/assets/logo-aipu.png" srcset="/lander11__flash-sale__aipu/assets/logo-aipu.png 1x, /lander11__flash-sale__aipu/assets/logo-aipu.png 2x" style="color:transparent" width="160"/></picture></div></a><p class="typography typography--body2 text-sm text-(--text-secondary) mb-6 max-w-xs leading-relaxed">Deploy powerful AI agents for content creation, automation, and beyond.</p></div><div><h6 class="typography typography--subtitle2 text-sm font-medium leading-relaxed text-foreground mb-4">Product</h6><div class="stack stack--vertical gap-2.5"><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/createvideo.php<?= $__step1link; ?>">AI Agent</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/createvideo.php<?= $__step1link; ?>">AI Studio</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/createvideo.php<?= $__step1link; ?>">Create Studio</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/create-voice-agents.php<?= $__step1link; ?>">Voice Agents</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/knowledge-base.php<?= $__step1link; ?>">Knowledge Base</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="<?= $__checkout; ?>">Pricing</a></div></div><div><h6 class="typography typography--subtitle2 text-sm font-medium leading-relaxed text-foreground mb-4">Resources</h6><div class="stack stack--vertical gap-2.5"><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/help-center.php<?= $__step1link; ?>">Community</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="<?= $__checkout; ?>">Contact Us</a></div></div><div><h6 class="typography typography--subtitle2 text-sm font-medium leading-relaxed text-foreground mb-4">Legal</h6><div class="stack stack--vertical gap-2.5"><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/privacy-policy.php<?= $__step1link; ?>">Privacy Policy</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/terms-of-service.php<?= $__step1link; ?>">Terms of Service</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/data-deletion-request.php<?= $__step1link; ?>">Data Deletion Request</a><a class="link link--muted link--hover-underline inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4 text-sm" href="/lander11__flash-sale__aipu/acceptable-use-policy.php<?= $__step1link; ?>">Acceptable Use Policy</a></div></div></div><div class="shrink-0 h-[1px] w-full bg-border divider my-4" data-orientation="horizontal" role="none"></div><div class="flex-layout gap-4 items-center justify-between flex-col md:flex-row pt-8"><span class="typography typography--caption text-xs leading-normal text-(--text-muted)">© <!-- -->2026<!-- --> <!-- -->AI Professionals University<!-- --> · <a class="link link--muted link--hover-underline link--external inline-flex items-center gap-1 transition-colors duration-200 text-(--text-secondary) hover:text-foreground no-underline hover:underline underline-offset-4" href="mailto:support@aiprofessionalsuniversity.com" rel="noopener noreferrer" target="_blank">support@aiprofessionalsuniversity.com</a></span><span class="typography typography--caption text-xs leading-normal text-(--text-muted) flex items-center gap-1">Made with <span class="text-accent">❤</span> for creators worldwide</span></div></div></footer>
+
+<script defer="" src="/lander11__flash-sale__aipu/assets/static.js"></script>
+<script data-flow-home-dead="">
+(function(){
+  function kill(){
+    var els=document.querySelectorAll('a,button');
+    for(var i=0;i<els.length;i++){
+      var el=els[i];
+      var t=(el.textContent||'').replace(/\s+/g,' ').trim();
+      if(t==='Home'){
+        if(el.tagName==='A'){el.setAttribute('href','#');}
+        el.style.cursor='default';
+        if(!el.__flowHomeDead){el.__flowHomeDead=1;el.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();},true);}
+      }
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',kill);}else{kill();}
+  setTimeout(kill,300);setTimeout(kill,1200);
+})();
+</script>
+</body>
+</html>

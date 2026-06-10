@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07080c"/>
+      <stop offset="100%" stop-color="#11131c"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="600" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6c8cff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff6bd5" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c8cff"/>
+      <stop offset="50%" stop-color="#a06bff"/>
+      <stop offset="100%" stop-color="#ff6bd5"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- glow blobs -->
+  <ellipse cx="150" cy="180" rx="400" ry="400" fill="url(#g1)" opacity="0.6"/>
+  <ellipse cx="1100" cy="500" rx="350" ry="350" fill="#ff6bd5" opacity="0.12"/>
+  <!-- grid -->
+  <pattern id="gr" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#gr)"/>
+  <!-- logo mark -->
+  <rect x="80" y="60" width="60" height="60" rx="14" fill="url(#brand)"/>
+  <rect x="88" y="68" width="44" height="44" rx="9" fill="#07080c"/>
+  <text x="110" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="24" fill="url(#brand)">A</text>
+  <!-- wordmark -->
+  <text x="154" y="103" font-family="system-ui,sans-serif" font-weight="700" font-size="26" fill="white">TheAi</text>
+  <text x="246" y="103" font-family="system-ui,sans-serif" font-weight="800" font-size="26" fill="url(#brand)">ContentPro</text>
+  <!-- headline -->
+  <text x="80" y="230" font-family="system-ui,sans-serif" font-weight="800" font-size="68" fill="white" letter-spacing="-2">Every AI Tool.</text>
+  <text x="80" y="320" font-family="system-ui,sans-serif" font-weight="800" font-size="68" fill="url(#brand)" letter-spacing="-2">One Login. $15/mo.</text>
+  <!-- sub -->
+  <text x="80" y="390" font-family="system-ui,sans-serif" font-size="26" fill="rgba(255,255,255,0.6)">140+ premium models � Videos, images, music, agents &amp; more</text>
+  <!-- cta pill -->
+  <rect x="80" y="450" width="300" height="56" rx="16" fill="url(#brand)" opacity="0.9"/>
+  <text x="230" y="484" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="20" fill="white">Start creating  $15/mo</text>
+  <!-- rating -->
+  <text x="80" y="570" font-family="system-ui,sans-serif" font-size="22" fill="rgba(255,255,255,0.5)">  4.9 / 5 � 52,300+ creators � 7-day money-back</text>
+</svg>

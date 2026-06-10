@@ -1,0 +1,215 @@
+/* AI Editor — styles for the right-side chat panel and per-card "Edit with AI" buttons */
+.btn-ai {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+  border: 1px solid transparent;
+}
+.btn-ai:hover { filter: brightness(1.08); }
+
+.ai-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 10, 0.55);
+  backdrop-filter: blur(3px);
+  display: none;
+  z-index: 220;
+}
+.ai-overlay.open { display: block; }
+
+.ai-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(560px, 100vw);
+  height: 100vh;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -24px 0 80px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  z-index: 230;
+  transform: translateX(100%);
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.ai-panel.open { transform: translateX(0); }
+
+.ai-head {
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, rgba(139,92,246,0.08), transparent);
+}
+.ai-head-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+}
+.ai-head h2 {
+  margin: 0; font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.ai-spark {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.ai-scope {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  word-break: break-all;
+}
+.ai-scope strong { color: var(--text); }
+.ai-scope .brand-tag { vertical-align: 1px; }
+
+.ai-controls {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.ai-controls select, .ai-controls .ai-pill {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.8rem;
+}
+.ai-controls select:disabled { opacity: 0.55; }
+.ai-pill {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  color: var(--muted);
+}
+.ai-pill.warn { color: #f0b429; border-color: rgba(240,180,41,0.4); }
+
+.ai-stream {
+  flex: 1; overflow-y: auto;
+  padding: 1rem 1.1rem;
+  display: flex; flex-direction: column; gap: 0.85rem;
+}
+.ai-msg {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.ai-msg.user { background: var(--surface-2); }
+.ai-msg.assistant { background: rgba(139,92,246,0.06); border-color: rgba(139,92,246,0.35); }
+.ai-msg.system { background: rgba(255,255,255,0.02); border-style: dashed; color: var(--muted); font-size: 0.78rem; }
+.ai-msg.error { background: rgba(248,113,113,0.08); border-color: rgba(248,113,113,0.5); color: #fecaca; }
+.ai-msg.success { background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.45); }
+
+.ai-msg-head {
+  display: flex; align-items: center; gap: 0.45rem;
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+.ai-msg-body { white-space: pre-wrap; word-break: break-word; }
+
+.ai-changed {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+}
+.ai-changed-row { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.15rem 0; word-break: break-all; }
+.ai-changed-row code { color: var(--accent); }
+.ai-changed-row .delta { color: var(--muted); }
+
+.ai-warnings {
+  margin-top: 0.4rem;
+  font-size: 0.74rem;
+  color: #f0b429;
+}
+
+.ai-actions-row {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  margin-top: 0.55rem;
+}
+
+.ai-status {
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 0.5rem 1.1rem;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.5rem;
+  min-height: 36px;
+}
+.ai-status.busy { color: var(--accent); }
+.ai-status.ok { color: var(--omni); }
+.ai-status.err { color: #f87171; }
+.ai-spinner {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  animation: ai-spin 0.7s linear infinite;
+}
+@keyframes ai-spin { to { transform: rotate(360deg); } }
+
+.ai-input-wrap {
+  border-top: 1px solid var(--border);
+  padding: 0.85rem 1.1rem 1rem;
+  background: var(--surface);
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.ai-input-wrap textarea {
+  width: 100%;
+  min-height: 76px;
+  max-height: 220px;
+  resize: vertical;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  outline: none;
+}
+.ai-input-wrap textarea:focus { border-color: var(--accent); }
+.ai-input-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ai-hint { font-size: 0.72rem; color: var(--muted); }
+.ai-send {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.55rem 0.95rem;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+  font: inherit; font-weight: 600; font-size: 0.86rem;
+  cursor: pointer;
+}
+.ai-send:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.ai-empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 2rem 1rem;
+}
+.ai-empty h3 { margin: 0 0 0.4rem; font-size: 0.95rem; color: var(--text); }
+.ai-suggestions { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.85rem; align-items: stretch; }
+.ai-suggest {
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit; font-size: 0.82rem;
+  cursor: pointer;
+}
+.ai-suggest:hover { border-color: var(--accent); color: var(--accent); }

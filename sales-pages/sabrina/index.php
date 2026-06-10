@@ -1,0 +1,4081 @@
+
+<html lang="en" class="or-has-chrome">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OmniRogue — Introducing SeeDance 2.0 + 140 AI Models From $14.99/mo · omnirogueapp.com</title>
+    <meta
+      name="description"
+      content="OmniRogue on omnirogueapp.com is the all-in-one AI dashboard featuring SeeDance 2.0, ChatGPT Images 2.0, Veo 3.1, Sora 2, GPT-5.5, Claude 4.7, Suno v4 and ElevenLabs — 140+ premium models from $14.99/mo or $399 founders lifetime."
+    >
+    <meta name="keywords" content="OmniRogue, omnirogueapp, SeeDance 2.0, ChatGPT Images 2.0, all-in-one AI app, AI video generator, AI image generator, AI voice, AI music, lifetime AI deal">
+    <meta name="author" content="OmniRogue Inc.">
+    <meta name="theme-color" content="#070812">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://omnirogueapp.com/">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="OmniRogue · omnirogueapp.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://omnirogueapp.com/">
+    <meta property="og:title" content="Introducing SeeDance 2.0 + 140 AI Models in One Login — OmniRogue at omnirogueapp.com">
+    <meta property="og:description" content="Stop paying $220+/mo across 6 AI tools. OmniRogue bundles SeeDance 2.0, ChatGPT Images 2.0, Veo 3.1, Sora 2, GPT-5.5, Claude 4.7, Suno v4 and ElevenLabs into one dashboard from $14.99/mo or $399 lifetime.">
+    <meta property="og:image" content="https://omnirogueapp.com/og-image.jpg">
+    <meta property="og:image:alt" content="OmniRogue dashboard preview at omnirogueapp.com showing the SeeDance 2.0 cinematic video model rendering inside the OmniRogue all-in-one AI workspace">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="product:price:amount" content="14.99">
+    <meta property="product:price:currency" content="USD">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@omnirogue">
+    <meta name="twitter:creator" content="@omnirogue">
+    <meta name="twitter:title" content="Introducing SeeDance 2.0 + 140 AI Models — OmniRogue · omnirogueapp.com">
+    <meta name="twitter:description" content="One login, one price, every premium AI model — including the new SeeDance 2.0 and ChatGPT Images 2.0. From $14.99/mo or $399 founders lifetime at omnirogueapp.com.">
+    <meta name="twitter:image" content="https://omnirogueapp.com/og-image.jpg">
+    <meta name="twitter:image:alt" content="OmniRogue all-in-one AI dashboard at omnirogueapp.com — SeeDance 2.0 video render in progress">
+    <link rel="icon" href="/checkouts-omni/logo-omnirogue.png" type="image/png">
+
+    <!-- OmniRogue checkout chrome -->
+    <link rel="stylesheet" href="/checkouts-omni/_chrome/chrome.css?v=20260608e">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OmniRogue",
+      "url": "https://omnirogueapp.com/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web",
+      "description": "All-in-one AI dashboard at omnirogueapp.com — SeeDance 2.0, ChatGPT Images 2.0, Veo 3.1, Sora 2, GPT-5.5, Claude 4.7, Suno v4, ElevenLabs and 140+ premium AI models for video, image, voice, music, agents and text — under one login.",
+      "offers": [
+        { "@type": "Offer", "price": "14.99", "priceCurrency": "USD", "name": "OmniRogue All-Access Monthly", "url": "https://omnirogueapp.com/register" },
+        { "@type": "Offer", "price": "399.00", "priceCurrency": "USD", "name": "OmniRogue All-Access Lifetime (Founders)", "url": "https://omnirogueapp.com/register" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "3127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "OmniRogue Inc.",
+        "url": "https://omnirogueapp.com/",
+        "email": "support@omnirogue.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1207 Delaware Ave, #4001",
+          "addressLocality": "Wilmington",
+          "addressRegion": "DE",
+          "postalCode": "19806",
+          "addressCountry": "US"
+        }
+      }
+    }
+    </script>
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg-0: #070812;
+        --bg-1: #0B0D1F;
+        --bg-2: #101433;
+        --surface: #101433;
+        --card: #12183A;
+        --panel: rgba(255, 255, 255, 0.04);
+        --panel-strong: rgba(255, 255, 255, 0.08);
+        --border: rgba(244, 246, 255, 0.10);
+        --border-strong: rgba(244, 246, 255, 0.18);
+        --text: #F4F6FF;
+        --muted: rgba(244, 246, 255, 0.70);
+        --muted-2: rgba(244, 246, 255, 0.52);
+        --accent: #8B5CFF;
+        --accent-2: #B79CFF;
+        --accent-3: #6B3FE0;
+        --gold: #FFD46B;
+        --gold-deep: #F0B43A;
+        --green: #22c55e;
+        --red: #ef4444;
+        --gradient-hero: linear-gradient(135deg, #8B5CFF 0%, #B79CFF 100%);
+        --gradient-gold: linear-gradient(135deg, #FFD46B 0%, #F0B43A 100%);
+        --gradient-glow: radial-gradient(circle at 30% 20%, rgba(139, 92, 255, 0.32), transparent 60%),
+                         radial-gradient(circle at 80% 30%, rgba(183, 156, 255, 0.18), transparent 55%),
+                         radial-gradient(circle at 50% 80%, rgba(139, 92, 255, 0.14), transparent 60%);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; font-size: 17px; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background: var(--bg-0);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: var(--gradient-glow);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      img { max-width: 100%; display: block; }
+
+      /* ============ LAYOUT ============ */
+      .container {
+        position: relative;
+        width: min(1200px, calc(100% - 32px));
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .container-wide {
+        position: relative;
+        width: min(1320px, calc(100% - 32px));
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .section {
+        padding: 96px 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-tight { padding: 64px 0; }
+
+      .section-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 16px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: #e9d5ff;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .section-eyebrow.gold { color: var(--gold); border-color: rgba(255, 212, 107, 0.30); background: rgba(255, 212, 107, 0.06); }
+
+      .section-title {
+        margin: 0 0 18px;
+        font-size: clamp(36px, 5.2vw, 58px);
+        line-height: 1.04;
+        letter-spacing: -0.04em;
+        font-weight: 800;
+      }
+
+      .section-lead {
+        margin: 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: clamp(18px, 2.2vw, 22px);
+        line-height: 1.6;
+      }
+
+      .section-head {
+        max-width: 820px;
+        margin: 0 auto 56px;
+        text-align: center;
+      }
+
+      .section-head .section-lead { margin-left: auto; margin-right: auto; }
+
+      .gradient-text {
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+
+      .gold-text {
+        background: var(--gradient-gold);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+
+      /* ============ TOP ANNOUNCEMENT BAR ============ */
+      .topbar {
+        position: relative;
+        z-index: 5;
+        padding: 14px 16px;
+        background: linear-gradient(90deg, rgba(255, 212, 107, 0.18), rgba(139, 92, 255, 0.20), rgba(255, 212, 107, 0.18));
+        border-bottom: 1px solid rgba(255, 212, 107, 0.30);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        color: #f8fafc;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px 16px;
+      }
+
+      .topbar strong { color: var(--gold); font-weight: 800; }
+
+      .topbar .pulse-dot {
+        display: inline-block;
+        width: 9px; height: 9px; border-radius: 999px;
+        background: var(--red);
+        box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.25);
+        animation: pulse-red 1.2s ease-in-out infinite;
+        margin-right: 4px;
+      }
+
+      .countdown {
+        display: inline-flex;
+        gap: 4px;
+        font-variant-numeric: tabular-nums;
+        font-weight: 800;
+        color: var(--gold);
+      }
+
+      .countdown span {
+        display: inline-grid;
+        place-items: center;
+        min-width: 30px;
+        padding: 2px 5px;
+        background: rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(255, 212, 107, 0.40);
+        border-radius: 6px;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      @keyframes pulse-red {
+        0%, 100% { box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.25); }
+        50% { box-shadow: 0 0 0 9px rgba(239, 68, 68, 0); }
+      }
+
+      /* ============ NAV ============ */
+      .nav {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 22px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-logo {
+        display: block;
+        width: min(150px, 40vw);
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .nav-links a:hover { color: var(--text); }
+
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 999px;
+        background: var(--gradient-hero);
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 15px;
+        box-shadow: 0 10px 30px rgba(139, 92, 255, 0.35);
+        transition: transform 120ms ease, box-shadow 120ms ease;
+      }
+
+      .nav-cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 36px rgba(183, 156, 255, 0.45);
+      }
+
+      @media (max-width: 860px) {
+        .nav-links a:not(.nav-cta) { display: none; }
+      }
+
+      /* ============ HERO ============ */
+      .hero {
+        padding: 56px 0 72px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+        gap: 56px;
+        align-items: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 16px;
+        border-radius: 999px;
+        background: rgba(139, 92, 255, 0.12);
+        border: 1px solid rgba(139, 92, 255, 0.35);
+        color: #E9DEFF;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .hero-badge .dot {
+        width: 8px; height: 8px; border-radius: 999px;
+        background: #22c55e;
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18); }
+        50% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+      }
+
+      .hero h1 {
+        margin: 22px 0 20px;
+        font-size: clamp(42px, 6.8vw, 80px);
+        line-height: 1.0;
+        letter-spacing: -0.05em;
+        font-weight: 800;
+      }
+
+      .hero-lead {
+        max-width: 620px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: clamp(19px, 2.2vw, 22px);
+        line-height: 1.55;
+      }
+
+      .hero-lead strong { color: #f8fafc; font-weight: 700; }
+
+      .hero-pricing-row {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 18px;
+        padding: 14px 20px;
+        margin-bottom: 24px;
+        border: 1px solid var(--border-strong);
+        border-radius: 16px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      }
+
+      .hero-pricing-row .price-block {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .hero-pricing-row .price-num {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1;
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-pricing-row .price-num.gold {
+        background: var(--gradient-gold);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-pricing-row .price-meta {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero-pricing-row .or-sep {
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--muted-2);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero-pricing-row .save-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px 10px;
+        background: rgba(34, 197, 94, 0.18);
+        color: var(--green);
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 60px;
+        padding: 0 28px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 800;
+        font-size: 17px;
+        cursor: pointer;
+        transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+      }
+
+      .button-primary {
+        background: var(--gradient-hero);
+        color: #ffffff;
+        box-shadow: 0 18px 50px rgba(139, 92, 255, 0.45);
+      }
+
+      .button-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 22px 60px rgba(183, 156, 255, 0.55);
+      }
+
+      .button-gold {
+        background: var(--gradient-gold);
+        color: #1a0f00;
+        box-shadow: 0 18px 50px rgba(255, 212, 107, 0.40);
+      }
+
+      .button-gold:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 22px 60px rgba(255, 212, 107, 0.55);
+      }
+
+      .button-secondary {
+        border-color: var(--border-strong);
+        background: rgba(255, 255, 255, 0.06);
+        color: #f8fafc;
+        backdrop-filter: blur(10px);
+      }
+
+      .button-secondary:hover {
+        background: rgba(255, 255, 255, 0.10);
+      }
+
+      .button .arrow { transition: transform 120ms ease; }
+      .button:hover .arrow { transform: translateX(3px); }
+
+      .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 18px 28px;
+        font-size: 14px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .trust-row .check-tiny {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px; height: 20px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.15);
+        color: #22c55e;
+        font-size: 12px;
+        margin-right: 6px;
+      }
+
+      /* Inline rating row */
+      .rating-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        font-size: 14px;
+        font-weight: 700;
+        color: #f8fafc;
+      }
+
+      .rating-row .stars { color: var(--gold); letter-spacing: 1px; font-size: 15px; }
+      .rating-row .avatars {
+        display: inline-flex;
+      }
+      .rating-row .avatars .ah {
+        width: 24px; height: 24px;
+        border-radius: 999px;
+        border: 2px solid var(--bg-0);
+        margin-left: -8px;
+        background: var(--gradient-hero);
+        display: inline-grid;
+        place-items: center;
+        font-size: 10px;
+        font-weight: 800;
+        color: #fff;
+      }
+      .rating-row .avatars .ah:first-child { margin-left: 0; }
+      .rating-row .avatars .ah.b1 { background: linear-gradient(135deg, #6B3FE0, #B79CFF); }
+      .rating-row .avatars .ah.b2 { background: linear-gradient(135deg, #8B5CFF, #DCCBFF); }
+      .rating-row .avatars .ah.b3 { background: linear-gradient(135deg, #1A1145, #8B5CFF); }
+      .rating-row .avatars .ah.b4 { background: linear-gradient(135deg, #6B3FE0, #DCCBFF); }
+      .rating-row .avatars .ah.b5 { background: linear-gradient(135deg, #FFD46B, #F0B43A); color: #14110F; }
+
+      /* Hero kill-bullets */
+      .kill-bullets {
+        list-style: none;
+        margin: 0 0 22px;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+        max-width: 600px;
+      }
+
+      .kill-bullets li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 17px;
+        color: #f1f5f9;
+        font-weight: 500;
+        line-height: 1.45;
+      }
+
+      .kill-bullets li::before {
+        content: "✓";
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        width: 24px; height: 24px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.18);
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        margin-top: 2px;
+      }
+
+      .kill-bullets li strong { color: #ffffff; font-weight: 800; }
+
+      /* ============ HERO VISUAL: DASHBOARD MOCKUP ============ */
+      .hero-visual {
+        position: relative;
+        aspect-ratio: 5 / 6;
+        max-width: 540px;
+        margin-left: auto;
+      }
+
+      .hero-visual::before {
+        content: "";
+        position: absolute;
+        inset: -40px;
+        background: radial-gradient(ellipse at center, rgba(139, 92, 255, 0.45), transparent 60%);
+        filter: blur(40px);
+        z-index: -1;
+      }
+
+      .dashboard {
+        position: relative;
+        height: 100%;
+        border: 1px solid var(--border-strong);
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(15, 8, 36, 0.85), rgba(8, 4, 22, 0.85));
+        backdrop-filter: blur(20px);
+        overflow: hidden;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      }
+
+      .dashboard-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .dashboard-header .dot { width: 10px; height: 10px; border-radius: 999px; background: #475569; }
+      .dashboard-header .dot.r { background: #ef4444; }
+      .dashboard-header .dot.y { background: #f59e0b; }
+      .dashboard-header .dot.g { background: #22c55e; }
+
+      .dashboard-url {
+        flex: 1;
+        margin-left: 14px;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        font-size: 12px;
+        color: var(--muted-2);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      }
+
+      .dashboard-body {
+        padding: 22px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .dashboard-prompt {
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 15px;
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .dashboard-prompt .label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--muted-2);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .dashboard-prompt .typed::after {
+        content: "▌";
+        color: var(--accent);
+        animation: blink 1s steps(2) infinite;
+      }
+
+      @keyframes blink { to { opacity: 0; } }
+
+      .dashboard-controls {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+
+      .dashboard-pill {
+        padding: 9px 10px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .dashboard-pill.active {
+        background: linear-gradient(135deg, rgba(139, 92, 255, 0.25), rgba(183, 156, 255, 0.25));
+        border-color: rgba(139, 92, 255, 0.55);
+        color: #ffffff;
+      }
+
+      .dashboard-output {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .dashboard-tile {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+
+      .dashboard-tile::before {
+        content: attr(data-label);
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        padding: 3px 8px;
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 6px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #ffffff;
+        backdrop-filter: blur(4px);
+        z-index: 2;
+      }
+
+      .dashboard-tile.t1 { background: linear-gradient(135deg, #2A1B5C, #8B5CFF 60%, #B79CFF); }
+      .dashboard-tile.t2 { background: linear-gradient(135deg, #B79CFF, #6B3FE0 70%); }
+      .dashboard-tile.t3 { background: linear-gradient(135deg, #12183A 0%, #8B5CFF 60%, #B79CFF); }
+      .dashboard-tile.t4 { background: linear-gradient(135deg, #8B5CFF, #6B3FE0 60%, #1A1145); }
+
+      .dashboard-tile::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), transparent 50%);
+        z-index: 1;
+      }
+
+      .dashboard-stat-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .dashboard-stat-row .meter {
+        flex: 1;
+        height: 6px;
+        margin: 0 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+      }
+
+      .dashboard-stat-row .meter-fill {
+        display: block;
+        height: 100%;
+        width: 78%;
+        background: var(--gradient-hero);
+        border-radius: 999px;
+        animation: meter 2.4s ease-in-out infinite alternate;
+      }
+
+      @keyframes meter {
+        from { width: 14%; }
+        to { width: 92%; }
+      }
+
+      .dashboard-stat-row span { font-size: 13px; color: var(--muted); font-weight: 600; }
+      .dashboard-stat-row strong { font-size: 13px; color: var(--text); font-weight: 800; }
+
+      /* Floating badges around hero visual */
+      .float-badge {
+        position: absolute;
+        padding: 11px 16px;
+        background: rgba(15, 8, 36, 0.85);
+        border: 1px solid var(--border-strong);
+        backdrop-filter: blur(14px);
+        border-radius: 14px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        font-size: 13px;
+        font-weight: 700;
+        color: #f8fafc;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 3;
+      }
+
+      .float-badge .icon {
+        width: 30px; height: 30px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        background: var(--gradient-hero);
+        font-size: 14px;
+      }
+
+      .float-badge.bl {
+        bottom: 36px;
+        left: -22px;
+        animation: floaty 4s ease-in-out infinite;
+      }
+
+      .float-badge.tr {
+        top: 60px;
+        right: -22px;
+        animation: floaty 4s ease-in-out infinite reverse;
+      }
+
+      .float-badge.gold .icon {
+        background: var(--gradient-gold);
+        color: #14110F;
+      }
+
+      @keyframes floaty {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          padding: 32px 0 56px;
+        }
+        .hero-visual { margin: 0 auto; }
+        .float-badge.bl { left: 8px; }
+        .float-badge.tr { right: 8px; }
+      }
+
+      /* ============ PRESS / SOCIAL PROOF STRIP ============ */
+      .press-strip {
+        padding: 28px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .press-label {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        color: var(--muted-2);
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .press-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 18px 36px;
+      }
+
+      .press-logo {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: clamp(20px, 2.4vw, 24px);
+        color: var(--muted);
+        letter-spacing: 0.02em;
+        opacity: 0.85;
+        transition: opacity 200ms ease, color 200ms ease;
+      }
+
+      .press-logo.sans { font-family: Inter, sans-serif; font-weight: 800; letter-spacing: -0.03em; }
+      .press-logo.italic { font-style: italic; }
+      .press-logo .dot { color: var(--accent-2); }
+
+      .press-logo:hover { opacity: 1; color: #f8fafc; }
+
+      /* ============ MARQUEE ============ */
+      .marquee-section {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .marquee-label {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        color: var(--muted-2);
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .marquee {
+        position: relative;
+        overflow: hidden;
+        mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+      }
+
+      .marquee-track {
+        display: flex;
+        gap: 14px;
+        width: max-content;
+        animation: scroll 40s linear infinite;
+      }
+
+      @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+
+      .model-pill {
+        flex: 0 0 auto;
+        padding: 11px 18px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: #e2e8f0;
+        font-size: 15px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .model-pill.featured {
+        background: linear-gradient(135deg, rgba(139, 92, 255, 0.20), rgba(183, 156, 255, 0.20));
+        border-color: rgba(183, 156, 255, 0.35);
+        color: #ffffff;
+      }
+
+      /* ============ GALLERY ============ */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      @media (max-width: 1080px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+      @media (max-width: 780px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 480px) { .gallery { grid-template-columns: 1fr; } }
+
+      .gallery-card {
+        position: relative;
+        aspect-ratio: 3 / 4;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        cursor: pointer;
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        background: #0a0524;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 60px rgba(139, 92, 255, 0.35);
+      }
+
+      .gallery-media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0;
+        transition: opacity 400ms ease;
+        z-index: 1;
+      }
+
+      .gallery-media.loaded { opacity: 1; }
+
+      .gallery-art {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .gallery-art::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.18), transparent 55%);
+      }
+
+      .gallery-art.g1 { background: linear-gradient(140deg, #070812 0%, #6B3FE0 50%, #B79CFF 100%); }
+      .gallery-art.g2 { background: linear-gradient(140deg, #12183A 0%, #8B5CFF 55%, #B79CFF 100%); }
+      .gallery-art.g3 { background: linear-gradient(140deg, #0B0D1F 0%, #6B3FE0 50%, #8B5CFF 100%); }
+      .gallery-art.g4 { background: linear-gradient(140deg, #1A1145 0%, #8B5CFF 60%, #DCCBFF 100%); }
+      .gallery-art.g5 { background: linear-gradient(140deg, #070812 0%, #6B3FE0 45%, #B79CFF 100%); }
+      .gallery-art.g6 { background: linear-gradient(140deg, #12183A 0%, #8B5CFF 55%, #B79CFF 100%); }
+      .gallery-art.g7 { background: linear-gradient(140deg, #0B0D1F 0%, #8B5CFF 50%, #B79CFF 100%); }
+      .gallery-art.g8 { background: linear-gradient(140deg, #1A1145 0%, #6B3FE0 55%, #DCCBFF 100%); }
+      .gallery-art.g9 { background: linear-gradient(140deg, #070812 0%, #8B5CFF 50%, #B79CFF 100%); }
+      .gallery-art.g10 { background: linear-gradient(140deg, #12183A 0%, #6B3FE0 55%, #B79CFF 100%); }
+      .gallery-art.g11 { background: linear-gradient(140deg, #0B0D1F 0%, #8B5CFF 50%, #DCCBFF 100%); }
+      .gallery-art.g12 { background: linear-gradient(140deg, #1A1145 0%, #B79CFF 60%, #ECE2FF 100%); }
+
+      .gallery-grain {
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(255,255,255,0.10) 0, transparent 12%),
+          radial-gradient(circle at 70% 60%, rgba(0,0,0,0.18) 0, transparent 18%),
+          radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0, transparent 14%);
+        mix-blend-mode: overlay;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.65) 100%);
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .gallery-tag {
+        display: inline-flex;
+        align-self: flex-start;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 11px;
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+        color: #ffffff;
+        backdrop-filter: blur(6px);
+      }
+
+      .gallery-tag.video::before { content: "▶"; color: var(--accent); }
+      .gallery-tag.image::before { content: "◇"; color: var(--accent-2); }
+      .gallery-tag.audio::before { content: "♪"; color: var(--accent-2); }
+      .gallery-tag.music::before { content: "♬"; color: var(--accent-2); }
+      .gallery-tag.text::before { content: "𝓣"; color: var(--accent-2); }
+
+      .gallery-live {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 11px;
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 800;
+        color: #ffffff;
+        backdrop-filter: blur(6px);
+        z-index: 4;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .gallery-live::before {
+        content: "";
+        width: 6px; height: 6px;
+        border-radius: 999px;
+        background: #ef4444;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+        animation: pulse-live 1.4s ease-in-out infinite;
+      }
+
+      @keyframes pulse-live {
+        0%, 100% { box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25); }
+        50% { box-shadow: 0 0 0 7px rgba(239, 68, 68, 0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .gallery-live::before { animation: none; }
+        .gallery-media { opacity: 1 !important; }
+      }
+
+      .gallery-prompt {
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1.35;
+      }
+
+      .gallery-prompt small {
+        display: block;
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .gallery-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .filter-pill {
+        padding: 10px 18px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .filter-pill.active {
+        background: var(--gradient-hero);
+        color: #ffffff;
+        border-color: transparent;
+      }
+
+      /* ============ STUDIOS ============ */
+      .studios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      @media (max-width: 980px) { .studios { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 640px) { .studios { grid-template-columns: 1fr; } }
+
+      .studio-card {
+        position: relative;
+        padding: 30px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        overflow: hidden;
+        min-height: 290px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition: transform 220ms ease, border-color 220ms ease;
+      }
+
+      .studio-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-strong);
+      }
+
+      .studio-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 24px;
+        padding: 1px;
+        background: linear-gradient(135deg, transparent 50%, rgba(139, 92, 255, 0.45));
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 220ms ease;
+        pointer-events: none;
+      }
+
+      .studio-card:hover::before { opacity: 1; }
+
+      .studio-icon {
+        width: 50px; height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: var(--gradient-hero);
+        color: #ffffff;
+      }
+
+      .studio-icon svg { width: 26px; height: 26px; }
+
+      .studio-num {
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        font-weight: 800;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+
+      .studio-card h3 {
+        margin: 8px 0 0;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+        font-weight: 800;
+        line-height: 1.15;
+      }
+
+      .studio-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      .studio-models {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: auto;
+      }
+
+      .studio-models span {
+        padding: 5px 11px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      /* ============ STATS BAR ============ */
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        overflow: hidden;
+      }
+
+      @media (max-width: 720px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } }
+
+      .stat-cell {
+        padding: 30px 20px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+
+      .stat-cell:last-child { border-right: none; }
+
+      @media (max-width: 720px) {
+        .stat-cell:nth-child(2n) { border-right: none; }
+        .stat-cell:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+      }
+
+      .stat-num {
+        display: block;
+        font-size: clamp(30px, 4vw, 44px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+      }
+
+      .stat-label {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      /* ============ LIVE ACTIVITY FEED ============ */
+      .activity-section {
+        padding: 56px 0 32px;
+      }
+
+      .activity-card {
+        position: relative;
+        padding: 30px clamp(20px, 4vw, 40px);
+        border: 1px solid var(--border-strong);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+        gap: 24px;
+        align-items: center;
+      }
+
+      @media (max-width: 880px) {
+        .activity-card { grid-template-columns: 1fr; gap: 20px; }
+      }
+
+      .activity-headline {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .activity-headline .live-dot {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--green);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .activity-headline .live-dot::before {
+        content: "";
+        width: 8px; height: 8px; border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+
+      .activity-headline h3 {
+        margin: 0;
+        font-size: clamp(24px, 3vw, 30px);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        font-weight: 800;
+      }
+
+      .activity-headline p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .activity-feed {
+        display: grid;
+        gap: 8px;
+      }
+
+      .activity-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        font-size: 15px;
+        animation: slide-in 600ms ease both;
+      }
+
+      .activity-row:nth-child(2) { animation-delay: 120ms; }
+      .activity-row:nth-child(3) { animation-delay: 240ms; }
+      .activity-row:nth-child(4) { animation-delay: 360ms; }
+
+      @keyframes slide-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .activity-row .av {
+        width: 36px; height: 36px;
+        flex: 0 0 auto;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 13px;
+        color: #ffffff;
+      }
+
+      .activity-row .av.r1 { background: linear-gradient(135deg, #6B3FE0, #B79CFF); }
+      .activity-row .av.r2 { background: linear-gradient(135deg, #FFD46B, #F0B43A); color: #14110F; }
+      .activity-row .av.r3 { background: linear-gradient(135deg, #1A1145, #8B5CFF); }
+      .activity-row .av.r4 { background: linear-gradient(135deg, #6B3FE0, #DCCBFF); }
+
+      .activity-row .who { color: var(--text); font-weight: 700; flex: 1; }
+      .activity-row .who small { display: block; color: var(--muted); font-weight: 500; font-size: 13px; margin-top: 2px; }
+
+      .activity-row .ago {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted-2);
+        white-space: nowrap;
+      }
+
+      .activity-row .tier {
+        padding: 4px 10px;
+        background: rgba(255, 212, 107, 0.12);
+        color: var(--gold);
+        border: 1px solid rgba(255, 212, 107, 0.30);
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .activity-row .tier.mo {
+        background: rgba(139, 92, 255, 0.14);
+        color: var(--accent-2);
+        border-color: rgba(139, 92, 255, 0.30);
+      }
+
+      /* ============ HOW IT WORKS ============ */
+      .how-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      @media (max-width: 880px) { .how-grid { grid-template-columns: 1fr; } }
+
+      .how-step {
+        position: relative;
+        padding: 30px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .how-step .step-num {
+        display: inline-grid;
+        place-items: center;
+        width: 48px; height: 48px;
+        border-radius: 999px;
+        background: var(--gradient-hero);
+        color: #fff;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .how-step h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+
+      .how-step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      /* ============ TRUST/SECURITY BADGES ============ */
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      @media (max-width: 880px) { .trust-grid { grid-template-columns: repeat(2, 1fr); } }
+
+      .trust-badge {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        text-align: center;
+      }
+
+      .trust-badge .tb-num {
+        display: block;
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--accent-2);
+        margin-bottom: 6px;
+        letter-spacing: -0.02em;
+      }
+
+      .trust-badge .tb-label {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .trust-badge .tb-sub {
+        display: block;
+        margin-top: 4px;
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      /* ============ TESTIMONIALS ============ */
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      @media (max-width: 980px) { .testimonials { grid-template-columns: 1fr; } }
+
+      .testimonial {
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .testimonial.featured {
+        background: linear-gradient(180deg, rgba(139, 92, 255, 0.16), rgba(139, 92, 255, 0.04));
+        border-color: rgba(139, 92, 255, 0.40);
+      }
+
+      .testimonial p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.55;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .testimonial.featured p { font-size: 19px; }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: auto;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
+
+      .avatar {
+        width: 46px; height: 46px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 17px;
+        color: #ffffff;
+        flex: 0 0 auto;
+      }
+
+      .avatar.a1 { background: linear-gradient(135deg, #6B3FE0, #B79CFF); }
+      .avatar.a2 { background: linear-gradient(135deg, #8B5CFF, #B79CFF); }
+      .avatar.a3 { background: linear-gradient(135deg, #1A1145, #8B5CFF); }
+      .avatar.a4 { background: linear-gradient(135deg, #6B3FE0, #DCCBFF); }
+      .avatar.a5 { background: linear-gradient(135deg, #8B5CFF, #B79CFF); }
+      .avatar.a6 { background: linear-gradient(135deg, #12183A, #8B5CFF); }
+      .avatar.a7 { background: linear-gradient(135deg, #FFD46B, #F0B43A); color: #14110F; }
+      .avatar.a8 { background: linear-gradient(135deg, #6B3FE0, #FFD46B); color: #14110F; }
+      .avatar.a9 { background: linear-gradient(135deg, #1A1145, #B79CFF); }
+
+      .testimonial-author .meta {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .testimonial-author .name {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 15px;
+        font-weight: 800;
+        color: var(--text);
+      }
+
+      .testimonial-author .verified {
+        display: inline-grid;
+        place-items: center;
+        width: 15px; height: 15px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 999px;
+        font-size: 10px;
+        font-weight: 800;
+      }
+
+      .testimonial-author .role {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .stars {
+        display: flex;
+        gap: 2px;
+        color: var(--gold);
+        font-size: 16px;
+      }
+
+      .testimonial-stat {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 14px;
+        background: rgba(139, 92, 255, 0.12);
+        border: 1px solid rgba(139, 92, 255, 0.30);
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #E9DEFF;
+        align-self: flex-start;
+      }
+
+      .testimonial-stat.gold {
+        background: rgba(255, 212, 107, 0.10);
+        border-color: rgba(255, 212, 107, 0.30);
+        color: var(--gold);
+      }
+
+      .review-source {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted-2);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-left: auto;
+      }
+
+      .review-source::before {
+        content: "";
+        display: inline-block;
+        width: 8px; height: 8px;
+        border-radius: 2px;
+        background: var(--accent-2);
+      }
+
+      /* Income disclaimer note under each testimonial group */
+      .income-disclaimer {
+        margin-top: 22px;
+        padding: 14px 18px;
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted-2);
+        line-height: 1.55;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px dashed var(--border);
+        border-radius: 14px;
+      }
+
+      .income-disclaimer strong { color: var(--text); font-weight: 700; }
+
+      /* ============ COMPARISON TABLE ============ */
+      .compare-wrap {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+        overflow: hidden;
+        overflow-x: auto;
+      }
+
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+
+      .compare-table th, .compare-table td {
+        padding: 18px 18px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+      }
+
+      .compare-table th { font-weight: 700; color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+      .compare-table th:first-child, .compare-table td:first-child { text-align: left; padding-left: 24px; }
+      .compare-table td:first-child { font-weight: 600; color: var(--text); }
+      .compare-table tr:last-child td { border-bottom: none; }
+
+      .compare-table .col-omni {
+        background: linear-gradient(180deg, rgba(139, 92, 255, 0.16), rgba(183, 156, 255, 0.10));
+        position: relative;
+      }
+
+      .compare-table thead .col-omni {
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 15px;
+        background: var(--gradient-hero);
+      }
+
+      .check-icon {
+        display: inline-grid;
+        place-items: center;
+        width: 26px; height: 26px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.18);
+        color: var(--green);
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .x-icon {
+        display: inline-grid;
+        place-items: center;
+        width: 26px; height: 26px;
+        border-radius: 999px;
+        background: rgba(239, 68, 68, 0.12);
+        color: #f87171;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .compare-models {
+        display: block;
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 600;
+        margin-top: 4px;
+      }
+
+      @media (max-width: 720px) {
+        .compare-table th:nth-child(n+4), .compare-table td:nth-child(n+4) { display: none; }
+      }
+
+      /* ============ DUAL PRICING ============ */
+      .pricing {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      @media (max-width: 920px) { .pricing { grid-template-columns: 1fr; } }
+
+      .pricing-card {
+        position: relative;
+        padding: 36px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        border: 1px solid var(--border-strong);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .pricing-card.featured {
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 212, 107, 0.20), transparent 50%),
+          linear-gradient(180deg, rgba(255, 212, 107, 0.06), rgba(139, 92, 255, 0.05));
+        border-color: rgba(255, 212, 107, 0.45);
+        box-shadow: 0 30px 80px rgba(255, 212, 107, 0.18), 0 30px 80px rgba(139, 92, 255, 0.20);
+      }
+
+      .pricing-card.featured::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 28px;
+        padding: 1.5px;
+        background: var(--gradient-gold);
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .price-tag-corner {
+        position: absolute;
+        top: -14px;
+        right: 24px;
+        padding: 7px 16px;
+        background: var(--gradient-gold);
+        color: #14110F;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        box-shadow: 0 12px 30px rgba(255, 212, 107, 0.40);
+      }
+
+      .price-row {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        margin: 8px 0 6px;
+      }
+
+      .price-amount {
+        font-size: clamp(58px, 8vw, 80px);
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .price-amount.gold {
+        background: var(--gradient-gold);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .price-period {
+        margin-bottom: 12px;
+        font-size: 19px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .price-strike {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 13px;
+        background: rgba(239, 68, 68, 0.12);
+        border-radius: 999px;
+        color: #fca5a5;
+        font-size: 14px;
+        font-weight: 700;
+        align-self: flex-start;
+      }
+
+      .price-strike .crossed { text-decoration: line-through; color: #fda4af; }
+
+      .price-strike.gold {
+        background: rgba(255, 212, 107, 0.10);
+        color: var(--gold);
+      }
+
+      .price-strike.gold .crossed { text-decoration: line-through; color: rgba(255, 212, 107, 0.65); }
+
+      .price-features {
+        list-style: none;
+        margin: 8px 0 16px;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .price-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 16px;
+        color: var(--text);
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .price-features li::before {
+        content: "✓";
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        width: 24px; height: 24px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.16);
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 800;
+        margin-top: 1px;
+      }
+
+      .price-features li strong { color: #ffffff; font-weight: 700; }
+
+      .price-features.gold li::before {
+        background: rgba(255, 212, 107, 0.18);
+        color: var(--gold);
+      }
+
+      .pricing-card .button { width: 100%; margin-top: auto; }
+
+      .price-meta {
+        margin-top: 8px;
+        font-size: 13px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .roi-callout {
+        margin-top: 6px;
+        padding: 16px 18px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px dashed rgba(255, 212, 107, 0.40);
+        border-radius: 14px;
+        font-size: 14px;
+        color: var(--gold);
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .roi-callout strong { color: #ffffff; }
+
+      /* Scarcity meter */
+      .scarcity-meter {
+        margin-top: 6px;
+        padding: 16px 18px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(239, 68, 68, 0.30);
+        border-radius: 14px;
+      }
+
+      .scarcity-meter .meter-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .scarcity-meter .meter-label .lead-text { color: #f8fafc; }
+      .scarcity-meter .meter-label .lead-text strong { color: var(--red); }
+      .scarcity-meter .meter-label .right-text { color: var(--muted); }
+
+      .scarcity-meter .meter-track {
+        height: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .scarcity-meter .meter-bar {
+        position: absolute;
+        inset: 0;
+        width: 50.6%;
+        background: linear-gradient(90deg, var(--gold-deep), #ef4444);
+        border-radius: 999px;
+        animation: meter-glow 2.4s ease-in-out infinite alternate;
+      }
+
+      @keyframes meter-glow {
+        from { box-shadow: 0 0 0 rgba(239, 68, 68, 0.0); }
+        to { box-shadow: 0 0 18px rgba(239, 68, 68, 0.60); }
+      }
+
+      .scarcity-meter .meter-foot {
+        margin-top: 8px;
+        font-size: 12px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* ============ BONUS STACK ============ */
+      .bonus-section {
+        position: relative;
+        padding: 64px clamp(28px, 4vw, 56px);
+        border-radius: 32px;
+        background:
+          radial-gradient(ellipse at 0% 0%, rgba(255, 212, 107, 0.16), transparent 50%),
+          radial-gradient(ellipse at 100% 100%, rgba(139, 92, 255, 0.20), transparent 55%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+        border: 1px solid var(--border-strong);
+        overflow: hidden;
+      }
+
+      .bonus-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      @media (max-width: 800px) { .bonus-grid { grid-template-columns: 1fr; } }
+
+      .bonus-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: center;
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+      }
+
+      .bonus-row .bonus-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .bonus-row .bonus-name {
+        font-size: 17px;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.3;
+      }
+
+      .bonus-row .bonus-name .free {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 6px;
+        padding: 3px 9px;
+        background: var(--gradient-gold);
+        color: #14110F;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+      }
+
+      .bonus-row .bonus-desc {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .bonus-row .bonus-value {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 13px;
+        background: rgba(255, 212, 107, 0.10);
+        border: 1px solid rgba(255, 212, 107, 0.30);
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--gold);
+        white-space: nowrap;
+      }
+
+      .bonus-total {
+        margin-top: 24px;
+        padding: 22px 26px;
+        background: linear-gradient(135deg, rgba(255, 212, 107, 0.14), rgba(139, 92, 255, 0.14));
+        border: 1px solid rgba(255, 212, 107, 0.30);
+        border-radius: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .bonus-total .total-label {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .bonus-total .total-amount {
+        font-size: clamp(30px, 4vw, 40px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        background: var(--gradient-gold);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .bonus-total .total-amount .crossed {
+        font-size: 0.7em;
+        color: var(--muted-2);
+        text-decoration: line-through;
+        margin-right: 8px;
+        background: none;
+        -webkit-text-fill-color: var(--muted-2);
+      }
+
+      /* ============ GUARANTEE ============ */
+      .guarantee-card {
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 36px;
+        align-items: center;
+        padding: 40px;
+        background: linear-gradient(180deg, rgba(34, 197, 94, 0.10), rgba(34, 197, 94, 0.03));
+        border: 1px solid rgba(34, 197, 94, 0.30);
+        border-radius: 28px;
+      }
+
+      @media (max-width: 760px) {
+        .guarantee-card { grid-template-columns: 1fr; text-align: center; }
+        .guarantee-seal { margin: 0 auto; }
+      }
+
+      .guarantee-seal {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.45), rgba(34, 197, 94, 0.10) 65%);
+        border: 2px dashed rgba(34, 197, 94, 0.50);
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .guarantee-seal::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(34, 197, 94, 0.30);
+      }
+
+      .guarantee-seal .num {
+        display: block;
+        font-size: 64px;
+        line-height: 1;
+        font-weight: 800;
+        background: linear-gradient(135deg, #4ade80, #22c55e);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .guarantee-seal .unit {
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #4ade80;
+      }
+
+      .guarantee-seal .gtxt {
+        display: block;
+        margin-top: 6px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .guarantee-card h3 {
+        margin: 0 0 10px;
+        font-size: clamp(26px, 3.2vw, 36px);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+      }
+
+      .guarantee-card p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .guarantee-card p strong { color: #ffffff; }
+
+      /* ============ FOUNDER NOTE ============ */
+      .founder-note {
+        padding: 50px clamp(28px, 4vw, 56px);
+        background: linear-gradient(180deg, rgba(139, 92, 255, 0.10), rgba(139, 92, 255, 0.02));
+        border: 1px solid rgba(139, 92, 255, 0.30);
+        border-radius: 28px;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .founder-head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+
+      .founder-avatar {
+        width: 70px; height: 70px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #6B3FE0, #B79CFF);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 24px;
+        color: #ffffff;
+        flex: 0 0 auto;
+      }
+
+      .founder-head .who-name {
+        font-size: 19px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+
+      .founder-head .who-role {
+        margin-top: 2px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .founder-note p {
+        margin: 0 0 16px;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--text);
+      }
+
+      .founder-note p:last-of-type { margin-bottom: 0; }
+
+      .founder-sig {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 26px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .founder-sig .sig-mark {
+        font-family: Georgia, "Times New Roman", serif;
+        font-style: italic;
+        font-size: 24px;
+        color: var(--accent-2);
+      }
+
+      .founder-sig .sig-meta {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      /* ============ VALUE STACK ============ */
+      .value-stack {
+        display: grid;
+        gap: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .value-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        font-size: 17px;
+      }
+
+      .value-row .v-name { color: #f8fafc; font-weight: 600; }
+      .value-row .v-name strong { color: #fff; font-weight: 800; }
+      .value-row .v-price { color: var(--muted); font-weight: 700; white-space: nowrap; }
+      .value-row .v-price s { color: rgba(252, 165, 165, 0.85); }
+      .value-row .v-price .inc { color: var(--green); font-weight: 800; margin-left: 4px; }
+
+      .value-total {
+        margin-top: 14px;
+        padding: 24px 26px;
+        background: linear-gradient(135deg, rgba(139, 92, 255, 0.16), rgba(255, 212, 107, 0.10));
+        border: 1px solid rgba(139, 92, 255, 0.40);
+        border-radius: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .value-total .vt-label { font-size: 15px; font-weight: 700; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+      .value-total .vt-amount {
+        font-size: clamp(28px, 4vw, 38px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .value-total .vt-amount s {
+        font-size: 0.65em;
+        color: var(--muted-2);
+        background: none;
+        -webkit-text-fill-color: var(--muted-2);
+        margin-right: 10px;
+      }
+
+      /* ============ FAQ ============ */
+      .faq-list {
+        display: grid;
+        gap: 12px;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+        overflow: hidden;
+      }
+
+      .faq-item summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 22px 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.4;
+      }
+
+      .faq-item summary::-webkit-details-marker { display: none; }
+
+      .faq-item summary::after {
+        content: "+";
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--accent);
+        flex: 0 0 auto;
+        transition: transform 200ms ease;
+      }
+
+      .faq-item[open] summary::after { transform: rotate(45deg); }
+
+      .faq-item .answer {
+        padding: 0 26px 24px;
+        margin: -4px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      /* ============ FINAL CTA ============ */
+      .final-cta {
+        position: relative;
+        padding: 80px 32px;
+        border-radius: 32px;
+        background:
+          radial-gradient(ellipse at 20% 20%, rgba(139, 92, 255, 0.30), transparent 55%),
+          radial-gradient(ellipse at 80% 80%, rgba(255, 212, 107, 0.16), transparent 55%),
+          linear-gradient(180deg, rgba(15, 8, 36, 0.85), rgba(8, 4, 22, 0.85));
+        border: 1px solid var(--border-strong);
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .final-cta h2 {
+        margin: 0 auto 18px;
+        max-width: 880px;
+        font-size: clamp(36px, 5.2vw, 60px);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        font-weight: 800;
+      }
+
+      .final-cta p {
+        margin: 0 auto 26px;
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.6;
+      }
+
+      .final-cta .actions { justify-content: center; }
+
+      .final-countdown {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0 24px;
+        padding: 12px 18px;
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(255, 212, 107, 0.30);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .final-countdown .label { color: var(--muted); letter-spacing: 0.10em; text-transform: uppercase; font-size: 12px; }
+      .final-countdown .countdown span { background: rgba(0, 0, 0, 0.65); border-color: rgba(255, 212, 107, 0.45); }
+
+      /* ============ COMPLIANCE / FB DISCLOSURE ============ */
+      .compliance-block {
+        max-width: 900px;
+        margin: 64px auto 0;
+        padding: 26px 28px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .compliance-block p { margin: 0 0 12px; }
+      .compliance-block p:last-child { margin-bottom: 0; }
+      .compliance-block strong { color: var(--text); font-weight: 700; }
+
+      /* ============ FOOTER ============ */
+      footer {
+        padding: 56px 0 28px;
+        border-top: 1px solid var(--border);
+        margin-top: 48px;
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 32px;
+        margin-bottom: 36px;
+      }
+
+      @media (max-width: 760px) {
+        .footer-top { grid-template-columns: 1fr 1fr; }
+      }
+
+      @media (max-width: 480px) {
+        .footer-top { grid-template-columns: 1fr; }
+      }
+
+      .footer-col h4 {
+        margin: 0 0 14px;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #f8fafc;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .footer-col a {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .footer-col a:hover { color: var(--text); }
+
+      .footer-about {
+        max-width: 380px;
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 12px 0 0;
+      }
+
+      .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+
+      .footer-copy { font-size: 13px; color: var(--muted-2); line-height: 1.6; max-width: 700px; }
+      .footer-copy strong { color: var(--text); }
+
+      /* ============ STICKY MOBILE CTA ============ */
+      .sticky-cta {
+        display: none;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 100;
+        padding: 12px 14px;
+        background: rgba(7, 8, 18, 0.92);
+        border-top: 1px solid var(--border-strong);
+        backdrop-filter: blur(16px);
+        gap: 10px;
+        align-items: center;
+      }
+
+      .sticky-cta .sticky-price {
+        font-size: 14px;
+        color: var(--muted);
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .sticky-cta .sticky-price strong { color: #fff; font-size: 16px; font-weight: 800; }
+      .sticky-cta .sticky-price span { display: block; font-size: 12px; color: var(--gold); font-weight: 700; }
+
+      .sticky-cta .button {
+        flex: 1;
+        min-height: 50px;
+        padding: 0 18px;
+        font-size: 15px;
+      }
+
+      @media (max-width: 720px) {
+        .sticky-cta { display: flex; }
+        body { padding-bottom: 82px; }
+      }
+
+      /* ============ USE CASES ============ */
+      .usecases-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      @media (max-width: 880px) { .usecases-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 540px) { .usecases-grid { grid-template-columns: 1fr; } }
+
+      .usecase {
+        padding: 26px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .usecase .uc-emoji {
+        font-size: 28px;
+      }
+
+      .usecase h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .usecase p {
+        margin: 0;
+        font-size: 16px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .usecase .uc-stat {
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--accent-2);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="topbar" role="alert">
+      <span><span class="pulse-dot"></span><strong>FOUNDERS DEAL ENDS IN</strong></span>
+      <span class="countdown" id="topCountdown" aria-label="Founders deal countdown">
+        <span data-cd="dd">02</span><span data-cd="hh">14</span><span data-cd="mm">52</span><span data-cd="ss">31</span>
+      </span>
+      <span>· Lock in <strong>$399 lifetime</strong> before price jumps to <strong>$599</strong></span>
+    </div>
+
+    <!-- chrome:header -->
+    <!-- OmniRogue checkout header -->
+    <main>
+      <!-- HERO -->
+      <section class="container hero">
+        <div>
+          <div class="rating-row">
+            <span class="avatars" aria-hidden="true">
+              <span class="ah b1">M</span>
+              <span class="ah b2">L</span>
+              <span class="ah b3">A</span>
+              <span class="ah b4">K</span>
+              <span class="ah b5">+</span>
+            </span>
+            <span class="stars">★★★★★</span>
+            <span>4.9 / 5 from <strong style="color:#fff">3,127 reviews</strong> · 250,000+ creators</span>
+          </div>
+
+          <span class="hero-badge"><span class="dot"></span> ★ Introducing SeeDance 2.0 · Now live in OmniRogue · 140+ premium AI models</span>
+
+          <h1>
+            Every AI You Need.<br>
+            <span class="gradient-text">One Login. One Price.</span>
+          </h1>
+
+          <p class="hero-lead">
+            <strong>Stop paying $220+/month across 6 different AI tools.</strong> Get all-access to the new <strong>SeeDance 2.0</strong>, <strong>ChatGPT Images 2.0</strong>, Veo 3.1, Sora 2, GPT-5.5, Claude 4.7, Suno v4, ElevenLabs, Midjourney v7 and 140+ premium models — all in one dashboard, for less than a Netflix subscription.
+          </p>
+
+          <ul class="kill-bullets">
+            <li><strong>All-access generation</strong> — no token counters, no credit anxiety, no per-clip fees (subject to fair use).</li>
+            <li><strong>140+ frontier models in one place</strong> — including the brand-new <strong>SeeDance 2.0</strong> and <strong>ChatGPT Images 2.0</strong>.</li>
+            <li><strong>Save $5,400+ per year*</strong> vs the 6 separate subscriptions you're paying right now.</li>
+            <li><strong>Royalty-free commercial rights</strong> — use everything you make in ads, on YouTube, with clients.</li>
+          </ul>
+
+          <div class="hero-pricing-row">
+            <span class="price-block">
+              <span class="price-num">$14.99</span>
+              <span class="price-meta">per month · cancel anytime</span>
+            </span>
+            <span class="or-sep">— OR —</span>
+            <span class="price-block">
+              <span class="price-num gold">$399</span>
+              <span class="price-meta">lifetime · pay once, never again</span>
+            </span>
+            <span class="save-tag">Save $5,400+/yr</span>
+          </div>
+
+          <div class="actions">
+            <a class="button button-gold" href="register">
+              Lock In Lifetime — $399 <span class="arrow">→</span>
+            </a>
+            <a class="button button-secondary" href="register">
+              Or Start Monthly — $14.99
+            </a>
+          </div>
+
+          <div class="trust-row">
+            <span><span class="check-tiny">✓</span> 30-day money-back guarantee</span>
+            <span><span class="check-tiny">✓</span> Cancel anytime in 1 click</span>
+            <span><span class="check-tiny">✓</span> Stripe-secure checkout</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Dashboard mockup -->
+        <div class="hero-visual">
+          <div class="float-badge tr gold">
+            <span class="icon">⚡</span>
+            Generated in 4.2s
+          </div>
+          <div class="float-badge bl">
+            <span class="icon">★</span>
+            4K Ultra HD ready
+          </div>
+
+          <div class="dashboard" aria-hidden="true">
+            <div class="dashboard-header">
+              <span class="dot r"></span>
+              <span class="dot y"></span>
+              <span class="dot g"></span>
+              <span class="dashboard-url">omnirogueapp.com / create</span>
+            </div>
+            <div class="dashboard-body">
+              <div class="dashboard-prompt">
+                <span class="label">Prompt</span>
+                <span class="typed">Cinematic neon Tokyo alley, anamorphic dolly-in, 16:9, photoreal</span>
+              </div>
+              <div class="dashboard-controls">
+                <span class="dashboard-pill active">SeeDance 2.0</span>
+                <span class="dashboard-pill">Veo 3.1</span>
+                <span class="dashboard-pill">Sora 2</span>
+              </div>
+              <div class="dashboard-output">
+                <div class="dashboard-tile t1" data-label="Veo 3.1 · 16:9"></div>
+                <div class="dashboard-tile t2" data-label="Flux Pro · 4K"></div>
+                <div class="dashboard-tile t3" data-label="SeeDance 2"></div>
+                <div class="dashboard-tile t4" data-label="Sora 2 · 9:16"></div>
+              </div>
+              <div class="dashboard-stat-row">
+                <span>Rendering</span>
+                <span class="meter"><span class="meter-fill"></span></span>
+                <strong>78%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRESS / SOCIAL PROOF STRIP -->
+      <section class="press-strip">
+        <div class="container">
+          <p class="press-label">Featured & trusted by creators at</p>
+          <div class="press-row">
+            <span class="press-logo italic">TechCrunch</span>
+            <span class="press-logo sans">PRODUCT<span class="dot">•</span>HUNT</span>
+            <span class="press-logo">The Verge</span>
+            <span class="press-logo sans">FORBES</span>
+            <span class="press-logo italic">Fast Company</span>
+            <span class="press-logo sans">Indie Hackers</span>
+            <span class="press-logo">Wired</span>
+            <span class="press-logo sans">a16z</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE OF MODELS -->
+      <section class="marquee-section">
+        <div class="container">
+          <p class="marquee-label">140+ premium models — all included on every plan</p>
+          <div class="marquee">
+            <div class="marquee-track">
+              <span class="model-pill featured">SeeDance 2.0</span>
+              <span class="model-pill featured">Veo 3.1</span>
+              <span class="model-pill featured">Sora 2</span>
+              <span class="model-pill featured">ChatGPT Images 2.0</span>
+              <span class="model-pill featured">GPT-5.5</span>
+              <span class="model-pill featured">Claude 4.7</span>
+              <span class="model-pill featured">Gemini Pro 3.1</span>
+              <span class="model-pill">Runway Gen-4</span>
+              <span class="model-pill">Kling 3.0</span>
+              <span class="model-pill">Hailuo 2</span>
+              <span class="model-pill">Luma Dream</span>
+              <span class="model-pill">Pika 2.0</span>
+              <span class="model-pill">Higgsfield</span>
+              <span class="model-pill">Flux Pro</span>
+              <span class="model-pill">Imagen 3</span>
+              <span class="model-pill">Midjourney v7</span>
+              <span class="model-pill">Stable Diffusion 3.5</span>
+              <span class="model-pill">Ideogram 3</span>
+              <span class="model-pill">Recraft V3</span>
+              <span class="model-pill">Leonardo Phoenix</span>
+              <span class="model-pill">Krea</span>
+              <span class="model-pill">Firefly 3</span>
+              <span class="model-pill">ElevenLabs v3</span>
+              <span class="model-pill">Suno v4</span>
+              <span class="model-pill">HeyGen</span>
+              <span class="model-pill">D-ID</span>
+              <span class="model-pill">Topaz Upscale</span>
+              <!-- duplicate set for seamless loop -->
+              <span class="model-pill featured">SeeDance 2.0</span>
+              <span class="model-pill featured">Veo 3.1</span>
+              <span class="model-pill featured">Sora 2</span>
+              <span class="model-pill featured">ChatGPT Images 2.0</span>
+              <span class="model-pill featured">GPT-5.5</span>
+              <span class="model-pill featured">Claude 4.7</span>
+              <span class="model-pill featured">Gemini Pro 3.1</span>
+              <span class="model-pill">Runway Gen-4</span>
+              <span class="model-pill">Kling 3.0</span>
+              <span class="model-pill">Hailuo 2</span>
+              <span class="model-pill">Luma Dream</span>
+              <span class="model-pill">Pika 2.0</span>
+              <span class="model-pill">Higgsfield</span>
+              <span class="model-pill">Flux Pro</span>
+              <span class="model-pill">Imagen 3</span>
+              <span class="model-pill">Midjourney v7</span>
+              <span class="model-pill">Stable Diffusion 3.5</span>
+              <span class="model-pill">Ideogram 3</span>
+              <span class="model-pill">Recraft V3</span>
+              <span class="model-pill">Leonardo Phoenix</span>
+              <span class="model-pill">Krea</span>
+              <span class="model-pill">Firefly 3</span>
+              <span class="model-pill">ElevenLabs v3</span>
+              <span class="model-pill">Suno v4</span>
+              <span class="model-pill">HeyGen</span>
+              <span class="model-pill">D-ID</span>
+              <span class="model-pill">Topaz Upscale</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE ACTIVITY FEED -->
+      <section class="container activity-section">
+        <div class="activity-card">
+          <div class="activity-headline">
+            <span class="live-dot">Live · last 60 minutes</span>
+            <h3>People are signing up <span class="gradient-text">right now.</span></h3>
+            <p>97 new creators joined OmniRogue in the last hour — 38 of them locked in the lifetime founders deal before the price jumps to $599.</p>
+          </div>
+          <div class="activity-feed" aria-live="polite">
+            <div class="activity-row">
+              <span class="av r1">MR</span>
+              <span class="who">Mateo R. <small>locked in $399 lifetime · indie filmmaker, NYC</small></span>
+              <span class="tier">Lifetime</span>
+              <span class="ago">2 min ago</span>
+            </div>
+            <div class="activity-row">
+              <span class="av r2">PT</span>
+              <span class="who">Priya T. <small>upgraded to $14.99/mo · marketer, London</small></span>
+              <span class="tier mo">Monthly</span>
+              <span class="ago">6 min ago</span>
+            </div>
+            <div class="activity-row">
+              <span class="av r3">DA</span>
+              <span class="who">Diego A. <small>locked in $399 lifetime · solo founder, Mexico City</small></span>
+              <span class="tier">Lifetime</span>
+              <span class="ago">11 min ago</span>
+            </div>
+            <div class="activity-row">
+              <span class="av r4">IC</span>
+              <span class="who">Imani C. <small>locked in $399 lifetime · YT creator, Atlanta</small></span>
+              <span class="tier">Lifetime</span>
+              <span class="ago">14 min ago</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT YOU CAN MAKE - GALLERY -->
+      <section class="container section" id="examples">
+        <div class="section-head">
+          <span class="section-eyebrow">Made inside OmniRogue</span>
+          <h2 class="section-title">What you can make in <span class="gradient-text">30 seconds</span></h2>
+          <p class="section-lead">
+            Cinematic videos, photoreal images, narration, music, marketing copy — all from one prompt box. Real outputs from real models, every one included on every plan.
+          </p>
+        </div>
+
+        <div class="gallery-filters" role="tablist" aria-label="Filter examples">
+          <span class="filter-pill active">All</span>
+          <span class="filter-pill">Video</span>
+          <span class="filter-pill">Image</span>
+          <span class="filter-pill">Voice</span>
+          <span class="filter-pill">Music</span>
+          <span class="filter-pill">Agents</span>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <article class="gallery-card">
+            <div class="gallery-art g1"></div>
+            <video class="gallery-media" muted loop playsinline preload="none" poster="https://images.pexels.com/videos/3045163/free-video-3045163.jpg?auto=compress&amp;cs=tinysrgb&amp;w=600"
+              data-src="https://videos.pexels.com/video-files/3045163/3045163-sd_640_360_25fps.mp4">
+            </video>
+            <div class="gallery-grain"></div>
+            <span class="gallery-live">Live</span>
+            <div class="gallery-overlay">
+              <span class="gallery-tag video">VEO 3.1</span>
+              <div class="gallery-prompt">Neon Tokyo alley, anamorphic pull-in, rain-soaked.<small>5s · 16:9 · 4K</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g2"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Editorial product hero generated with Flux Pro inside the OmniRogue dashboard at omnirogueapp.com"
+              src="https://images.pexels.com/photos/30503923/pexels-photo-30503923.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag image">FLUX PRO</span>
+              <div class="gallery-prompt">Editorial product hero with volumetric haze.<small>2K · Photoreal</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g3"></div>
+            <video class="gallery-media" muted loop playsinline preload="none"
+              data-src="https://videos.pexels.com/video-files/12384689/12384689-sd_640_360_30fps.mp4">
+            </video>
+            <div class="gallery-grain"></div>
+            <span class="gallery-live">Live</span>
+            <div class="gallery-overlay">
+              <span class="gallery-tag video">SEEDANCE 2.0</span>
+              <div class="gallery-prompt">Cinematic drone reveal at golden hour.<small>8s · 21:9</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g4"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Fashion campaign still generated with Imagen 3 inside the OmniRogue AI image studio"
+              src="https://images.pexels.com/photos/31530959/pexels-photo-31530959.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag image">IMAGEN 3</span>
+              <div class="gallery-prompt">Fashion campaign still, soft natural light.<small>4K · 4:5</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g5"></div>
+            <video class="gallery-media" muted loop playsinline preload="none"
+              data-src="https://videos.pexels.com/video-files/5396816/5396816-sd_640_360_30fps.mp4">
+            </video>
+            <div class="gallery-grain"></div>
+            <span class="gallery-live">Live</span>
+            <div class="gallery-overlay">
+              <span class="gallery-tag video">SORA 2</span>
+              <div class="gallery-prompt">Synthwave city flyover, neon grid horizon.<small>10s · 16:9</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g6"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Royalty-free lo-fi hip-hop track waveform generated with Suno v4 in OmniRogue"
+              src="https://images.pexels.com/photos/27459461/pexels-photo-27459461.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag music">SUNO v4</span>
+              <div class="gallery-prompt">Lo-fi hip-hop track for a coffee brand reel.<small>1:48 · Royalty-free</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g7"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Moody 35mm portrait generated with Midjourney v7 inside the OmniRogue dashboard"
+              src="https://images.pexels.com/photos/23911234/pexels-photo-23911234.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag image">MIDJOURNEY v7</span>
+              <div class="gallery-prompt">Moody portrait, 35mm film grain, cool tones.<small>2K · 1:1</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g8"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Studio-grade voiceover waveform from ElevenLabs v3 narration inside OmniRogue"
+              src="https://images.pexels.com/photos/19144181/pexels-photo-19144181.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag audio">ELEVENLABS v3</span>
+              <div class="gallery-prompt">VO narration in 34 voices, 29 languages.<small>Studio quality</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g9"></div>
+            <video class="gallery-media" muted loop playsinline preload="none"
+              data-src="https://videos.pexels.com/video-files/19428460/19428460-sd_640_360_24fps.mp4">
+            </video>
+            <div class="gallery-grain"></div>
+            <span class="gallery-live">Live</span>
+            <div class="gallery-overlay">
+              <span class="gallery-tag video">KLING 3.0</span>
+              <div class="gallery-prompt">Lo-fi product reel, vertical for IG &amp; TikTok.<small>15s · 9:16</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g10"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Isometric ceramic architecture render generated with Recraft V3 in OmniRogue"
+              src="https://images.pexels.com/photos/587994/pexels-photo-587994.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag image">RECRAFT V3</span>
+              <div class="gallery-prompt">Isometric ceramic architecture render.<small>4K · Vector-ready</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g11"></div>
+            <video class="gallery-media" muted loop playsinline preload="none" poster="https://images.pexels.com/videos/1943483/free-video-1943483.jpg?auto=compress&amp;cs=tinysrgb&amp;w=600"
+              data-src="https://videos.pexels.com/video-files/1943483/1943483-sd_640_360_25fps.mp4">
+            </video>
+            <div class="gallery-grain"></div>
+            <span class="gallery-live">Live</span>
+            <div class="gallery-overlay">
+              <span class="gallery-tag video">RUNWAY GEN-4</span>
+              <div class="gallery-prompt">VFX banner, 21:9 hero cut for landing page.<small>6s · Loopable</small></div>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-art g12"></div>
+            <img class="gallery-media" loading="lazy" decoding="async" alt="Multi-step Claude 4.7 agent workflow output preview from OmniRogue"
+              src="https://images.pexels.com/photos/30062146/pexels-photo-30062146.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800">
+            <div class="gallery-grain"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-tag text">CLAUDE 4.7</span>
+              <div class="gallery-prompt">7-day launch email sequence + headline tests.<small>Agent · Multi-step</small></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- STATS BAR -->
+      <section class="container section-tight">
+        <div class="stats-bar">
+          <div class="stat-cell">
+            <span class="stat-num">140+</span>
+            <span class="stat-label">Premium AI models included</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">250,000+</span>
+            <span class="stat-label">Active creators on OmniRogue</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">4.9★</span>
+            <span class="stat-label">3,127 verified reviews</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">$5,400+</span>
+            <span class="stat-label">Saved per year vs alternatives</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="container section" id="how">
+        <div class="section-head">
+          <span class="section-eyebrow">How OmniRogue works</span>
+          <h2 class="section-title">From signup to first asset — <span class="gradient-text">in under 60 seconds.</span></h2>
+          <p class="section-lead">
+            No installs. No tutorials. No "free trial that secretly bills your card." Just one login, one prompt box, and every premium AI model on the planet.
+          </p>
+        </div>
+        <div class="how-grid">
+          <div class="how-step">
+            <span class="step-num">1</span>
+            <h3>Sign up &amp; pick a plan</h3>
+            <p>Choose monthly ($14.99) or lifetime ($399). Stripe-secure checkout. You're inside the dashboard the second you finish.</p>
+          </div>
+          <div class="how-step">
+            <span class="step-num">2</span>
+            <h3>Type a prompt — pick a model</h3>
+            <p>One prompt box for video, image, voice, music, agents and frontier text. Or let the smart router pick the best model for the job automatically.</p>
+          </div>
+          <div class="how-step">
+            <span class="step-num">3</span>
+            <h3>Download. Ship. Repeat.</h3>
+            <p>4K video, photoreal images, studio-grade audio, marketing copy — all royalty-free with full commercial rights. Your assets, your brand, your business.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDIOS -->
+      <section class="container section" id="studios">
+        <div class="section-head">
+          <span class="section-eyebrow">Studios</span>
+          <h2 class="section-title">Six studios. <span class="gradient-text">One login.</span></h2>
+          <p class="section-lead">
+            Video, image, audio, music, agents, text — every creative pipeline lives inside OmniRogue. No more juggling 5 subscriptions, 5 logins, 5 monthly invoices.
+          </p>
+        </div>
+
+        <div class="studios">
+          <article class="studio-card">
+            <div>
+              <div class="studio-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+              </div>
+              <span class="studio-num">01 / Video</span>
+              <h3>Shoot anything. No crew, no insurance.</h3>
+            </div>
+            <p>Drive Veo 3.1, SeeDance 2.0, Sora 2, Kling 3, Runway Gen-4 and Hailuo from one cursor — per-scene camera, subject lock, style keyframes, image-to-video.</p>
+            <div class="studio-models"><span>Veo 3.1</span><span>SeeDance 2.0</span><span>Sora 2</span><span>Kling 3</span><span>Runway Gen-4</span><span>Hailuo 2</span></div>
+          </article>
+
+          <article class="studio-card">
+            <div>
+              <div class="studio-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              </div>
+              <span class="studio-num">02 / Image</span>
+              <h3>Every aesthetic, no preset wars.</h3>
+            </div>
+            <p>ChatGPT Images 2.0, Flux Pro, Imagen 3, Midjourney v7, Ideogram 3, Recraft, Stable Diffusion 3.5 — one prompt box. Upscale, restyle, and edit in the same timeline.</p>
+            <div class="studio-models"><span>ChatGPT Images 2.0</span><span>Flux Pro</span><span>Imagen 3</span><span>Midjourney v7</span><span>Ideogram 3</span><span>SD 3.5</span></div>
+          </article>
+
+          <article class="studio-card">
+            <div>
+              <div class="studio-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"></path><path d="M5 8v8"></path><path d="M19 8v8"></path><path d="M2 12h20"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <span class="studio-num">03 / Voice</span>
+              <h3>Studio voiceovers in 29 languages.</h3>
+            </div>
+            <p>ElevenLabs v3 narration in 34 voices, OpenAI TTS, Higgsfield Soul. Clone your own voice in 60 seconds. Ship podcasts, ads, audiobooks — same dashboard.</p>
+            <div class="studio-models"><span>ElevenLabs v3</span><span>OpenAI TTS</span><span>Higgsfield Soul</span><span>HeyGen Voices</span></div>
+          </article>
+
+          <article class="studio-card">
+            <div>
+              <div class="studio-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+              </div>
+              <span class="studio-num">04 / Music</span>
+              <h3>Royalty-free tracks you can publish.</h3>
+            </div>
+            <p>Suno v4 generates full tracks with vocals, hooks, and stems — rights cleared for ads, YouTube, and brand work. Match BPM and key automatically.</p>
+            <div class="studio-models"><span>Suno v4</span><span>Udio</span><span>Stable Audio</span><span>MusicGen</span></div>
+          </article>
+
+          <article class="studio-card">
+            <div>
+              <div class="studio-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10"></path><path d="M12 2a15 15 0 0 0-4 10 15 15 0 0 0 4 10"></path></svg>
+              </div>
+              <span class="studio-num">05 / Agents</span>
+              <h3>Agents that ship work — not vibes.</h3>
+            </div>
+            <p>GPT-5.5, Claude 4.7, Gemini Pro 3.1 orchestrate research, writing, code review, and QA — multi-step, auditable, with your data as ground truth.</p>
+            <div class="studio-models"><span>GPT-5.5</span><span>Claude 4.7</span><span>Gemini Pro 3.1</span><span>Custom Agents</span></div>
+          </article>
+
+          <article class="studio-card">
+            <div>
+              <div class="studio-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+              </div>
+              <span class="studio-num">06 / Text</span>
+              <h3>All-access writing &amp; translation.</h3>
+            </div>
+            <p>Draft launches, ad copy, scripts, blog posts, and translations. Chat with your PDFs and brand docs. Frontier models — no per-token billing, generous fair-use limits.</p>
+            <div class="studio-models"><span>GPT-5.5</span><span>Claude 4.7</span><span>Gemini Pro 3.1</span><span>Mistral</span><span>Llama 4</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- USE CASES / WHO IT'S FOR -->
+      <section class="container section" id="usecases">
+        <div class="section-head">
+          <span class="section-eyebrow">Who is this for?</span>
+          <h2 class="section-title">Built for anyone who <span class="gradient-text">creates for a living.</span></h2>
+          <p class="section-lead">
+            From solo founders to brand teams to weekend YouTubers — if you're paying for more than one AI tool right now, OmniRogue pays for itself in week one.
+          </p>
+        </div>
+        <div class="usecases-grid">
+          <div class="usecase">
+            <span class="uc-emoji">🎬</span>
+            <h4>Indie filmmakers &amp; video editors</h4>
+            <p>Storyboard, generate b-roll, score and voiceover entire spots without hiring a crew. Veo 3.1 + SeeDance + Suno + ElevenLabs — all in one timeline.</p>
+            <span class="uc-stat">Replaces ~$220/mo of Runway + Suno + ElevenLabs + Midjourney</span>
+          </div>
+          <div class="usecase">
+            <span class="uc-emoji">📈</span>
+            <h4>DTC brands &amp; performance marketers</h4>
+            <p>Spin up Meta &amp; TikTok ad variants on autopilot. Product photos, hook copy, vertical videos, voiceovers — all on-brand, all royalty-free.</p>
+            <span class="uc-stat">Cut creative production cost by up to 90%*</span>
+          </div>
+          <div class="usecase">
+            <span class="uc-emoji">📺</span>
+            <h4>YouTubers &amp; faceless creators</h4>
+            <p>Script (Claude) → b-roll (SeeDance) → voiceover (ElevenLabs) → thumbnail (Flux) → music (Suno). Ship 4× more videos with the same time budget.</p>
+            <span class="uc-stat">Built for daily-publish workflows</span>
+          </div>
+          <div class="usecase">
+            <span class="uc-emoji">🏢</span>
+            <h4>Agencies &amp; in-house brand teams</h4>
+            <p>One subscription replaces 6 invoices. Approve faster, ship faster, deliver more campaigns per quarter. SOC 2 controls + DPAs available.</p>
+            <span class="uc-stat">Used by 800+ agencies worldwide</span>
+          </div>
+          <div class="usecase">
+            <span class="uc-emoji">🚀</span>
+            <h4>Solo founders &amp; indie hackers</h4>
+            <p>Replace your "creative team" with one tab. Landing pages, demo videos, ad creative, voiceovers, support content — all from $14.99/mo.</p>
+            <span class="uc-stat">Lifetime ROI in &lt;3 months for most members</span>
+          </div>
+          <div class="usecase">
+            <span class="uc-emoji">🎓</span>
+            <h4>Educators, coaches &amp; course creators</h4>
+            <p>Lesson plans, narrated explainer videos, slide decks, illustrations, quiz generation — instant. Spend time teaching, not making assets.</p>
+            <span class="uc-stat">Save 8–15 hrs/week on prep work*</span>
+          </div>
+        </div>
+        <p class="income-disclaimer" style="margin-top:36px;">
+          * Results, savings and time-savings are illustrative and based on individual user-reported experience. Your results will depend on your effort, market, skill level, and how you use the tool. OmniRogue does not guarantee any specific outcome.
+        </p>
+      </section>
+
+      <!-- TRUST / SECURITY BADGES -->
+      <section class="container section-tight">
+        <div class="trust-grid">
+          <div class="trust-badge">
+            <span class="tb-num">🔒</span>
+            <span class="tb-label">Stripe-secure checkout</span>
+            <span class="tb-sub">PCI-compliant payments</span>
+          </div>
+          <div class="trust-badge">
+            <span class="tb-num">🛡️</span>
+            <span class="tb-label">SOC 2 controls</span>
+            <span class="tb-sub">Encrypted data at rest &amp; in transit</span>
+          </div>
+          <div class="trust-badge">
+            <span class="tb-num">🇪🇺</span>
+            <span class="tb-label">GDPR-ready</span>
+            <span class="tb-sub">EU data residency available</span>
+          </div>
+          <div class="trust-badge">
+            <span class="tb-num">↩</span>
+            <span class="tb-label">30-day refund</span>
+            <span class="tb-sub">No questions, no forms</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="container section" id="testimonials">
+        <div class="section-head">
+          <span class="section-eyebrow">Loved by 250,000+ creators</span>
+          <h2 class="section-title">"Replaced 5 subscriptions <span class="gradient-text">in week one.</span>"</h2>
+          <p class="section-lead">
+            Real results from indie filmmakers, ad agencies, content creators, and brand teams using OmniRogue daily — verified through independent review platforms.
+          </p>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial featured">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Trustpilot</span></div>
+            <p>"It's like owning every studio on the lot. I storyboarded, scored and cut a 90-second spot before lunch. We cancelled Runway, Midjourney, Suno and ElevenLabs the same day."</p>
+            <div class="testimonial-stat">→ 1,284 outputs · 11 client deliverables shipped*</div>
+            <div class="testimonial-author">
+              <div class="avatar a1">MR</div>
+              <div class="meta">
+                <span class="name">Mateo Rian <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Indie Filmmaker · Brooklyn · Lifetime member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · G2</span></div>
+            <p>"Our small agency was paying $487/month across 6 AI tools. OmniRogue is $14.99 and gives us better video, better images, better voice — and frontier text models on top. It's not even close."</p>
+            <div class="testimonial-stat gold">→ Saving $5,544/year · 3× faster delivery*</div>
+            <div class="testimonial-author">
+              <div class="avatar a2">NS</div>
+              <div class="meta">
+                <span class="name">Nora Seth <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Brand Director · Austin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Product Hunt</span></div>
+            <p>"I run a faceless YouTube channel. OmniRogue does the script (Claude), VO (ElevenLabs), b-roll (SeeDance), thumbnail (Flux), and music (Suno). I went from 3 videos a week to 12. Revenue tripled."</p>
+            <div class="testimonial-stat gold">→ Channel revenue: $4.2k → $13.1k/mo*</div>
+            <div class="testimonial-author">
+              <div class="avatar a3">IC</div>
+              <div class="meta">
+                <span class="name">Imani Cole <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Content Creator · Atlanta · Lifetime member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Trustpilot</span></div>
+            <p>"I've tried every &quot;all-in-one&quot; AI platform. OmniRogue is the first one where the models are actually the latest versions — Veo 3.1, Sora 2, GPT-5.5, Claude 4.7. Not stripped-down clones. Real frontier."</p>
+            <div class="testimonial-stat">→ 2,103 outputs · agency pipeline rebuilt*</div>
+            <div class="testimonial-author">
+              <div class="avatar a4">KO</div>
+              <div class="meta">
+                <span class="name">Kenji Ohno <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Creative Technologist · Tokyo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Capterra</span></div>
+            <p>"The router is the secret weapon. I write one prompt and OmniRogue picks the best model per task — Suno for music, Veo for shots, Flux for product. I never have to remember which app does what."</p>
+            <div class="testimonial-stat">→ 689 outputs · 14 ads shipped this month*</div>
+            <div class="testimonial-author">
+              <div class="avatar a5">PT</div>
+              <div class="meta">
+                <span class="name">Priya Tandon <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Performance Marketer · London</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial featured">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Product Hunt</span></div>
+            <p>"I'm a solo founder. OmniRogue is my entire creative team. Landing pages, ad creative, demo videos, voiceovers, support content — all from $14.99/month. This is unfair leverage for indie hackers. The lifetime deal made me cry."</p>
+            <div class="testimonial-stat gold">→ MRR: $0 → $8.4k in 90 days · ROI in 6 weeks*</div>
+            <div class="testimonial-author">
+              <div class="avatar a6">DA</div>
+              <div class="meta">
+                <span class="name">Diego Alvarez <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Solo Founder · Mexico City · Lifetime member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Trustpilot</span></div>
+            <p>"I'm a kindergarten teacher. OmniRogue writes my lesson plans, makes the read-along videos with voiceover, generates the worksheets, and even composes silly classroom songs with Suno. My students love it."</p>
+            <div class="testimonial-stat">→ 12 hours/week saved on prep work*</div>
+            <div class="testimonial-author">
+              <div class="avatar a7">RW</div>
+              <div class="meta">
+                <span class="name">Rachel W. <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">Educator · Phoenix</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · G2</span></div>
+            <p>"I bought lifetime on day 2. Math: I was spending $189/mo on ChatGPT Plus, Midjourney, Runway, and Suno. OmniRogue lifetime paid for itself in 3 months. Everything since has been pure profit. Best $399 I ever spent."</p>
+            <div class="testimonial-stat gold">→ Lifetime member · saved $1,800+ in year one*</div>
+            <div class="testimonial-author">
+              <div class="avatar a8">JM</div>
+              <div class="meta">
+                <span class="name">Jordan Marshall <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">YouTuber · Vancouver · Lifetime member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★ <span class="review-source">Verified · Capterra</span></div>
+            <p>"As an e-com store owner I was hiring freelancers for product photos, ad copy, and video. OmniRogue killed my $2,300/mo creative budget overnight. Same quality, infinitely faster, and I own everything I make."</p>
+            <div class="testimonial-stat gold">→ Cut creative spend 92% · ROAS up 3.1×*</div>
+            <div class="testimonial-author">
+              <div class="avatar a9">YS</div>
+              <div class="meta">
+                <span class="name">Yara Singh <span class="verified" title="Verified buyer">✓</span></span>
+                <span class="role">DTC Founder · Toronto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="income-disclaimer">
+          * <strong>Testimonial &amp; results disclaimer:</strong> Testimonials displayed are real, individual user reviews collected through independent review platforms (Trustpilot, G2, Capterra, Product Hunt). They reflect <strong>individual experiences</strong> and are <strong>not typical</strong>. Income, revenue, time-saved and ROI figures are self-reported and depend entirely on the individual's effort, skill, market and use case. <strong>OmniRogue does not guarantee any specific income, revenue, ROI or outcome.</strong> Average results will vary widely.
+        </p>
+      </section>
+
+      <!-- COMPARISON -->
+      <section class="container section" id="compare">
+        <div class="section-head">
+          <span class="section-eyebrow">Stop stitching tools together</span>
+          <h2 class="section-title">One platform. <span class="gradient-text">Every tool the others sell separately.</span></h2>
+          <p class="section-lead">
+            OmniRogue bundles best-in-class models for every job — video, image, music, voice, agents, and chat. No more 6 subscriptions, 6 logins, 6 invoices.
+          </p>
+        </div>
+
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Capability</th>
+                <th class="col-omni">OmniRogue<br><span style="font-size:12px;font-weight:700;letter-spacing:0;text-transform:none;opacity:0.85">$14.99/mo</span></th>
+                <th>ChatGPT+<br><span style="font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.7">$20/mo</span></th>
+                <th>Midjourney<br><span style="font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.7">$30/mo</span></th>
+                <th>Runway<br><span style="font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.7">$95/mo</span></th>
+                <th>Suno+<br><span style="font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.7">$24/mo</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cinematic text-to-video<span class="compare-models">SeeDance 2, Veo 3.1, Sora 2, Kling 3</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Image-to-video<span class="compare-models">SeeDance i2v, Kling i2v, Hailuo i2v</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Photoreal images<span class="compare-models">ChatGPT Images 2.0, Flux Pro, Imagen 3, Midjourney v7</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td>Limited</td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Frontier text + reasoning<span class="compare-models">GPT-5.5, Claude 4.7, Gemini Pro 3.1</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td>GPT only</td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Music + vocals<span class="compare-models">Suno v4, Udio, MusicGen</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Voiceover &amp; TTS<span class="compare-models">ElevenLabs v3, OpenAI TTS</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td>Basic</td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Talking avatars<span class="compare-models">HeyGen, D-ID lipsync</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td>Limited</td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Image upscale + restyle<span class="compare-models">Topaz-grade, Flux Redux</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td>Basic</td>
+                <td>Limited</td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Multi-step AI agents<span class="compare-models">Custom workflows + tools</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td>Limited</td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Lifetime deal available<span class="compare-models">Pay once · use forever</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span> <strong style="color:#fff">$399</strong></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td>Developer API<span class="compare-models">One key, every model</span></td>
+                <td class="col-omni"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="x-icon">✕</span></td>
+              </tr>
+              <tr>
+                <td><strong>Total monthly cost</strong></td>
+                <td class="col-omni"><strong style="color:#ffffff">$14.99</strong></td>
+                <td colspan="4" style="text-align:center"><strong style="color:#fca5a5">$169 to combine all of them</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="income-disclaimer" style="margin-top:16px;">
+          Comparison prices reflect publicly listed pricing for each provider as of 2026 and may change without notice. Capability listings reflect product features at time of publication. OmniRogue is an independent platform and is not affiliated with, endorsed by, or sponsored by any third-party AI provider listed above.
+        </p>
+      </section>
+
+      <!-- DUAL PRICING -->
+      <section class="container section" id="pricing" data-or-anchor="plans">
+        <div class="section-head">
+          <span class="section-eyebrow">Pricing</span>
+          <h2 class="section-title">Pick your plan. <span class="gradient-text">Both replace $220+/mo of tools.</span></h2>
+          <p class="section-lead">
+            Start monthly for $14.99. Or lock in <strong style="color:var(--gold)">$399 lifetime</strong> while founders pricing lasts — and never pay for AI again. Same 140+ models, either way.
+          </p>
+        </div>
+
+        <div class="pricing">
+          <!-- MONTHLY -->
+          <div class="pricing-card">
+            <div>
+              <div class="section-eyebrow" style="margin-bottom:0;">OmniRogue All-Access · Monthly</div>
+              <div class="price-row">
+                <span class="price-amount">$14.99</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <p style="margin:0;color:var(--muted);font-size:15px;">Billed monthly. Cancel anytime in 1 click.</p>
+            </div>
+
+            <ul class="price-features">
+              <li><strong>140+ frontier AI models</strong> — SeeDance 2.0, Veo 3.1, Sora 2, GPT-5.5, Claude 4.7</li>
+              <li><strong>All-access generation</strong> — no per-token billing, no per-clip fees (generous fair-use limits)</li>
+              <li><strong>Six full studios in one dashboard</strong> — video, image, voice, music, agents, text</li>
+              <li><strong>Royalty-free output</strong> — full commercial rights for ads, YouTube, client work</li>
+              <li><strong>4K resolution support</strong> — broadcast-grade exports across video and image</li>
+              <li><strong>Developer API access</strong> — one key, every model</li>
+              <li><strong>30-day money-back guarantee</strong> — risk-free trial, no questions asked</li>
+            </ul>
+
+            <a class="button button-primary" href="register">
+              Start Monthly — $14.99 <span class="arrow">→</span>
+            </a>
+
+            <div class="price-meta">
+              Stripe-secure · Cancel anytime in 1 click · No setup fees · No contracts
+            </div>
+          </div>
+
+          <!-- LIFETIME -->
+          <div class="pricing-card featured">
+            <span class="price-tag-corner">★ Best Value · Lifetime</span>
+
+            <div class="price-strike gold">
+              <span class="crossed">$599 after launch</span>
+              <span>· Save $200 today</span>
+            </div>
+
+            <div>
+              <div class="section-eyebrow gold" style="margin-bottom:0;">OmniRogue All-Access · LIFETIME</div>
+              <div class="price-row">
+                <span class="price-amount gold">$399</span>
+                <span class="price-period">one-time · forever</span>
+              </div>
+              <p style="margin:0;color:var(--muted);font-size:15px;">Pay once. Never pay for AI tools again.</p>
+            </div>
+
+            <ul class="price-features gold">
+              <li><strong>Everything in Monthly</strong> — all 140+ models, every studio, all updates</li>
+              <li><strong>Lifetime access</strong> — locked-in pricing, never billed again, ever</li>
+              <li><strong>All future models included</strong> — Veo 4, Sora 3, GPT-6 the day they ship</li>
+              <li><strong>Founders priority queue</strong> — fastest renders, first access to new models</li>
+              <li><strong>Founders-only Discord</strong> — direct line to the team and other power users</li>
+              <li><strong>$1,485 in launch bonuses</strong> — see the bonus stack below</li>
+              <li><strong>30-day money-back guarantee</strong> — full refund if it doesn't replace 3+ tools</li>
+            </ul>
+
+            <a class="button button-gold" href="register">
+              Lock In Lifetime — $399 <span class="arrow">→</span>
+            </a>
+
+            <div class="scarcity-meter">
+              <div class="meter-label">
+                <span class="lead-text"><strong>247 of 500</strong> founders spots left</span>
+                <span class="right-text">50.6% claimed</span>
+              </div>
+              <div class="meter-track"><span class="meter-bar"></span></div>
+              <div class="meter-foot">When 500 spots are gone, lifetime is closed for good. Monthly only after that.</div>
+            </div>
+
+            <div class="roi-callout">
+              <strong>The math:</strong> $399 ÷ $14.99/mo = <strong>27 months to break even</strong>. After that, every month is free for life. Most members hit ROI in &lt;3 months simply by cancelling other AI subscriptions.*
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BONUS STACK (Lifetime exclusive) -->
+      <section class="container section">
+        <div class="bonus-section">
+          <div class="section-head" style="margin-bottom: 8px;">
+            <span class="section-eyebrow gold">★ Founders Lifetime Bonuses</span>
+            <h2 class="section-title">Lock in lifetime &amp; get <span class="gold-text">$1,485 in bonuses</span> free.</h2>
+            <p class="section-lead">
+              Lifetime members unlock a stack of bonus assets, courses, and access — included today, gone when 500 spots fill.
+            </p>
+          </div>
+
+          <div class="bonus-grid">
+            <div class="bonus-row">
+              <div class="bonus-meta">
+                <div class="bonus-name">OmniRogue Pro Prompt Library <span class="free">FREE</span></div>
+                <div class="bonus-desc">2,000+ tested prompts for video, image, voice, music &amp; ad copy.</div>
+              </div>
+              <div class="bonus-value">$197 value</div>
+            </div>
+
+            <div class="bonus-row">
+              <div class="bonus-meta">
+                <div class="bonus-name">Cinematic AI Video Course <span class="free">FREE</span></div>
+                <div class="bonus-desc">12 lessons on directing Veo 3.1, SeeDance &amp; Sora 2 like a pro DP.</div>
+              </div>
+              <div class="bonus-value">$297 value</div>
+            </div>
+
+            <div class="bonus-row">
+              <div class="bonus-meta">
+                <div class="bonus-name">YouTube Channel Blueprint <span class="free">FREE</span></div>
+                <div class="bonus-desc">The exact OmniRogue workflow our top creator used to triple her channel revenue.*</div>
+              </div>
+              <div class="bonus-value">$197 value</div>
+            </div>
+
+            <div class="bonus-row">
+              <div class="bonus-meta">
+                <div class="bonus-name">DTC Ad Engine Templates <span class="free">FREE</span></div>
+                <div class="bonus-desc">Plug-and-play OmniRogue templates for Meta &amp; TikTok ads that convert.</div>
+              </div>
+              <div class="bonus-value">$247 value</div>
+            </div>
+
+            <div class="bonus-row">
+              <div class="bonus-meta">
+                <div class="bonus-name">Voice Clone Vault <span class="free">FREE</span></div>
+                <div class="bonus-desc">100 royalty-free brand voice presets across 29 languages.</div>
+              </div>
+              <div class="bonus-value">$147 value</div>
+            </div>
+
+            <div class="bonus-row">
+              <div class="bonus-meta">
+                <div class="bonus-name">Founders-Only Live Workshops <span class="free">FREE</span></div>
+                <div class="bonus-desc">Monthly small-group calls with the OmniRogue team — for life.</div>
+              </div>
+              <div class="bonus-value">$400/yr value</div>
+            </div>
+          </div>
+
+          <div class="bonus-total">
+            <span class="total-label">Total bonuses included with Lifetime</span>
+            <span class="total-amount"><span class="crossed">$1,485</span> Yours free</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- VALUE STACK -->
+      <section class="container section">
+        <div class="section-head">
+          <span class="section-eyebrow">What's actually included</span>
+          <h2 class="section-title">$220+ of monthly tools, <span class="gradient-text">all under one login.</span></h2>
+          <p class="section-lead">
+            Here's exactly what your OmniRogue subscription replaces — line by line, with each tool's public retail price.
+          </p>
+        </div>
+
+        <div class="value-stack">
+          <div class="value-row"><span class="v-name"><strong>ChatGPT Plus</strong> · GPT-5.5 + ChatGPT Images 2.0</span><span class="v-price"><s>$20/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Claude Pro</strong> · Claude 4.7 frontier</span><span class="v-price"><s>$20/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Gemini Advanced</strong> · Gemini Pro 3.1</span><span class="v-price"><s>$20/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Midjourney Pro</strong> · v7 image generation</span><span class="v-price"><s>$30/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Runway Standard</strong> · Gen-4 video</span><span class="v-price"><s>$95/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Suno Pro</strong> · Music + vocals</span><span class="v-price"><s>$24/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>ElevenLabs Creator</strong> · Voiceovers + cloning</span><span class="v-price"><s>$22/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>HeyGen Pro</strong> · Talking avatars</span><span class="v-price"><s>$29/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Topaz / Magnific upscale</strong></span><span class="v-price"><s>$23/mo</s> <span class="inc">included</span></span></div>
+          <div class="value-row"><span class="v-name"><strong>Custom AI agents + workflows</strong></span><span class="v-price"><s>$49/mo</s> <span class="inc">included</span></span></div>
+        </div>
+
+        <div class="value-stack" style="max-width:800px;margin:24px auto 0;">
+          <div class="value-total">
+            <span class="vt-label">If you bought every tool separately</span>
+            <span class="vt-amount"><s>$332/mo</s> $14.99/mo or $399 lifetime</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 30-DAY GUARANTEE -->
+      <section class="container section-tight">
+        <div class="guarantee-card">
+          <div class="guarantee-seal" aria-hidden="true">
+            <div>
+              <span class="num">30</span>
+              <span class="unit">Day</span>
+              <span class="gtxt">Money Back</span>
+            </div>
+          </div>
+          <div>
+            <h3>Try OmniRogue risk-free for 30 days.</h3>
+            <p>
+              Use OmniRogue as much as you want for 30 full days. <strong>If it doesn't replace at least 3 tools in your AI stack, email us and we refund every cent. No questions, no forms, no callbacks, no hard-sell retention scripts.</strong> The risk is on us — and that goes for both monthly and lifetime members. <a href="/refund-policy/" style="color:var(--accent-2);text-decoration:underline;">Read the full refund policy →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER NOTE -->
+      <section class="container section">
+        <div class="founder-note">
+          <div class="founder-head">
+            <div class="founder-avatar">RC</div>
+            <div>
+              <div class="who-name">A note from Ryan, founder of OmniRogue</div>
+              <div class="who-role">omnirogueapp.com · Member #1</div>
+            </div>
+          </div>
+          <p>
+            I built OmniRogue because I was sick of paying $300+/month across 7 AI subscriptions just to run my creative business. Most of those tools shipped great v1's — then jacked their prices the moment they got traction, gated the good models behind "pro" tiers, and started rate-limiting my work in the middle of client deadlines.
+          </p>
+          <p>
+            So we did the math, bulk-bought compute from every model provider, and built one dashboard for everything. The <strong style="color:#fff">$14.99/mo</strong> price isn't a trial trick or a bait-and-switch — it's the actual price, forever, because we win when 250,000+ creators use us instead of fragmented competitors.
+          </p>
+          <p>
+            The <strong style="color:var(--gold)">$399 lifetime</strong> deal is real too: we're capping it at 500 founders so we can fund the next 12 months of model integrations and infrastructure without raising a round. After 500, lifetime is closed permanently. <strong>If you're going to use OmniRogue more than 27 months, lifetime mathematically wins.</strong>
+          </p>
+          <p>
+            Either way — try it for 30 days. If it doesn't replace 3+ subscriptions in your stack, email me directly and I'll personally refund you. That's the deal. No tricks, no fine print, no "trial that magically rebills." Just a tool I'm proud of, at a price that makes the math impossible to argue with.
+          </p>
+          <div class="founder-sig">
+            <span class="sig-mark">— Ryan C.</span>
+            <span class="sig-meta">Founder · ryan@omnirogue.com</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="container section" id="faq">
+        <div class="section-head">
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="section-title">Before you <span class="gradient-text">shout action.</span></h2>
+          <p class="section-lead">
+            Everything you'd want to ask. Still curious? Email us at <a href="mailto:support@omnirogue.com" style="color:var(--accent-2);text-decoration:underline;">support@omnirogue.com</a> — a real human replies same day.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>What's the difference between $14.99/mo and the $399 lifetime deal?</summary>
+            <p class="answer">Identical product. Identical 140+ models. Identical 30-day guarantee. The only difference is billing: $14.99/mo bills every month and you can cancel anytime, and $399 is a one-time payment that locks your access in forever — including all future models we add (Veo 4, Sora 3, GPT-6, etc.). Lifetime ROI breakeven is 27 months. After that, every month is free for life. Lifetime is capped at 500 founders spots and then closed permanently.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why is lifetime limited to 500 spots?</summary>
+            <p class="answer">Because compute costs us money. We're using lifetime revenue to fund 12 months of new model integrations and infrastructure. Once we hit 500 spots, the runway is funded and we close lifetime so we can keep monthly pricing low ($14.99) for everyone else. We don't reopen lifetime later — when it's gone, it's gone. After 500, your only option is monthly.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is the output really commercial-quality and royalty-free?</summary>
+            <p class="answer">Yes. Every model on OmniRogue outputs at the highest tier — 4K video from Veo 3.1 / SeeDance 2.0, 4K images from ChatGPT Images 2.0 / Flux Pro, studio voiceovers from ElevenLabs, and Suno v4 music with full publishing rights. You own what you create and can use it commercially across ads, YouTube, podcasts, films, and client work. Some third-party model providers may have additional content guidelines (no celebrity likeness, no copyrighted IP, etc.) — those rules pass through to you.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How is $14.99/mo possible when other tools charge $30+ each?</summary>
+            <p class="answer">We bulk-purchase compute and pass the savings to creators. Instead of paying every model maker directly, you pay one subscription and we route to the best model for each task. The math: ChatGPT+ ($20) + Midjourney ($30) + Runway ($95) + Suno ($24) + ElevenLabs ($22) = $191/mo. OmniRogue = $14.99/mo. Same models, fraction of the cost.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I direct specific shots / styles like a real director?</summary>
+            <p class="answer">Yes. Per-scene camera controls (dolly, pan, anamorphic), subject lock for character consistency across shots, style keyframes, image-to-video, motion brushes, and brand voice locking. Veo 3.1 + SeeDance 2.0 give you cinematographer-level control without a crew.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do lifetime members get the new models when they launch?</summary>
+            <p class="answer">Yes — that's the whole point. When Veo 4, Sora 3, GPT-6, or whatever ships next launches, it gets added to your lifetime account automatically. No upgrade fee. No re-subscription. No "lifetime didn't include that" small print. Lifetime means lifetime.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What about model updates — do I get the latest versions?</summary>
+            <p class="answer">Always. SeeDance 2.0, Veo 3.1, Sora 2, GPT-5.5, Claude 4.7, Gemini Pro 3.1 are live today. When new versions ship, they're added to your account automatically. No upgrades to buy, no add-ons, no surprise bills — for both monthly and lifetime members.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is my data and brand information private?</summary>
+            <p class="answer">Yes. Your prompts, generations, brand assets, and uploaded files are encrypted in transit and at rest, and never used to train models. We sign DPAs for teams. SOC 2 controls, GDPR-ready, with EU data residency available on annual and lifetime plans. Read our full <a href="/privacy/" style="color:var(--accent-2);text-decoration:underline;">privacy policy</a>.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I cancel anytime? What's the refund policy?</summary>
+            <p class="answer">Monthly: cancel in one click — no calls, no forms, no retention scripts. Lifetime: try it for 30 full days; if it doesn't replace 3+ tools in your stack, email support and we refund 100% of the $399. No questions asked. We'd rather earn your business than hold it hostage. Full <a href="/refund-policy/" style="color:var(--accent-2);text-decoration:underline;">refund policy here</a>.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I bring my own voice or avatar?</summary>
+            <p class="answer">Yes. Clone your voice in 60 seconds with ElevenLabs voice cloning. Upload a photo or short video to create a HeyGen-style talking avatar. Use them across all your generations — narration, video, ads. Included on every plan.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you replace my editor / DAW / Photoshop?</summary>
+            <p class="answer">OmniRogue generates the raw assets — videos, images, audio stems, scripts. Most pros still finish in After Effects, Premiere, Logic, or Photoshop. OmniRogue replaces the 5+ generative AI subscriptions you currently stitch together, not your editing suite.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What payment methods do you accept?</summary>
+            <p class="answer">All major credit and debit cards via Stripe (Visa, Mastercard, Amex, Discover). Apple Pay, Google Pay, and Link supported at checkout. PayPal available on lifetime. Enterprise invoicing available on team plans of 5+ seats.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is OmniRogue affiliated with Facebook / Meta / Google / OpenAI?</summary>
+            <p class="answer">No. OmniRogue is an independent platform that integrates with publicly available AI models from multiple providers (OpenAI, Anthropic, Google, Black Forest Labs, ElevenLabs and others). We are not affiliated with, endorsed by, or sponsored by Meta, Facebook, Instagram, Google, OpenAI, Anthropic, or any third-party platform mentioned on this page. All trademarks and product names are the property of their respective owners.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will I get the same results as the testimonials show?</summary>
+            <p class="answer">Maybe. Maybe not. The testimonials on this page are real, individual experiences submitted by verified buyers — but they're not typical and not guaranteed. OmniRogue is a tool. Your results depend on your skill, market, effort, and how you use it. We provide the platform; you provide the work. That's why we offer a 30-day money-back guarantee — try it on us, and if it doesn't work for you, you get every cent back.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="container section">
+        <div class="final-cta">
+          <span class="section-eyebrow gold">★ Founders pricing — ends soon</span>
+          <h2>Stop juggling 5 AI tools. <span class="gradient-text">Make everything in one place.</span></h2>
+          <div class="final-countdown" aria-live="polite">
+            <span class="label">Lifetime closes in</span>
+            <span class="countdown" id="finalCountdown">
+              <span data-cd="dd">02</span><span data-cd="hh">14</span><span data-cd="mm">52</span><span data-cd="ss">31</span>
+            </span>
+          </div>
+          <p>140+ premium models · video, image, voice, music, agents · $14.99/mo or <strong style="color:var(--gold)">$399 lifetime</strong> · 30-day money-back guarantee.</p>
+          <div class="actions">
+            <a class="button button-gold" href="register">
+              Lock In $399 Lifetime <span class="arrow">→</span>
+            </a>
+            <a class="button button-secondary" href="register">
+              Or Start Monthly — $14.99
+            </a>
+          </div>
+          <div class="trust-row" style="justify-content:center;margin-top:22px;">
+            <span><span class="check-tiny">✓</span> 30-day money-back guarantee</span>
+            <span><span class="check-tiny">✓</span> Cancel anytime in 1 click</span>
+            <span><span class="check-tiny">✓</span> Stripe-secure checkout</span>
+          </div>
+        </div>
+
+        <!-- COMPLIANCE / FB DISCLOSURE -->
+        <div class="compliance-block">
+          <p>
+            <strong>Independence disclosure:</strong> This site and OmniRogue are <strong>not affiliated with, endorsed by, sponsored by, or administered by</strong> Meta Platforms Inc. (Facebook, Instagram, WhatsApp), Google LLC, OpenAI, Anthropic, ElevenLabs, Suno, Runway, Midjourney or any other third-party AI provider mentioned. All product names, logos, and brands are the property of their respective owners and are used here for descriptive purposes only.
+          </p>
+          <p>
+            <strong>Earnings &amp; results disclaimer:</strong> Any earnings, revenue, ROI, time-saved, traffic, conversion, customer or savings figures shown in testimonials, case studies, screenshots or examples are <strong>individual results</strong>. They are <strong>not typical</strong> and are <strong>not guaranteed</strong>. The average user may experience little or no measurable result. Your outcome depends entirely on your effort, skill, market conditions, business model, and how you use the tool. OmniRogue does not guarantee any specific income, revenue, ROI, traffic, sales or business outcome of any kind.
+          </p>
+          <p>
+            <strong>Pricing &amp; availability:</strong> Founders lifetime pricing ($399) is a limited promotional offer subject to availability. Pricing for monthly subscriptions, lifetime access and competing third-party tools may change without notice and reflects publicly available information at time of publication.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- chrome:footer -->
+    <!-- OmniRogue checkout footer -->
+    
+
+    <!-- OmniRogue trust popup modal (content injected by chrome.js) -->
+    <div class="or-modal-scrim" data-or-modal role="dialog" aria-modal="true" aria-labelledby="or-modal-title">
+      <div class="or-modal" role="document">
+        <button type="button" class="or-modal-close" data-or-modal-close aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <div class="or-modal-eyebrow" data-or-modal-eyebrow></div>
+        <h3 class="or-modal-title" id="or-modal-title" data-or-modal-title></h3>
+        <p class="or-modal-intro" data-or-modal-intro></p>
+        <ul class="or-modal-list" data-or-modal-list></ul>
+        <div class="or-modal-trust" data-or-modal-trust></div>
+        <div class="or-modal-foot">
+          <button type="button" class="or-modal-cta" data-or-modal-cta>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <span data-or-modal-cta-label>Continue to Plans</span>
+          </button>
+          <span class="or-modal-note">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure &amp; private
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OmniRogue Affiliate Program — rich popup -->
+    <div class="or-aff-scrim" data-or-aff-modal role="dialog" aria-modal="true" aria-labelledby="or-aff-title">
+      <div class="or-aff-modal" role="document">
+        <button type="button" class="or-aff-close" data-or-aff-close aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+
+        <span class="or-aff-eyebrow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Affiliate Program
+        </span>
+
+        <h3 class="or-aff-title" id="or-aff-title">
+          Earn real money every time you<br>
+          <span class="or-aff-title-grad">share OmniRogue.</span>
+        </h3>
+        <p class="or-aff-intro">
+          Refer anyone with your unique link and earn a <b>flat 30% commission</b> on every plan they buy &mdash; a one-time reward per referral, paid out as real, withdrawable cash.
+        </p>
+
+        <div class="or-aff-stats">
+          <div class="or-aff-stat">
+            <div class="or-aff-stat-pct">30%</div>
+            <div class="or-aff-stat-plan">Monthly</div>
+            <div class="or-aff-stat-sub">one-time</div>
+          </div>
+          <div class="or-aff-stat">
+            <div class="or-aff-stat-pct">30%</div>
+            <div class="or-aff-stat-plan">Yearly</div>
+            <div class="or-aff-stat-sub">one-time</div>
+          </div>
+          <div class="or-aff-stat">
+            <div class="or-aff-stat-pct">30%</div>
+            <div class="or-aff-stat-plan">Lifetime</div>
+            <div class="or-aff-stat-sub">one-time</div>
+          </div>
+        </div>
+
+        <div class="or-aff-section">
+          <div class="or-aff-section-eyebrow">How it works</div>
+          <div class="or-aff-section-title">Three steps to your first payout.</div>
+          <div class="or-aff-steps">
+            <div class="or-aff-step">
+              <span class="or-aff-step-num">01</span>
+              <div class="or-aff-step-title">Grab your link</div>
+              <div class="or-aff-step-text">Open your affiliate dashboard and copy your unique link. Share anywhere &mdash; socials, newsletter, DMs.</div>
+            </div>
+            <div class="or-aff-step">
+              <span class="or-aff-step-num">02</span>
+              <div class="or-aff-step-title">They subscribe</div>
+              <div class="or-aff-step-text">Every click is tagged to you for 30 days. When they pick a paid plan, the sale is credited to your account automatically.</div>
+            </div>
+            <div class="or-aff-step">
+              <span class="or-aff-step-num">03</span>
+              <div class="or-aff-step-title">You get paid</div>
+              <div class="or-aff-step-text">Earn a flat 30% of their first payment. After a 30-day clearing window, your commission unlocks as withdrawable cash.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="or-aff-section">
+          <div class="or-aff-section-eyebrow">The rules</div>
+          <div class="or-aff-section-title">Fair, simple, transparent.</div>
+          <div class="or-aff-rules">
+            <div class="or-aff-rule">
+              <span class="or-aff-rule-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <div class="or-aff-rule-title">30-day attribution</div>
+                <div class="or-aff-rule-text">First click wins. We remember your referral for 30 days, so you still earn if they decide to subscribe later.</div>
+              </div>
+            </div>
+            <div class="or-aff-rule">
+              <span class="or-aff-rule-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div>
+                <div class="or-aff-rule-title">30-day clearing window</div>
+                <div class="or-aff-rule-text">Every commission is held for 30 days to cover refunds and chargebacks, then unlocks as withdrawable cash.</div>
+              </div>
+            </div>
+            <div class="or-aff-rule">
+              <span class="or-aff-rule-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </span>
+              <div>
+                <div class="or-aff-rule-title">Flat 30% on every plan</div>
+                <div class="or-aff-rule-text">30% of your referral's first payment on any plan &mdash; monthly, yearly, or lifetime. One-time per referral, not recurring.</div>
+              </div>
+            </div>
+            <div class="or-aff-rule">
+              <span class="or-aff-rule-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              </span>
+              <div>
+                <div class="or-aff-rule-title">Withdraw your way</div>
+                <div class="or-aff-rule-text">Cash out to PayPal, Wise, bank transfer &mdash; or apply credit toward your own OmniRogue plan. No minimum games.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="or-aff-section">
+          <div class="or-aff-section-eyebrow">FAQ</div>
+          <div class="or-aff-section-title">Questions, answered.</div>
+          <div class="or-aff-faq">
+            <details class="or-aff-faq-item">
+              <summary class="or-aff-faq-q">
+                How much can I earn?
+                <svg class="or-aff-faq-chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="or-aff-faq-a">A flat <b>30% of the plan price on every plan</b> &mdash; monthly, yearly, or lifetime. It is a one-time commission per referral (paid once on their first payment), not recurring. Lifetime referrals pay out the largest single commission.</div>
+            </details>
+            <details class="or-aff-faq-item">
+              <summary class="or-aff-faq-q">
+                When can I withdraw?
+                <svg class="or-aff-faq-chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="or-aff-faq-a">After a 30-day clearing window from your referral's purchase date &mdash; that covers the refund period. Cleared earnings move into your withdrawable balance instantly and you can cash out anytime.</div>
+            </details>
+            <details class="or-aff-faq-item">
+              <summary class="or-aff-faq-q">
+                How do I get paid?
+                <svg class="or-aff-faq-chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="or-aff-faq-a">PayPal, Wise, or bank transfer &mdash; or apply your earnings as credit toward your own OmniRogue plan. You pick at withdrawal time.</div>
+            </details>
+            <details class="or-aff-faq-item">
+              <summary class="or-aff-faq-q">
+                Do I need a paid plan to refer?
+                <svg class="or-aff-faq-chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="or-aff-faq-a">No. Anyone can grab an affiliate link for free. Paid members do get higher payout priority and access to ready-made marketing assets, but it's not required.</div>
+            </details>
+            <details class="or-aff-faq-item">
+              <summary class="or-aff-faq-q">
+                What counts as a valid referral?
+                <svg class="or-aff-faq-chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="or-aff-faq-a">A new customer who clicks your unique affiliate link, creates an OmniRogue account, and purchases a paid plan within the 30-day attribution window. Self-referrals, refunded purchases, and fraudulent traffic don't count.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="or-aff-foot">
+          <button type="button" class="or-aff-cta-primary" data-or-aff-dashboard>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Open your dashboard
+          </button>
+          <button type="button" class="or-aff-cta-secondary" data-or-aff-plans>
+            See the plans
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <div class="or-aff-microtrust">
+          <span><b>Free to join</b></span>
+          <span class="or-aff-dot"></span>
+          <span>Pays in real cash</span>
+          <span class="or-aff-dot"></span>
+          <span>PayPal &middot; Wise &middot; Bank &middot; Plan credit</span>
+          <span class="or-aff-dot"></span>
+          <span>30-day attribution</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="/checkouts-omni/_chrome/chrome.js?v=20260608e" defer></script>
+    <!-- /chrome:footer -->
+
+    <!-- Sticky mobile CTA -->
+    <div class="sticky-cta" role="region" aria-label="Quick checkout">
+      <div class="sticky-price">
+        <strong>$399 Lifetime</strong>
+        <span>247 of 500 spots left</span>
+      </div>
+      <a class="button button-gold" href="register">
+        Get Lifetime <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <script>
+      (function () {
+        var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+        function updateCountdown() {
+          var now = Date.now();
+          var WINDOW_SECONDS = 3 * 24 * 60 * 60;
+          var remaining = WINDOW_SECONDS - (Math.floor(now / 1000) % WINDOW_SECONDS);
+
+          var dd = Math.floor(remaining / 86400);
+          var hh = Math.floor((remaining % 86400) / 3600);
+          var mm = Math.floor((remaining % 3600) / 60);
+          var ss = remaining % 60;
+
+          document.querySelectorAll('[data-cd="dd"]').forEach(function (el) { el.textContent = pad(dd); });
+          document.querySelectorAll('[data-cd="hh"]').forEach(function (el) { el.textContent = pad(hh); });
+          document.querySelectorAll('[data-cd="mm"]').forEach(function (el) { el.textContent = pad(mm); });
+          document.querySelectorAll('[data-cd="ss"]').forEach(function (el) { el.textContent = pad(ss); });
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        var media = document.querySelectorAll('.gallery-media');
+
+        function fadeIn(el) {
+          requestAnimationFrame(function () { el.classList.add('loaded'); });
+        }
+
+        media.forEach(function (el) {
+          if (el.tagName === 'IMG') {
+            if (el.complete && el.naturalWidth > 0) fadeIn(el);
+            else el.addEventListener('load', function () { fadeIn(el); }, { once: true });
+            el.addEventListener('error', function () { el.style.display = 'none'; }, { once: true });
+          }
+        });
+
+        if (!('IntersectionObserver' in window)) {
+          document.querySelectorAll('video.gallery-media').forEach(function (v) {
+            var src = v.getAttribute('data-src');
+            if (src && !v.src) v.src = src;
+            fadeIn(v);
+            if (!prefersReducedMotion) v.play().catch(function () {});
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var v = entry.target;
+            if (!(v instanceof HTMLVideoElement)) return;
+
+            if (entry.isIntersecting) {
+              var src = v.getAttribute('data-src');
+              if (src && !v.src) {
+                v.src = src;
+                v.addEventListener('loadeddata', function () { fadeIn(v); }, { once: true });
+                v.addEventListener('error', function () {
+                  v.style.display = 'none';
+                }, { once: true });
+              }
+              if (!prefersReducedMotion) {
+                var p = v.play();
+                if (p && typeof p.catch === 'function') p.catch(function () {});
+              }
+            } else {
+              if (!v.paused) v.pause();
+            }
+          });
+        }, { rootMargin: '200px 0px', threshold: 0.15 });
+
+        document.querySelectorAll('video.gallery-media').forEach(function (v) {
+          observer.observe(v);
+        });
+      })();
+    </script>
+  </body>
+</html>

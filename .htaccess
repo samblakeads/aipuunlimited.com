@@ -1,0 +1,62 @@
+# Defense-in-depth: never serve dotenv files as static content.
+# The recommended location for .env is one level ABOVE this folder (outside the
+# web root entirely). This rule only matters if a .env is placed inside htdocs.
+# Guarded by <IfModule> so it cannot 500 the site if a module is unavailable.
+
+<IfModule mod_authz_core.c>
+    # Apache 2.4+
+    <FilesMatch "^\.env">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    <IfModule mod_access_compat.c>
+        # Apache 2.2 fallback
+        <FilesMatch "^\.env">
+            Order allow,deny
+            Deny from all
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Static asset caching (mobile/page-speed). Far-future cache for fingerprinted/
+# immutable assets; shorter for HTML so content updates are picked up quickly.
+# All guarded by <IfModule> so a missing module can never 500 the site.
+# (Assets published to BunnyCDN are cached by the CDN; these headers cover
+#  assets still served from this origin.)
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/gif                 "access plus 1 year"
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType image/avif                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType font/woff                 "access plus 1 year"
+    ExpiresByType application/font-woff2    "access plus 1 year"
+    ExpiresByType text/css                  "access plus 1 month"
+    ExpiresByType application/javascript    "access plus 1 month"
+    ExpiresByType text/javascript           "access plus 1 month"
+    ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Long-lived, immutable cache for static media + fonts.
+    <FilesMatch "\.(?:css|js|png|jpe?g|gif|webp|avif|svg|ico|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    # HTML/PHP responses should always re-validate.
+    <FilesMatch "\.(?:html?|php)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Ship pre-built compressed text assets when present + compress on the fly.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>

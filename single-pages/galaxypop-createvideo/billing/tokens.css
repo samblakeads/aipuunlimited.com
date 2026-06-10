@@ -1,0 +1,145 @@
+/* ============================================================
+   AIPU — Colors & Type
+   AI Professionals University · "Every frontier AI model. One membership."
+   ------------------------------------------------------------
+   Dark, synthwave-leaning membership product. Near-black canvas
+   with magenta→purple→pink brand gradients, functional accent
+   hues (blue=starter, teal=value, gold=lifetime/premium,
+   green=savings/success). Friendly modern grotesque type.
+   ============================================================ */
+
+/* ---- Fonts ----
+   PRIMARY: "Hanken Grotesk" — a friendly modern grotesque used as a
+   close match for the headline/body face seen on the live AIPU site.
+   ⚠ SUBSTITUTION: the production font was not provided; Hanken Grotesk
+   is the nearest Google Fonts match. Swap in the real face if available.
+   MONO: "JetBrains Mono" for code / IDs / technical readouts. */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* ---------- Brand gradients ---------- */
+  --grad-brand: linear-gradient(95deg, #8B5CF6 0%, #C13AD6 50%, #EC4899 100%);
+  --grad-brand-soft: linear-gradient(95deg, #A855F7 0%, #D946C2 55%, #F472B6 100%);
+  --grad-logo: linear-gradient(100deg, #4F8BF0 0%, #8B5CF6 32%, #D946C2 62%, #22D3EE 100%);
+  --grad-gold: linear-gradient(100deg, #F5C77E 0%, #E8A33D 100%);
+  --grad-flash: linear-gradient(95deg, #F6B27A 0%, #F77FA8 45%, #E84CC0 100%);
+  --grad-page-glow: radial-gradient(120% 80% at 12% 0%, rgba(120,40,110,0.30) 0%, rgba(8,6,15,0) 55%),
+                    radial-gradient(120% 80% at 92% 0%, rgba(80,50,150,0.26) 0%, rgba(8,6,15,0) 55%);
+
+  /* ---------- Core neutrals (dark surfaces) ---------- */
+  --bg-base:      #08060F;   /* page canvas (near-black, purple tint) */
+  --bg-raised:    #0D0A16;   /* raised band / section */
+  --surface-1:    #14101F;   /* card */
+  --surface-2:    #1B1628;   /* nested / hover card */
+  --surface-3:    #241D33;   /* active / selected nested */
+  --hairline:     rgba(255,255,255,0.08);
+  --hairline-strong: rgba(255,255,255,0.14);
+  --overlay-scrim: rgba(8,6,15,0.72);
+
+  /* ---------- Brand accents ---------- */
+  --purple:   #A855F7;
+  --violet:   #8B5CF6;
+  --magenta:  #D946C2;
+  --pink:     #EC4899;
+  --pink-hot: #F0529C;
+
+  /* ---------- Functional accents ---------- */
+  --blue:   #4F8BF0;   /* Starter tier / Text-model badges */
+  --teal:   #2DD4BF;   /* Best-value eyebrow */
+  --cyan:   #22D3EE;   /* logo highlight / info */
+  --green:  #34D399;   /* savings, success, "Unlimited" text pills */
+  --gold:   #F5C77E;   /* Lifetime / Agency tier, ratings, credits */
+  --gold-deep: #E8A33D;
+  --amber:  #FBBF24;
+
+  /* ---------- Text ---------- */
+  --fg:        #F6F4FB;   /* primary text */
+  --fg-strong: #FFFFFF;   /* headlines on dark */
+  --fg-muted:  #B3ADC2;   /* body copy (lavender-grey) */
+  --fg-subtle: #847E97;   /* captions, meta */
+  --fg-faint:  #5C566E;   /* disabled / dividers-as-text */
+  --fg-on-accent: #FFFFFF;
+  --fg-on-gold:   #1A1206;
+
+  /* ---------- Tier signature colors ---------- */
+  --tier-basic:   var(--blue);
+  --tier-scale:   var(--teal);
+  --tier-unlimited: var(--magenta);
+  --tier-agency:  var(--gold);
+
+  /* ---------- Radii ---------- */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---------- Spacing scale (4pt base) ---------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  /* ---------- Shadows & glows ---------- */
+  --shadow-card: 0 18px 50px -24px rgba(0,0,0,0.85);
+  --shadow-pop:  0 24px 70px -22px rgba(0,0,0,0.9);
+  --glow-magenta: 0 0 0 1px rgba(217,70,194,0.55), 0 22px 60px -18px rgba(217,70,194,0.45);
+  --glow-gold:    0 0 0 1px rgba(245,199,126,0.45), 0 22px 60px -18px rgba(232,163,61,0.32);
+  --glow-soft:    0 0 40px -6px rgba(168,85,247,0.35);
+
+  /* ---------- Type families ---------- */
+  --font-display: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body:    "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---------- Type scale (semantic) ---------- */
+  --display-size: 72px; --display-line: 1.02; --display-weight: 800; --display-spacing: -0.025em;
+  --h1-size: 48px; --h1-line: 1.05; --h1-weight: 800; --h1-spacing: -0.02em;
+  --h2-size: 34px; --h2-line: 1.12; --h2-weight: 700; --h2-spacing: -0.015em;
+  --h3-size: 24px; --h3-line: 1.2;  --h3-weight: 700; --h3-spacing: -0.01em;
+  --h4-size: 19px; --h4-line: 1.3;  --h4-weight: 700; --h4-spacing: -0.005em;
+  --body-lg-size: 18px; --body-lg-line: 1.55;
+  --body-size: 16px; --body-line: 1.55;
+  --body-sm-size: 14px; --body-sm-line: 1.5;
+  --caption-size: 13px; --caption-line: 1.4;
+  --eyebrow-size: 12px; --eyebrow-spacing: 0.14em;
+}
+
+/* ============================================================
+   Semantic type classes — use directly or copy the rules.
+   ============================================================ */
+.aipu-display {
+  font-family: var(--font-display);
+  font-size: var(--display-size); line-height: var(--display-line);
+  font-weight: var(--display-weight); letter-spacing: var(--display-spacing);
+  color: var(--fg-strong);
+}
+.aipu-h1 { font-family: var(--font-display); font-size: var(--h1-size); line-height: var(--h1-line); font-weight: var(--h1-weight); letter-spacing: var(--h1-spacing); color: var(--fg-strong); }
+.aipu-h2 { font-family: var(--font-display); font-size: var(--h2-size); line-height: var(--h2-line); font-weight: var(--h2-weight); letter-spacing: var(--h2-spacing); color: var(--fg-strong); }
+.aipu-h3 { font-family: var(--font-display); font-size: var(--h3-size); line-height: var(--h3-line); font-weight: var(--h3-weight); letter-spacing: var(--h3-spacing); color: var(--fg); }
+.aipu-h4 { font-family: var(--font-display); font-size: var(--h4-size); line-height: var(--h4-line); font-weight: var(--h4-weight); letter-spacing: var(--h4-spacing); color: var(--fg); }
+.aipu-body-lg { font-family: var(--font-body); font-size: var(--body-lg-size); line-height: var(--body-lg-line); color: var(--fg-muted); }
+.aipu-body { font-family: var(--font-body); font-size: var(--body-size); line-height: var(--body-line); color: var(--fg-muted); }
+.aipu-body-sm { font-family: var(--font-body); font-size: var(--body-sm-size); line-height: var(--body-sm-line); color: var(--fg-muted); }
+.aipu-caption { font-family: var(--font-body); font-size: var(--caption-size); line-height: var(--caption-line); color: var(--fg-subtle); }
+.aipu-eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--eyebrow-size); font-weight: 700;
+  letter-spacing: var(--eyebrow-spacing); text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+.aipu-mono { font-family: var(--font-mono); font-size: var(--body-sm-size); letter-spacing: -0.01em; }
+
+/* Gradient text helper — brand magenta→purple→pink */
+.aipu-grad-text {
+  background: var(--grad-brand-soft);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+.aipu-grad-text-gold { background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
